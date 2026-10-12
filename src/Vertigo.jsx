@@ -44,8 +44,6 @@ const assetMap = {
   "software-makerboost.webp": "xrf-shared-makerboost.webp",
   "software-compatibility.webp": "xrf-shared-software-compatibility.webp",
   "material-acrylic.webp": "xrf-shared-custom-tumbler.webp",
-  "material-wood.webp": "product-wine-bottle.webp",
-  "material-leather.webp": "vertigo-lifestyle.jpg",
   "material-glass-stone.webp": "product-rocks-glass.webp",
   "material-coated-metal.webp": "home-project-vertigo-corporate-tumbler-batch.webp",
 };
@@ -94,12 +92,12 @@ const materialCategories = [
   {
     id: "ceramic", label: "Ceramic", title: "A direct path to gift-ready mugs.",
     copy: "Build monograms and artwork for compatible ceramic mugs without adding a separate rotary attachment.",
-    proof: "Mugs · drinkware · small vessels", image: "material-leather.webp", icon: CubeTransparent,
+    proof: "Mugs · drinkware · small vessels", image: "vertigo-ceramic-ai.webp", illustrative: true, icon: CubeTransparent,
   },
   {
     id: "wood", label: "Wood Cylinders", title: "More than drinkware.",
     copy: "Use tested settings for compatible cylindrical wood products such as rolling pins and presentation pieces.",
-    proof: "Rolling pins · cylindrical gifts", image: "material-wood.webp", icon: Tree,
+    proof: "Rolling pins · cylindrical gifts", image: "vertigo-wood-cylinder-ai.webp", illustrative: true, icon: Tree,
   },
 ];
 
@@ -143,7 +141,7 @@ const rfAdvantages = [
     "eyebrow": "CLEANER DETAIL",
     "title": "Engrave a Crystal-Clear Future",
     copy: "A responsive 38W RF source supports fine artwork with up to 1,000 DPI scanning precision and ≤0.01 mm positioning accuracy.",
-    proof: "1,000 DPI · ≤0.01 mm positioning", image: "vertigo-rf-detail-ai.webp", alt: "Fine botanical engraving detail on a powder-coated tumbler",
+    proof: "1,000 DPI · ≤0.01 mm positioning", image: "vertigo-rf-detail-ai.webp", illustrative: true, alt: "Illustrative botanical artwork on a powder-coated tumbler",
     "icon": Target
   },
   {
@@ -152,7 +150,7 @@ const rfAdvantages = [
     "eyebrow": "FASTER RESPONSE",
     title: "Production motion in a compact footprint.",
     copy: "Published motion performance reaches up to 800 mm/s with maximum 3G acceleration. Actual throughput depends on the artwork, coating and object geometry.",
-    proof: "Up to 800 mm/s · 3G", image: "vertigo-product-range-ai.webp", alt: "VertiGo with a curated range of cylindrical products",
+    proof: "Up to 800 mm/s · 3G", image: "vertigo-machine-products.jpg", alt: "Supplied VertiGo product photograph with cylindrical products",
     "icon": ArrowClockwise
   },
   {
@@ -174,6 +172,9 @@ const customerStoryVideos = [
   { id: "G9fXsZAbUXs", title: "If You Sell Tumblers, Buy This Laser", channel: "Make or Break Shop", tag: "INDEPENDENT REVIEW" },
   { id: "1WOh36-VBWs", title: "Unboxing the VertiGo", channel: "Maker Studio", tag: "OWNER UNBOXING" },
   { id: "tyvjqkY0ZF8", title: "Perfect Full-Wrap Engraving on Tapered Tumblers", channel: "LensDigital", tag: "APPLICATION DEMO" },
+  { id: "wlpuuP4DtHU", title: "20 Tumblers: The APA Show Production Challenge", channel: "LensDigital", tag: "BATCH ENGRAVING DEMO" },
+  { id: "j4eXCvOsSkg", title: "Glass Engraving on VertiGo", channel: "LensDigital", tag: "GLASS APPLICATION DEMO" },
+  { id: "PUctcoaOtiA", title: "3 Things a Vertical Laser Can Do", channel: "LensDigital", tag: "APPLICATION WALKTHROUGH" },
 ];
 
 const speedMotionMaterials = [
@@ -187,7 +188,7 @@ const speedMotionMaterials = [
     id: "glass", label: "Glass", title: "Keep cylindrical glassware upright.", copy: "Test the exact glass and settings first, then repeat the vertical setup across compatible products.", image: "product-rocks-glass.webp", icon: Target,
   },
   {
-    id: "mugs", label: "Mugs", title: "A focused path to gift-ready mugs.", copy: "Build names, monograms and artwork for compatible ceramic mugs without adding a separate rotary.", image: "vertigo-lifestyle.jpg", icon: CubeTransparent,
+    id: "mugs", label: "Mugs", title: "A focused path to gift-ready mugs.", copy: "Build names, monograms and artwork for compatible ceramic mugs without adding a separate rotary. Application shown is illustrative; test your specific material and settings.", image: "vertigo-ceramic-ai.webp", icon: CubeTransparent,
   }
 ];
 
@@ -561,6 +562,7 @@ function RfAdvantages({ activeIndex, onChange, carouselProps }) {
           <div className="rf-advantages__copy">
             <h3>{rfAdvantages[activeIndex].title}</h3>
             <p>{rfAdvantages[activeIndex].copy}</p>
+            {rfAdvantages[activeIndex].illustrative && <p className="application-caption">Illustrative application, not a precision test.</p>}
             <strong>{rfAdvantages[activeIndex].proof}</strong>
           </div>
         </div>
@@ -706,13 +708,14 @@ function CapabilityBrowser({ onPlay, children }) {
                           <source src={spotlight.video} type="video/mp4" />
                         </video>
                       ) : (
-                        <img src={asset(spotlight.image)} alt={`${spotlight.title} VertiGo proof`} />
+                        <img src={asset(spotlight.image)} alt={`${spotlight.title} ${spotlight.image.includes("-ai.") ? "illustrative application" : "VertiGo product photograph"}`} />
                       )}
                     </div>
                     {!spotlight.hideCopy && (
                       <div className="capability-scroll__story-copy">
                         <h4>{spotlight.title}</h4>
                         <p>{spotlight.copy}</p>
+                        {spotlight.image.includes("-ai.") && <p className="application-caption">Illustrative application · Results depend on material and settings.</p>}
                         <div>{spotlight.metrics.map((metric) => <span key={metric}>{metric}</span>)}</div>
                       </div>
                     )}
@@ -1297,6 +1300,7 @@ export function VertigoPage() {
               <button type="button" className="thumb-arrow" aria-label="Scroll product views right" onClick={() => scrollThumbnails(1)}><CaretRight size={20} /></button>
               <span className="thumbnail-divider" aria-hidden="true" />
               <button type="button" className="video-thumbnail" onClick={playOfficialFilm} aria-label="Watch the VertiGo product film">
+                <img src={`https://i.ytimg.com/vi/${officialFilm.youtubeId}/hqdefault.jpg`} alt="" />
                 <span><Play size={16} weight="fill" /><small>WATCH</small></span>
               </button>
             </div>
@@ -1326,12 +1330,9 @@ export function VertigoPage() {
           <div className="purchase-panel">
             <h1>OneLaser VertiGo™ Performance Rotary Laser for Drinkware (38W RF)</h1>
 
-            <div className="rating-row" aria-label="VertiGo has no published customer ratings yet">
-              <span className="rating-stars" aria-hidden="true">
-                {[0, 1, 2, 3, 4].map((item) => <Star size={18} weight="regular" key={item} />)}
-              </span>
-              <strong>—</strong>
-              <a href="#reviews">0 reviews</a>
+            <div className="rating-row" aria-label="Explore VertiGo creator videos">
+              <Play size={18} weight="fill" aria-hidden="true" />
+              <a href="#reviews">See creator reviews &amp; application demos</a>
             </div>
 
             <ul className="hero-highlights">
@@ -1484,9 +1485,9 @@ export function VertigoPage() {
         <section className="review-proof authority-proof" aria-labelledby="authority-proof-title" data-reveal>
           <div className="review-proof__header">
             <div className="section-heading section-heading--stack">
-              <span className="eyebrow">SOURCE-BACKED PRODUCT PROOF</span>
+              <span className="eyebrow">OFFICIAL VIDEO GUIDES</span>
               <h2 id="authority-proof-title">Learn the VertiGo workflow from OneLaser.</h2>
-              <p>Official setup and touchscreen guides show the real machine workflow without substituting footage from another laser platform.</p>
+              <p>Get familiar with your machine, from the first setup to everyday touchscreen controls.</p>
             </div>
             <div className="review-proof__controls" aria-label="Browse VertiGo reviews and demonstrations">
               <button type="button" onClick={() => scrollAuthorityVideos(-1)} aria-label="Show previous VertiGo video"><CaretLeft size={22} /></button>
@@ -1648,6 +1649,7 @@ export function VertigoPage() {
                 <span>{materialCategories[activeMaterial].label}</span>
                 <h3>{materialCategories[activeMaterial].title}</h3>
                 <p>{materialCategories[activeMaterial].copy}</p>
+                {materialCategories[activeMaterial].illustrative && <p className="application-caption">Illustrative application · Test material and settings first.</p>}
                 <strong>{materialCategories[activeMaterial].proof}</strong>
               </div>
             </div>
@@ -1698,9 +1700,9 @@ export function VertigoPage() {
         <section className="review-proof" id="reviews" aria-labelledby="review-proof-title" data-reveal>
           <div className="review-proof__header">
             <div className="section-heading section-heading--stack">
-              <span className="eyebrow">OWNER PROOF</span>
+              <span className="eyebrow">REVIEWS &amp; REAL-WORLD APPLICATIONS</span>
               <h2 id="review-proof-title">See VertiGo in creators' hands.</h2>
-              <p>Independent review, owner unboxing and application footage add practical context beyond the published specifications.</p>
+              <p>Explore independent reviews, owner unboxing, full-wrap artwork, glass engraving and a 20-tumbler production challenge. Each video identifies its creator and purpose.</p>
             </div>
             <div className="review-proof__controls" aria-label="Browse customer stories">
               <button type="button" onClick={() => scrollReviewVideos(-1)} aria-label="Show previous customer story"><CaretLeft size={22} /></button>

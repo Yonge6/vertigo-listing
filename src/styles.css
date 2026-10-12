@@ -7786,6 +7786,12 @@ body { color: var(--ink); }
   to { filter: saturate(1) contrast(1); transform: scale(1); }
 }
 
+p.application-caption {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #6B6B70;
+}
+
 /* 2026-07-23 dedicated software and ownership-support modules. */
 .rf-advantages {
   width: 100%;
