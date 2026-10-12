@@ -30,7 +30,8 @@
 ## Content boundaries
 
 - Published specification uses 1,000 DPI; the supplied screenshot's conflicting 2,000 DPI label is not used as a specification.
-- Missing official film and owner stories remain explicit pending states; unrelated machine evidence is not substituted.
+- Product film, official setup/control tutorials and creator proof use verified VertiGo-specific YouTube videos; unrelated machine footage is not substituted.
+- High-mode ChatGPT imagery fills only two workbook-led gaps: the product-range studio scene and the RF engraving-detail proof. Real supplied images remain in every section that depicts VertiGo internals, controls or installation details.
 - Commercial examples remain labelled illustrative with a no-guarantee disclaimer.
 - Bare metal is not presented as direct CO₂ RF deep engraving.
 
@@ -39,7 +40,7 @@
 - P0: none.
 - P1: none.
 - P2: none.
-- P3: official film and verified VertiGo owner media remain pending.
+- P3: add more named VertiGo owner feedback only when independently verifiable; the current rail clearly labels review, owner unboxing and application demo.
 
 ## Final result
 

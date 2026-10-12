@@ -8,6 +8,8 @@
 - Official commercial facts verified 2026-10-12: $5,599 sale price, $5,999 compare-at price, variant `44483820224546`, official product page marked `Preorder`.
 - Workbook facts used: 38W CO₂ RF, air cooling, 800 mm/s, 3G, ≤0.01 mm positioning, 1,000 DPI, 89–230 mm autofocus diameter, 16–230 mm manual-focus diameter, 630 × 550 × 710 mm, 64 kg, LightBurn/RDWorks/MakerBoost, USB/Ethernet/Wi-Fi and limited one-year warranty.
 - Supplied reference screenshot text showing 2,000 DPI conflicts with the workbook and is not used as a visible specification.
-- Missing official film and customer-story proof remain explicit pending states. Commercial examples are labelled illustrative with a no-guarantee disclaimer.
+- The film and proof rails now use verified VertiGo-specific YouTube media: a product film, three official OneLaser setup/control guides, an independent review, an owner unboxing and a full-wrap application demo. Commercial examples remain labelled illustrative with a no-guarantee disclaimer.
+- The MakerBoost, software-compatibility and generic tumbler-result images are intentionally shared from the XRF Gen2 source set; no XRF machine imagery or XRF performance graphics are used as VertiGo proof.
+- Two High-mode ChatGPT assets now close the largest remaining visual gaps: a VertiGo product-range studio scene based on the supplied machine references, and a claim-specific RF detail macro. Both ship as compressed 1536 × 1024 WebP files; technical hardware proof continues to use the real supplied product image rather than generated internals.
 - Release gates passed: `npm run verify`; 1440 px and 390 px had no horizontal overflow or broken images, minimum visible text was 12 px, key tabs/disclosures worked and browser console warning/error logs were empty.
 - GitHub Pages run `38227324315` completed successfully; cache-busted live readback confirmed the canonical Hero, journey navigation, sticky purchase bar, correct H1 and $5,599/$5,999 pricing.

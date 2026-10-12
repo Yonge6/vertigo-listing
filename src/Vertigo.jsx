@@ -40,10 +40,10 @@ import { useAutoplayCarousel } from "./hooks/useAutoplayCarousel.js";
 const assetMap = {
   "feature-overview-hero.webp": "vertigo-lifestyle.jpg",
   "feature-overview-hydra-gen2-v2.webp": "vertigo-lifestyle.jpg",
-  "hydra-gen2-feature-overview-v1.webp": "vertigo-machine-products.jpg",
-  "software-makerboost.webp": "vertigo-makerboost.jpg",
-  "software-compatibility.webp": "vertigo-smart-workflow.jpg",
-  "material-acrylic.webp": "home-project-vertigo-mountain-rambler.webp",
+  "hydra-gen2-feature-overview-v1.webp": "vertigo-product-range-ai.webp",
+  "software-makerboost.webp": "xrf-shared-makerboost.webp",
+  "software-compatibility.webp": "xrf-shared-software-compatibility.webp",
+  "material-acrylic.webp": "xrf-shared-custom-tumbler.webp",
   "material-wood.webp": "product-wine-bottle.webp",
   "material-leather.webp": "vertigo-lifestyle.jpg",
   "material-glass-stone.webp": "product-rocks-glass.webp",
@@ -74,8 +74,10 @@ const packageHeroMedia = {
 };
 
 const officialFilm = {
-  youtubeId: "",
-  title: "See the VertiGo workflow."
+  youtubeId: "Yhfbj7ujNXQ",
+  title: "Meet VertiGo in motion.",
+  channel: "LensDigital",
+  tag: "VERTIGO PRODUCT FILM",
 };
 
 const materialCategories = [
@@ -141,7 +143,7 @@ const rfAdvantages = [
     "eyebrow": "CLEANER DETAIL",
     "title": "Engrave a Crystal-Clear Future",
     copy: "A responsive 38W RF source supports fine artwork with up to 1,000 DPI scanning precision and ≤0.01 mm positioning accuracy.",
-    proof: "1,000 DPI · ≤0.01 mm positioning", image: "vertigo-rf-proof.jpg", alt: "VertiGo RF source and engraving detail",
+    proof: "1,000 DPI · ≤0.01 mm positioning", image: "vertigo-rf-detail-ai.webp", alt: "Fine botanical engraving detail on a powder-coated tumbler",
     "icon": Target
   },
   {
@@ -150,7 +152,7 @@ const rfAdvantages = [
     "eyebrow": "FASTER RESPONSE",
     title: "Production motion in a compact footprint.",
     copy: "Published motion performance reaches up to 800 mm/s with maximum 3G acceleration. Actual throughput depends on the artwork, coating and object geometry.",
-    proof: "Up to 800 mm/s · 3G", image: "vertigo-machine-products.jpg", alt: "VertiGo with compatible cylindrical products",
+    proof: "Up to 800 mm/s · 3G", image: "vertigo-product-range-ai.webp", alt: "VertiGo with a curated range of cylindrical products",
     "icon": ArrowClockwise
   },
   {
@@ -164,14 +166,14 @@ const rfAdvantages = [
 
 const decisionVideos = {};
 const authorityVideos = [
-  { id: "official-page", title: "Official VertiGo product details", channel: "OneLaser", tag: "OFFICIAL PRODUCT SOURCE", cover: "vertigo-machine-products.jpg", placeholder: true },
-  { id: "release-workbook", title: "Published feature and specification workbook", channel: "OneLaser", tag: "PUBLISHED PRODUCT DATA", cover: "vertigo-rf-proof.jpg", placeholder: true },
-  { id: "product-brochure", title: "VertiGo product brochure", channel: "OneLaser", tag: "PRODUCT BROCHURE", cover: "vertigo-smart-workflow.jpg", placeholder: true },
+  { id: "qAn4HhGjRDs", title: "Getting Started with VertiGo: Complete Setup Guide", channel: "OneLaser", tag: "OFFICIAL SETUP GUIDE" },
+  { id: "qomhIor8-Ww", title: "OneLaser | VertiGo First Setup", channel: "OneLaser", tag: "OFFICIAL FIRST SETUP" },
+  { id: "bEAKhA2Wjj4", title: "VertiGo Step-by-Step Panel Tutorial", channel: "OneLaser", tag: "OFFICIAL PANEL GUIDE" },
 ];
 const customerStoryVideos = [
-  { id: "stories-pending-1", title: "VertiGo owner stories are coming", channel: "No customer claim substituted", tag: "OWNER PROOF PENDING", cover: "vertigo-lifestyle.jpg", placeholder: true },
-  { id: "stories-pending-2", title: "Live personalization workflow", channel: "Official media pending", tag: "WORKFLOW PROOF PENDING", cover: "home-project-vertigo-event-tumbler-batch.webp", placeholder: true },
-  { id: "stories-pending-3", title: "Cylindrical product batches", channel: "Official media pending", tag: "PRODUCTION PROOF PENDING", cover: "home-project-vertigo-corporate-tumbler-batch.webp", placeholder: true },
+  { id: "G9fXsZAbUXs", title: "If You Sell Tumblers, Buy This Laser", channel: "Make or Break Shop", tag: "INDEPENDENT REVIEW" },
+  { id: "1WOh36-VBWs", title: "Unboxing the VertiGo", channel: "Maker Studio", tag: "OWNER UNBOXING" },
+  { id: "tyvjqkY0ZF8", title: "Perfect Full-Wrap Engraving on Tapered Tumblers", channel: "LensDigital", tag: "APPLICATION DEMO" },
 ];
 
 const speedMotionMaterials = [
@@ -193,7 +195,7 @@ const capabilityChapters = [
   {
     id: "precision", nav: "RF Precision", title: "Sharper detail. More valuable work.",
     summary: "A responsive 38W RF source supports fine artwork with up to 1,000 DPI scanning precision and ≤0.01 mm positioning accuracy.",
-    spotlights: [{ title: "38W RF detail, without a water chiller.", copy: "Air-cooled operation keeps the production setup compact.", image: "vertigo-rf-proof.jpg", metrics: ["38W CO₂ RF", "1,000 DPI", "≤0.01 mm"], hideCopy: false }],
+    spotlights: [{ title: "38W RF detail, without a water chiller.", copy: "Air-cooled operation keeps the production setup compact.", image: "vertigo-rf-detail-ai.webp", metrics: ["38W CO₂ RF", "1,000 DPI", "≤0.01 mm"], hideCopy: false }],
     support: [],
     proofs: [
       { value: "Air-cooled", label: "RF source cooling", icon: Thermometer },
@@ -227,7 +229,7 @@ const capabilityChapters = [
   {
     id: "expansion", nav: "Product Range", title: "One vertical workflow. More cylindrical products.",
     summary: "Build focused collections across compatible tumblers, bottles, mugs, glassware and cylindrical gifts.",
-    spotlights: [{ title: "From one-off personalization to coordinated batches.", copy: "Reuse a familiar upright setup across products that fit the published diameter range.", image: "vertigo-machine-products.jpg", metrics: ["16–230 mm manual", "89–230 mm auto", "Integrated Grip2"], hideCopy: false }],
+    spotlights: [{ title: "From one-off personalization to coordinated batches.", copy: "Reuse a familiar upright setup across products that fit the published diameter range.", image: "vertigo-product-range-ai.webp", metrics: ["16–230 mm manual", "89–230 mm auto", "Integrated Grip2"], hideCopy: false }],
     support: [
       { title: "Customer-facing production", copy: "The compact enclosure is designed for studios, shops and live personalization workflows.", image: "vertigo-lifestyle.jpg" },
       { title: "Focused footprint", copy: "The machine base measures 630 × 550 mm, with a published overall height of 710 mm.", image: "vertigo-hero-04.png" },
@@ -1094,8 +1096,8 @@ export function VertigoPage() {
     setYoutubeVideo({
       id: officialFilm.youtubeId,
       title: officialFilm.title,
-      channel: "OneLaser",
-      tag: "OFFICIAL VertiGo FILM",
+      channel: officialFilm.channel,
+      tag: officialFilm.tag,
     });
   }
 
@@ -1294,7 +1296,7 @@ export function VertigoPage() {
               </div>
               <button type="button" className="thumb-arrow" aria-label="Scroll product views right" onClick={() => scrollThumbnails(1)}><CaretRight size={20} /></button>
               <span className="thumbnail-divider" aria-hidden="true" />
-              <button type="button" className="video-thumbnail video-thumbnail--placeholder" onClick={playOfficialFilm} aria-label="Watch the official VertiGo film" disabled={!officialFilm.youtubeId}>
+              <button type="button" className="video-thumbnail" onClick={playOfficialFilm} aria-label="Watch the VertiGo product film">
                 <span><Play size={16} weight="fill" /><small>WATCH</small></span>
               </button>
             </div>
@@ -1462,18 +1464,19 @@ export function VertigoPage() {
 
         <section className="official-film" aria-labelledby="official-film-title" data-reveal>
           <header className="official-film__header">
-            <span className="eyebrow">OFFICIAL VertiGo FILM</span>
+            <span className="eyebrow">VERTIGO PRODUCT FILM</span>
             <h2 id="official-film-title">{officialFilm.title}</h2>
-            <p>The official VertiGo film slot is reserved in the same position as the reference page. Media is coming soon.</p>
+            <p>See the vertical rotary concept, upright product handling and cylindrical production workflow in one focused introduction.</p>
           </header>
-          <button type="button" className="official-film__placeholder" onClick={playOfficialFilm} aria-label="Watch the official VertiGo film" disabled={!officialFilm.youtubeId}>
+          <button type="button" className="official-film__placeholder" onClick={playOfficialFilm} aria-label="Watch the VertiGo product film">
+            <img className="official-film__cover" src={`https://i.ytimg.com/vi/${officialFilm.youtubeId}/hqdefault.jpg`} alt="" />
             <div className="official-film__placeholder-copy">
-              <span>ONELASER · OFFICIAL FILM</span>
+              <span>{officialFilm.channel} · PRODUCT FILM</span>
               <strong>VertiGo</strong>
               <span className="official-film__play" aria-hidden="true">
                 <Play size={28} weight="fill" />
               </span>
-              <small>OFFICIAL FILM COMING SOON</small>
+              <small>PLAY ON YOUTUBE</small>
             </div>
           </button>
         </section>
@@ -1482,8 +1485,8 @@ export function VertigoPage() {
           <div className="review-proof__header">
             <div className="section-heading section-heading--stack">
               <span className="eyebrow">SOURCE-BACKED PRODUCT PROOF</span>
-              <h2 id="authority-proof-title">Start with the published VertiGo evidence.</h2>
-              <p>The current page uses the official product listing, release workbook and brochure without borrowing reviews or claims from another machine.</p>
+              <h2 id="authority-proof-title">Learn the VertiGo workflow from OneLaser.</h2>
+              <p>Official setup and touchscreen guides show the real machine workflow without substituting footage from another laser platform.</p>
             </div>
             <div className="review-proof__controls" aria-label="Browse VertiGo reviews and demonstrations">
               <button type="button" onClick={() => scrollAuthorityVideos(-1)} aria-label="Show previous VertiGo video"><CaretLeft size={22} /></button>
@@ -1696,8 +1699,8 @@ export function VertigoPage() {
           <div className="review-proof__header">
             <div className="section-heading section-heading--stack">
               <span className="eyebrow">OWNER PROOF</span>
-              <h2 id="review-proof-title">Customer stories are coming.</h2>
-              <p>No unrelated machine reviews are substituted here. This rail is ready for verified VertiGo owner media as it is published.</p>
+              <h2 id="review-proof-title">See VertiGo in creators' hands.</h2>
+              <p>Independent review, owner unboxing and application footage add practical context beyond the published specifications.</p>
             </div>
             <div className="review-proof__controls" aria-label="Browse customer stories">
               <button type="button" onClick={() => scrollReviewVideos(-1)} aria-label="Show previous customer story"><CaretLeft size={22} /></button>
