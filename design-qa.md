@@ -21,12 +21,14 @@
 
 ## Interaction and accessibility evidence
 
+- Live route: `https://yonge6.github.io/vertigo-listing/?v=31281c9`
 - Gallery next control changed `01 / 06` to `02 / 06`.
 - Opportunity, material and feature tabs changed their associated content.
 - FAQ disclosure toggled `aria-expanded` from `false` to `true`.
 - Product lightbox opened and closed successfully.
 - Browser console returned no warnings or errors.
 - Images completed with non-zero natural dimensions; broken image count was zero.
+- The live page, hero image and brochure routes returned HTTP 200.
 
 ## Findings
 
