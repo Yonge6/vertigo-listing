@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "Certia";
+  src: url("/fonts/Certia-Black.otf") format("opentype");
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+}
+
+:root {
+  color: #000;
+  background: #fff;
+  font-family: "Certia", Arial, sans-serif;
+  font-synthesis: none;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; min-height: 100vh; background: #fff; color: #000; -webkit-font-smoothing: antialiased; }
+body, button, a { font: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+button { color: inherit; }
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
