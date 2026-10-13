@@ -7792,6 +7792,34 @@ p.application-caption {
   color: #6B6B70;
 }
 
+.feature-overview .media-provenance {
+  margin: 0;
+  padding: 10px 18px;
+  text-align: center;
+  background: #F5F5F7;
+}
+
+.capability-scroll__support .youtube-cover {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 20px;
+}
+
+.capability-scroll__support article > .capability-scroll__support-icon {
+  margin: 20px;
+}
+
+.ownership-support__details a {
+  color: #000;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.capability-scroll__media img[src*="-brochure"],
+.power-proof-stage__media img[src*="-brochure"] {
+  background: #fff;
+}
+
 /* 2026-07-23 dedicated software and ownership-support modules. */
 .rf-advantages {
   width: 100%;

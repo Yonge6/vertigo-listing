@@ -39,8 +39,8 @@ import { useAutoplayCarousel } from "./hooks/useAutoplayCarousel.js";
 
 const assetMap = {
   "feature-overview-hero.webp": "vertigo-lifestyle.jpg",
-  "feature-overview-hydra-gen2-v2.webp": "vertigo-lifestyle.jpg",
-  "hydra-gen2-feature-overview-v1.webp": "vertigo-product-range-ai.webp",
+  "feature-overview-hydra-gen2-v2.webp": "vertigo-drinkware-collection-ai-v2.webp",
+  "hydra-gen2-feature-overview-v1.webp": "vertigo-machine-products.jpg",
   "software-makerboost.webp": "xrf-shared-makerboost.webp",
   "software-compatibility.webp": "xrf-shared-software-compatibility.webp",
   "material-acrylic.webp": "xrf-shared-custom-tumbler.webp",
@@ -54,6 +54,8 @@ const PRODUCT_URL = "https://www.1laser.com/products/vertigo-vertical-laser-engr
 const COMMUNITY_URL = "https://www.facebook.com/groups/onelaservertigo";
 const BROCHURE_URL = `${import.meta.env.BASE_URL}downloads/onelaser-product-brochure-vertigo-en-v1.pdf`;
 const SUPPORT_URL = "https://www.1laser.com/pages/contact-us";
+const WARRANTY_URL = "https://www.1laser.com/pages/warranty-policy";
+const RETURNS_URL = "https://www.1laser.com/pages/refund-policy";
 
 const baseHeroMedia = [
   ["vertigo-hero-01.png", "OneLaser VertiGo front product view"],
@@ -90,13 +92,13 @@ const materialCategories = [
     proof: "Mugs · steins · bottles", image: "material-glass-stone.webp", icon: Wine,
   },
   {
-    id: "ceramic", label: "Ceramic", title: "A direct path to gift-ready mugs.",
-    copy: "Build monograms and artwork for compatible ceramic mugs without adding a separate rotary attachment.",
-    proof: "Mugs · drinkware · small vessels", image: "vertigo-ceramic-ai.webp", illustrative: true, icon: CubeTransparent,
+    id: "mugs", label: "Coated Mugs", title: "A direct path to gift-ready mugs.",
+    copy: "Personalize laser-compatible coated mugs with names and artwork. Confirm the coating, handle clearance and marking method with a sample first.",
+    proof: "Compatible coatings · Tested blanks", image: "vertigo-coated-mugs-ai-v2.webp", illustrative: true, icon: CubeTransparent,
   },
   {
     id: "wood", label: "Wood Cylinders", title: "More than drinkware.",
-    copy: "Use tested settings for compatible cylindrical wood products such as rolling pins and presentation pieces.",
+    copy: "Explore compatible cylindrical wood gifts with tested settings. Confirm diameter, length, finish and secure clamping before production.",
     proof: "Rolling pins · cylindrical gifts", image: "vertigo-wood-cylinder-ai.webp", illustrative: true, icon: Tree,
   },
 ];
@@ -106,13 +108,13 @@ const powerProofs = [
     id: "38W", tab: "38W RF Precision", eyebrow: "AIR-COOLED RF",
     title: "Fine detail for cylindrical products.",
     copy: "The 38W CO₂ RF metal tube supports stable, detailed engraving with air-cooled operation and no external water chiller.",
-    proof: "38W RF · Air cooled · 1,000 DPI", image: "vertigo-rf-proof.jpg", alt: "VertiGo air-cooled RF source proof",
+    proof: "38W RF · Air cooled · 1,000 DPI", image: "vertigo-rf-source-brochure.webp", alt: "RF source illustration from the supplied OneLaser VertiGo brochure",
   },
   {
     id: "rotary", tab: "Integrated Rotary", eyebrow: "VERTICAL ARCHITECTURE",
     title: "Built around the cylinder.",
     copy: "The integrated Grip2 rotary keeps compatible products upright and removes the separate rotary setup used by traditional flat-bed workflows.",
-    proof: "Factory aligned · Upright positioning", image: "vertigo-vertical-vs-horizontal.jpg", alt: "Vertical engraving compared with a traditional horizontal rotary setup",
+    proof: "Factory aligned · Upright positioning", image: "vertigo-architecture-brochure.webp", alt: "Vertical motion and integrated rotary architecture illustration from the supplied VertiGo brochure",
   }
 ];
 
@@ -139,15 +141,15 @@ const rfAdvantages = [
     "id": "detail",
     "tab": "Cleaner Detail",
     "eyebrow": "CLEANER DETAIL",
-    "title": "Engrave a Crystal-Clear Future",
+    "title": "Fine artwork, made personal.",
     copy: "A responsive 38W RF source supports fine artwork with up to 1,000 DPI scanning precision and ≤0.01 mm positioning accuracy.",
     proof: "1,000 DPI · ≤0.01 mm positioning", image: "vertigo-rf-detail-ai.webp", illustrative: true, alt: "Illustrative botanical artwork on a powder-coated tumbler",
     "icon": Target
   },
   {
     "id": "speed",
-    "tab": "Faster Response",
-    "eyebrow": "FASTER RESPONSE",
+    "tab": "Production Motion",
+    "eyebrow": "PRODUCTION MOTION",
     title: "Production motion in a compact footprint.",
     copy: "Published motion performance reaches up to 800 mm/s with maximum 3G acceleration. Actual throughput depends on the artwork, coating and object geometry.",
     proof: "Up to 800 mm/s · 3G", image: "vertigo-machine-products.jpg", alt: "Supplied VertiGo product photograph with cylindrical products",
@@ -157,7 +159,7 @@ const rfAdvantages = [
     id: "workflow", tab: "Simpler Workflow", eyebrow: "INTEGRATED SYSTEM",
     title: "Load. Focus. Start.",
     copy: "Automatic focus, red-light positioning, touchscreen controls and an integrated rotary shorten the path from product setup to engraving.",
-    proof: "Autofocus · Integrated rotary · Touch control", image: "vertigo-smart-workflow.jpg", alt: "Operator using the VertiGo touchscreen",
+    proof: "Autofocus · Integrated rotary · Touch control", image: "vertigo-rotary-official.webp", alt: "Real VertiGo rotary and cylindrical positioning hardware",
     "icon": ShieldCheck
   }
 ];
@@ -169,7 +171,7 @@ const authorityVideos = [
   { id: "bEAKhA2Wjj4", title: "VertiGo Step-by-Step Panel Tutorial", channel: "OneLaser", tag: "OFFICIAL PANEL GUIDE" },
 ];
 const customerStoryVideos = [
-  { id: "G9fXsZAbUXs", title: "If You Sell Tumblers, Buy This Laser", channel: "Make or Break Shop", tag: "INDEPENDENT REVIEW" },
+  { id: "G9fXsZAbUXs", title: "If You Sell Tumblers, Buy This Laser", channel: "Make or Break Shop", tag: "CREATOR REVIEW" },
   { id: "1WOh36-VBWs", title: "Unboxing the VertiGo", channel: "Maker Studio", tag: "OWNER UNBOXING" },
   { id: "tyvjqkY0ZF8", title: "Perfect Full-Wrap Engraving on Tapered Tumblers", channel: "LensDigital", tag: "APPLICATION DEMO" },
   { id: "wlpuuP4DtHU", title: "20 Tumblers: The APA Show Production Challenge", channel: "LensDigital", tag: "BATCH ENGRAVING DEMO" },
@@ -188,7 +190,7 @@ const speedMotionMaterials = [
     id: "glass", label: "Glass", title: "Keep cylindrical glassware upright.", copy: "Test the exact glass and settings first, then repeat the vertical setup across compatible products.", image: "product-rocks-glass.webp", icon: Target,
   },
   {
-    id: "mugs", label: "Mugs", title: "A focused path to gift-ready mugs.", copy: "Build names, monograms and artwork for compatible ceramic mugs without adding a separate rotary. Application shown is illustrative; test your specific material and settings.", image: "vertigo-ceramic-ai.webp", icon: CubeTransparent,
+    id: "mugs", label: "Mugs", title: "A focused path to gift-ready mugs.", copy: "Personalize compatible coated mugs after checking the surface and handle clearance. Application shown is illustrative; test the exact blank and settings.", image: "vertigo-coated-mugs-ai-v2.webp", icon: CubeTransparent,
   }
 ];
 
@@ -196,7 +198,7 @@ const capabilityChapters = [
   {
     id: "precision", nav: "RF Precision", title: "Sharper detail. More valuable work.",
     summary: "A responsive 38W RF source supports fine artwork with up to 1,000 DPI scanning precision and ≤0.01 mm positioning accuracy.",
-    spotlights: [{ title: "38W RF detail, without a water chiller.", copy: "Air-cooled operation keeps the production setup compact.", image: "vertigo-rf-detail-ai.webp", metrics: ["38W CO₂ RF", "1,000 DPI", "≤0.01 mm"], hideCopy: false }],
+    spotlights: [{ title: "Fine artwork for compatible coatings.", copy: "A responsive RF source supports detailed designs; test the artwork, surface and settings before a batch run.", image: "vertigo-rf-detail-ai.webp", metrics: ["38W CO₂ RF", "1,000 DPI", "≤0.01 mm"], hideCopy: false }],
     support: [],
     proofs: [
       { value: "Air-cooled", label: "RF source cooling", icon: Thermometer },
@@ -214,10 +216,10 @@ const capabilityChapters = [
   {
     id: "workflow", nav: "Smart Workflow", title: "Load. Focus. Start.",
     summary: "Automatic focus, red-light positioning, touchscreen controls and the integrated Grip2 rotary shorten the path from product setup to engraving.",
-    spotlights: [{ title: "Built around cylindrical production.", copy: "VertiGo keeps compatible products upright and integrates the rotary into the machine architecture.", image: "vertigo-vertical-vs-horizontal.jpg", metrics: ["Integrated rotary", "Upright position", "Factory aligned"], hideCopy: false }],
+    spotlights: [{ title: "Built around cylindrical production.", copy: "VertiGo keeps compatible products upright and integrates the rotary into the machine architecture. This architecture view shows the vertical motion and rotary layout.", image: "vertigo-architecture-brochure.webp", metrics: ["Integrated rotary", "Upright position", "Factory aligned"], hideCopy: false }],
     support: [
-      { title: "Automatic focus", copy: "Repeatable focal setup across the published 89–230 mm autofocus diameter range.", image: "vertigo-smart-workflow.jpg" },
-      { title: "Direct machine control", copy: "Use touchscreen controls and connect through USB, Ethernet or Wi-Fi.", image: "vertigo-machine-products.jpg" },
+      { title: "Automatic focus", copy: "Repeatable focal setup across the 89–230 mm autofocus diameter range. Confirm the focal setup for each new product.", image: "vertigo-rotary-official.webp" },
+      { title: "Direct machine control", copy: "Watch OneLaser’s real panel tutorial, then use USB, Ethernet or Wi-Fi for your software workflow.", youtube: { id: "bEAKhA2Wjj4", title: "VertiGo Step-by-Step Panel Tutorial", channel: "OneLaser" } },
     ],
     proofs: [
       { value: "Auto", label: "Focus", icon: Camera },
@@ -230,9 +232,9 @@ const capabilityChapters = [
   {
     id: "expansion", nav: "Product Range", title: "One vertical workflow. More cylindrical products.",
     summary: "Build focused collections across compatible tumblers, bottles, mugs, glassware and cylindrical gifts.",
-    spotlights: [{ title: "From one-off personalization to coordinated batches.", copy: "Reuse a familiar upright setup across products that fit the published diameter range.", image: "vertigo-product-range-ai.webp", metrics: ["16–230 mm manual", "89–230 mm auto", "Integrated Grip2"], hideCopy: false }],
+    spotlights: [{ title: "From one-off personalization to coordinated batches.", copy: "Reuse a familiar upright setup across products that fit the diameter range. Confirm height, handles and clamping before production.", image: "vertigo-drinkware-collection-ai-v2.webp", metrics: ["16–230 mm manual", "89–230 mm auto", "Integrated Grip2"], hideCopy: false }],
     support: [
-      { title: "Customer-facing production", copy: "The compact enclosure is designed for studios, shops and live personalization workflows.", image: "vertigo-lifestyle.jpg" },
+      { title: "A clear view of the work", copy: "A large viewing door and LED-lit chamber make the engraving workflow visible in studios, shops and live personalization setups.", image: "vertigo-lifestyle.jpg" },
       { title: "Focused footprint", copy: "The machine base measures 630 × 550 mm, with a published overall height of 710 mm.", image: "vertigo-hero-04.png" },
     ],
     proofs: [
@@ -247,10 +249,10 @@ const capabilityChapters = [
     id: "protection", nav: "Reliability & Safety", title: "Enclosed for daily production.",
     summary: "An enclosed Class 1 design, lid protection, isolated electronics, built-in smoke extraction and air-cooled RF operation support a cleaner workflow.",
     spotlights: [],
-    feature: { title: "Air-cooled RF operation", copy: "No external water chiller is required for the 38W RF source.", image: "vertigo-rf-proof.jpg" },
+    feature: { title: "Air-cooled RF operation", copy: "No external water chiller is required for the 38W RF source. Keep cooling airflow and ventilation unobstructed.", image: "vertigo-rf-source-brochure.webp" },
     support: [
-      { title: "Enclosed workflow", copy: "The published platform includes a Class 1 enclosure and lid protection.", image: "vertigo-support.jpg" },
-      { title: "Built-in extraction", copy: "Integrated smoke extraction supports a more contained production setup; ventilation still needs to be planned for the installation.", image: "vertigo-machine-products.jpg" },
+      { title: "Enclosed workflow", copy: "A Class 1 enclosure design and lid protection support the workflow. Follow the operating manual and never bypass interlocks.", image: "vertigo-hero-01.png" },
+      { title: "Plan the exhaust path", copy: "Built-in extraction is not air filtration. Plan suitable exhaust or a compatible filtration solution for the material and workspace.", icon: ArrowClockwise },
     ],
     proofs: [
       { value: "Class 1", label: "Enclosure", icon: ShieldCheck },
@@ -258,7 +260,7 @@ const capabilityChapters = [
       { value: "Air", label: "RF cooling", icon: Thermometer },
       { value: "Built-in", label: "Smoke extraction", icon: Target },
     ],
-    details: ["Isolated electronics", "Emergency stop", "U.S.-based support"],
+    details: ["Isolated electronics", "Emergency stop", "Level indicator", "Quick-release lens for cleaning"],
   },
 ];
 
@@ -267,7 +269,7 @@ const purchasePackages = [{
   name: "OneLaser VertiGo",
   price: 5599,
   msrp: 5999,
-  badge: "PREORDER",
+  badge: "CHECK AVAILABILITY",
   detail: "38W RF · Integrated Grip2 rotary",
   hybrid: 44483820224546,
   pro: null,
@@ -288,18 +290,20 @@ const specs = [
   { title: "Laser & Performance", rows: [["Laser source", "38W CO₂ RF metal tube"], ["Cooling", "Air cooling"], ["Maximum speed", "800 mm/s"], ["Maximum acceleration", "3G"], ["Positioning accuracy", "≤0.01 mm"], ["Maximum scanning precision", "1,000 DPI"]] },
   { title: "Object Range", rows: [["Autofocus diameter", "89–230 mm", "3.5–9.05 in"], ["Manual-focus diameter", "16–230 mm", "0.62–9.05 in"]] },
   { title: "Control & Optics", rows: [["Software", "LightBurn / RDWorks / MakerBoost"], ["Connections", "USB / Ethernet / Wi-Fi"], ["Beam expander", "3×"], ["Focal lens", "2.5 in"], ["Lens / mirror diameter", "20 mm / 25 mm"]] },
-  { title: "Electrical & Support", rows: [["Electrical input", "100–240V AC, 50/60Hz", "Single phase; factory voltage configuration applies"], ["Power consumption", "706.2W at 115V / 660.5W at 220V"], ["Warranty", "Limited 1 year"], ["Support", "OneLaser knowledge base and U.S. support"]] },
+  { title: "Electrical & Support", rows: [["Electrical input", "Factory-configured 115V or 220V, 50/60Hz", "Single phase; confirm the supplied version and outlet requirements with OneLaser"], ["Power consumption", "706.2W at 115V / 660.5W at 220V"], ["Limited warranty", "1 year: mechanics and electronics", "6 months: optical power source; 1 month: lenses and mirrors. Official terms and exclusions apply."], ["Support", "OneLaser knowledge base and U.S. support"]] },
   { title: "Included Items", rows: [["Cables", "Power cable / USB cable"], ["Exhaust", "4-inch exhaust hose"], ["Tools", "2.5 mm and 4 mm hex keys"], ["Rotary jaws", "Short and extended chuck jaws"], ["Other", "USB drive / labels / stickers", "Confirm final bundle contents at checkout"]] },
 ];
 
 const faqs = [
   { q: "Do I need a separate rotary attachment?", a: "No. VertiGo's Grip2 rotary is integrated and factory-aligned for compatible cylindrical products." },
-  { q: "What object diameters can VertiGo focus on?", a: "The workbook lists 89–230 mm for autofocus and 16–230 mm for manual focus. Confirm unusual shapes and handle clearance with OneLaser before ordering." },
+  { q: "What object diameters can VertiGo focus on?", a: "Autofocus covers 89–230 mm; manual focus covers 16–230 mm. Confirm object height, unusual shapes, clamping and handle clearance with OneLaser before ordering." },
   { q: "Does VertiGo need a water chiller?", a: "No. The 38W RF metal tube uses air cooling." },
   { q: "Which software and connections are supported?", a: "The published specification lists LightBurn, RDWorks and MakerBoost, with USB, Ethernet and Wi-Fi connectivity." },
   { q: "Can it engrave bare metal directly?", a: "VertiGo is a CO₂ RF system. Use powder-coated, anodized, coated or otherwise laser-compatible surfaces; confirm the material and marking method before production." },
-  { q: "Is VertiGo available now?", a: "The official product page currently labels the configuration as Preorder. Confirm current processing, freight and delivery timing at checkout or with OneLaser sales." },
-  { q: "What comes in the box?", a: "The workbook lists a power cable, USB cable, 4-inch exhaust hose, 2.5 mm and 4 mm hex keys, short and extended chuck jaws, USB drive, labels and stickers. Confirm final bundle contents at checkout." },
+  { q: "Is VertiGo available now?", a: "Availability and preorder options are handled on OneLaser’s official product page. Confirm the current ordering status, freight and delivery estimate with sales before payment; delivery estimates are not guarantees." },
+  { q: "What comes in the box?", a: "The listed bundle includes a power cable, USB cable, 4-inch exhaust hose, 2.5 mm and 4 mm hex keys, short and extended chuck jaws, USB drive, labels and stickers. Confirm final contents with OneLaser before ordering." },
+  { q: "What should I prepare before installation?", a: "Confirm the factory-configured 115V or 220V version and suitable single-phase outlet with OneLaser. Plan ventilation, a stable support surface, delivery access and safe handling for the 64 kg machine. Follow the installation and operating instructions." },
+  { q: "Which materials should I test first?", a: "Test the exact coating, glass composition or wood finish and confirm dimensions and clamping. Ceramic glazes and marking methods vary: ask OneLaser to confirm suitable blanks rather than assuming every glazed mug is compatible." },
 ];
 
 const journeySections = [
@@ -571,7 +575,7 @@ function RfAdvantages({ activeIndex, onChange, carouselProps }) {
   );
 }
 
-function CapabilityBrowser({ onPlay, children }) {
+function CapabilityBrowser({ onPlay, onVideoPlay, children }) {
   const [activeChapter, setActiveChapter] = useState(0);
   const chapterRefs = useRef([]);
   const navRef = useRef(null);
@@ -637,7 +641,7 @@ function CapabilityBrowser({ onPlay, children }) {
     <section className="capability-scroll" id="features">
       <span className="commercial-capabilities__anchor" id="capability-system" aria-hidden="true" />
       <div className="journey-opening-artwork">
-        <img src={asset("hydra-gen2-feature-overview-v1.webp")} style={{aspectRatio:"3840 / 2004",objectFit:"cover"}} alt="VertiGo product collection covering precision, vertical architecture, workflow and cylindrical applications" />
+        <img src={asset("hydra-gen2-feature-overview-v1.webp")} style={{height:"auto",aspectRatio:"auto",objectFit:"contain"}} alt="Supplied VertiGo machine photograph with cylindrical product examples" />
       </div>
       <nav
           className="capability-scroll__nav"
@@ -708,14 +712,14 @@ function CapabilityBrowser({ onPlay, children }) {
                           <source src={spotlight.video} type="video/mp4" />
                         </video>
                       ) : (
-                        <img src={asset(spotlight.image)} alt={`${spotlight.title} ${spotlight.image.includes("-ai.") ? "illustrative application" : "VertiGo product photograph"}`} />
+                        <img src={asset(spotlight.image)} alt={`${spotlight.title} ${spotlight.image.includes("-ai") ? "illustrative application" : spotlight.image.includes("-brochure") ? "supplied technical illustration" : "VertiGo product photograph"}`} />
                       )}
                     </div>
                     {!spotlight.hideCopy && (
                       <div className="capability-scroll__story-copy">
                         <h4>{spotlight.title}</h4>
                         <p>{spotlight.copy}</p>
-                        {spotlight.image.includes("-ai.") && <p className="application-caption">Illustrative application · Results depend on material and settings.</p>}
+                        {spotlight.image.includes("-ai") && <p className="application-caption">Illustrative application · Results depend on material and settings.</p>}
                         <div>{spotlight.metrics.map((metric) => <span key={metric}>{metric}</span>)}</div>
                       </div>
                     )}
@@ -752,11 +756,13 @@ function CapabilityBrowser({ onPlay, children }) {
                   </article>
                 )}
 
-                <div className={chapter.support.some((item) => item.icon) ? "capability-scroll__support capability-scroll__support--icons" : "capability-scroll__support"}>
+                <div className={chapter.support.every((item) => item.icon) ? "capability-scroll__support capability-scroll__support--icons" : "capability-scroll__support"}>
                   {chapter.support.map((item) => (
                     <article key={item.title ?? item.compareTitles?.join("-")}>
                       {item.icon ? (
                         <span className="capability-scroll__support-icon" aria-hidden="true"><item.icon size={28} weight="regular" /></span>
+                      ) : item.youtube ? (
+                        <YouTubeCover video={item.youtube} onPlay={onVideoPlay} />
                       ) : item.video ? (
                         <video className="capability-scroll__support-media" controls muted playsInline preload="metadata" poster={item.poster} aria-label={`${item.title} video`}>
                           <source src={item.video} type="video/mp4" />
@@ -1052,16 +1058,20 @@ export function VertigoPage() {
   const purchaseTotal = (selectedPurchasePackage.price + purchaseAccessoryTotal) * quantity;
   const purchaseMsrpTotal = (selectedPurchasePackage.msrp + purchaseAccessoryMsrpTotal) * quantity;
   const selectedVariant = selectedPurchasePackage.hybrid;
-  const cartItems = [`${selectedVariant}:${quantity}`, ...officialAccessories.filter(item => selectedPurchaseAccessories.includes(item.id)).map(item => `${item.variant}:${quantity}`)];
-  const checkoutUrl = `https://www.1laser.com/cart/${cartItems.join(',')}`;
   const MORE_PAYMENT_OPTIONS_URL = PRODUCT_URL;
   const financingCopy = "Financing available";
 
   function handleJourneyNavigation(section) {
     trackEvent("navigate_section", { section_id: section.id, section_name: section.label });
-    document.getElementById(section.id)?.scrollIntoView({
+    const target = document.getElementById(section.id);
+    if (!target) return;
+    const chromeBottom = Math.max(
+      document.querySelector(".home-header")?.getBoundingClientRect().bottom || 0,
+      document.querySelector(".journey-nav")?.getBoundingClientRect().bottom || 0,
+    );
+    window.scrollTo({
+      top: target.getBoundingClientRect().top + window.scrollY - chromeBottom - 16,
       behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
-      block: "start",
     });
   }
 
@@ -1078,8 +1088,8 @@ export function VertigoPage() {
   }
 
   function handleAddToCart() {
-    trackEvent("add_to_cart", getPurchaseEventParameters());
-    window.open(checkoutUrl, "_blank", "noopener,noreferrer");
+    trackEvent("purchase_intent", getPurchaseEventParameters());
+    window.open(PRODUCT_URL, "_blank", "noopener,noreferrer");
   }
 
   function trackLead(destination, leadType) {
@@ -1322,7 +1332,7 @@ export function VertigoPage() {
               </a>
               <div className="hero-assurance-card">
                 <ShieldCheck size={28} weight="light" aria-hidden="true" />
-                <strong>Limited 1-Year Warranty</strong>
+                <strong>Component-Specific Limited Warranty</strong>
               </div>
             </div>
           </div>
@@ -1451,7 +1461,8 @@ export function VertigoPage() {
                   <strong>{quantity}</strong>
                   <button type="button" aria-label="Increase quantity" onClick={() => setQuantity((value) => value + 1)}><Plus size={15} /></button>
                 </div>
-                <button type="button" className="primary-cta" onClick={handleAddToCart}>Add to Cart</button>
+                <button type="button" className="primary-cta" onClick={handleAddToCart}>Order on OneLaser</button>
+                <p className="application-caption">Confirm availability, quantity and delivery timing on OneLaser’s official product page before payment.</p>
               </div>
               <a className="more-payment-options" href={MORE_PAYMENT_OPTIONS_URL} target="_blank" rel="noreferrer" onClick={() => trackEvent("begin_checkout", { ...getPurchaseEventParameters(), checkout_type: "more_payment_options" })}>More payment options <ArrowUpRight size={14} /></a>
             </div>
@@ -1460,7 +1471,8 @@ export function VertigoPage() {
         </section>
 
         <section className="feature-overview" id="why-vertigo" data-reveal>
-          <img src={asset("feature-overview-hydra-gen2-v2.webp")} style={{aspectRatio:"3840 / 1800",objectFit:"cover"}} alt="OneLaser VertiGo in an industrial workshop surrounded by finished engraved products" />
+          <img src={asset("feature-overview-hydra-gen2-v2.webp")} style={{height:"auto",aspectRatio:"1672 / 941",objectFit:"contain"}} alt="Illustrative collection of personalized powder-coated tumblers, bottles and a handled mug" />
+          <p className="application-caption media-provenance">AI-generated application concept · Not a material or performance test.</p>
         </section>
 
         <section className="official-film" aria-labelledby="official-film-title" data-reveal>
@@ -1509,7 +1521,7 @@ export function VertigoPage() {
           </div>
         </section>
 
-        <CapabilityBrowser onPlay={openStory}>
+        <CapabilityBrowser onPlay={openStory} onVideoPlay={setYoutubeVideo}>
           <RfAdvantages activeIndex={activeRfAdvantage} onChange={setActiveRfAdvantage} carouselProps={rfCarouselProps} />
           <section className="power-guide" id="power-guide" data-chapter-index="0" data-reveal {...powerCarouselProps}>
             <div className="power-guide__inner">
@@ -1580,7 +1592,7 @@ export function VertigoPage() {
                 <h2>Out of the box, into creation.</h2>
               </header>
               <div className="makerboost-proof__copy">
-                <p className="makerboost-proof__body">MakerBoost is built for the VertiGo platform — automatic model detection, recommended parameters and registration-mark recognition help simplify setup and repeat production.</p>
+                <p className="makerboost-proof__body">MakerBoost adapts the design view to VertiGo’s vertical coordinate system and brings machine-motion controls into the software, helping you prepare and position cylindrical work in one workflow.</p>
               </div>
             </div>
             <div className="makerboost-proof__media">
@@ -1597,7 +1609,7 @@ export function VertigoPage() {
             </header>
             <article className="software-compatibility__stage">
               <div className="software-compatibility__copy">
-                <p className="software-compatibility__body">Works with LightBurn, RDWorks, and MakerBoost AI — supporting formats including AI, PDF, DXF, HPGL, PLT, RD, SVG, LBRN, BMP, JPG, PNG, GIF, TIFF and more.</p>
+                <p className="software-compatibility__body">Works with LightBurn, RDWorks and MakerBoost. Choose the workflow you know; supported file formats and available controls depend on the software and version you use.</p>
               </div>
               <div className="software-compatibility__media">
                 <img src={asset("software-compatibility.webp")} alt="LightBurn and RDWorks software compatibility shown on a laptop" />
@@ -1702,7 +1714,7 @@ export function VertigoPage() {
             <div className="section-heading section-heading--stack">
               <span className="eyebrow">REVIEWS &amp; REAL-WORLD APPLICATIONS</span>
               <h2 id="review-proof-title">See VertiGo in creators' hands.</h2>
-              <p>Explore independent reviews, owner unboxing, full-wrap artwork, glass engraving and a 20-tumbler production challenge. Each video identifies its creator and purpose.</p>
+              <p>Explore creator reviews, owner unboxing, full-wrap artwork, glass engraving and a 20-tumbler production challenge. Each video identifies its creator and purpose.</p>
             </div>
             <div className="review-proof__controls" aria-label="Browse customer stories">
               <button type="button" onClick={() => scrollReviewVideos(-1)} aria-label="Show previous customer story"><CaretLeft size={22} /></button>
@@ -1810,14 +1822,14 @@ export function VertigoPage() {
                 <div className="ownership-support__card-top"><Check size={26} weight="bold" aria-hidden="true" /><span>01</span></div>
                 <div className="ownership-support__lead"><h3>Clear terms. Confident decisions.</h3></div>
                 <div className="ownership-support__details">
-                  <p>Review OneLaser’s current return eligibility, exclusions, fees and shipping responsibilities for your VertiGo configuration before ordering. Contact the team for help with the process.</p>
+                  <p>Non-defect returns carry a 25% restocking fee; original and return freight are non-refundable. Leased or financed equipment is excluded from returns and refunds. <a href={RETURNS_URL} target="_blank" rel="noreferrer">Read the official return terms.</a></p>
                 </div>
               </article>
               <article className="ownership-support__card">
                 <div className="ownership-support__card-top"><ShieldCheck size={26} weight="regular" aria-hidden="true" /><span>02</span></div>
-                <div className="ownership-support__lead"><h3>We built it to last. We back it to prove it.</h3></div>
+                <div className="ownership-support__lead"><h3>Know what is covered.</h3></div>
                 <div className="ownership-support__details">
-                  <p>The release workbook lists a limited one-year warranty. Review current coverage, component terms and exclusions with OneLaser before ordering.</p>
+                  <p>VertiGo’s limited warranty covers mechanics and electronics for 1 year, optical power sources for 6 months, and lenses and mirrors for 1 month. <a href={WARRANTY_URL} target="_blank" rel="noreferrer">Coverage and exclusions.</a></p>
                 </div>
               </article>
               <article className="ownership-support__card ownership-support__card--wide">
@@ -1865,7 +1877,7 @@ export function VertigoPage() {
       <div className="sticky-buy" aria-label="Sticky purchase bar">
         <div>
           <strong>{selectedPurchasePackage.name}</strong>
-          <span>38W RF · Integrated rotary · Preorder</span>
+          <span>38W RF · Integrated rotary</span>
           <small>U.S.-based support · Confirm current delivery timing</small>
         </div>
         <div className="sticky-buy__price">
@@ -1873,7 +1885,7 @@ export function VertigoPage() {
             <span><strong>{formatMoney(purchaseTotal)}</strong><del>{formatMoney(purchaseMsrpTotal)}</del></span>
             <small>Financing available with Affirm</small>
           </div>
-          <button type="button" onClick={handleAddToCart}>Add to Cart</button>
+          <button type="button" onClick={handleAddToCart}>Order on OneLaser</button>
         </div>
       </div>
 

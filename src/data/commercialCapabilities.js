@@ -22,7 +22,7 @@ export const products = {
   "mixed-range": product("mixed-range", "Mixed Cylindrical Range", "vertigo-machine-products.jpg", "Compatible cups, bottles and vessels", "Support cups, bottles, bowls and other compatible upright cylindrical items.", ["Multiple formats", "Focused catalog", "Diameter flexibility"], "Confirm diameter, height, handle clearance and focal method."),
 };
 
-const economics = (unitPrice, sellingPrice, margin, monthlySales, hourlyOutput) => ({ unitPrice, sellingPrice, margin, monthlySales, hourlyOutput });
+const economics = (unitPrice, sellingPrice, margin, monthlySales, orderValue) => ({ unitPrice, sellingPrice, margin, monthlySales, orderValue });
 export const economicsExamples = {
   "outdoor-tumbler": economics(35, "$35", "45%", 24, "$35/item"), "handled-tumbler": economics(55, "$55", "45%", 18, "$55/item"), "coated-bottle": economics(40, "$40", "45%", 24, "$40/item"),
   "event-batch": economics(300, "$300/10", "40%", 4, "$300/batch"), "corporate-batch": economics(450, "$450/15", "40%", 4, "$450/batch"), "studio-service": economics(30, "$30", "45%", 30, "$30/item"),
@@ -38,4 +38,4 @@ export const productCategories = [
   { id: "batch", label: "Batch Work", description: "Repeat the verified setup across logo programs, short runs and a focused product range.", productIds: ["logo-program", "short-run", "mixed-range"] },
 ];
 export const workflowCapabilities = [];
-export const economicsDisclaimer = "Illustrative estimates only, not guaranteed income. Actual pricing, costs, sales volume, profitability and payback vary by design, material, setup, labor, sales channel and market demand.";
+export const economicsDisclaimer = "Hypothetical planning example, not measured customer results or guaranteed income. Assumed contribution excludes fixed overhead, tax, equipment financing and other business-specific costs. Actual selling prices, costs, sales volume and results vary. Equipment price divided by 24 is an arithmetic illustration, not a loan or payment offer.";

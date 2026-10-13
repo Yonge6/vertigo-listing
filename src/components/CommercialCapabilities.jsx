@@ -35,17 +35,17 @@ function ProductEconomics({ product, equipmentInvestment }) {
       <div key={product.id} className="product-economics__inner">
         <header className="product-economics__header">
           <div>
-            <span>ILLUSTRATIVE EARNINGS</span>
-            <h4>Estimated monthly profit</h4>
+            <span>ILLUSTRATIVE EXAMPLE</span>
+            <h4>Monthly contribution scenario</h4>
           </div>
           <strong>{currencyFormatter.format(monthlyProfit)}<small>/mo.</small></strong>
         </header>
         <dl className="product-economics__metrics">
-          <div className="product-economics__payback"><dt>Estimated payback</dt><dd>{paybackMonths.toFixed(1)}<small>months</small></dd></div>
-          <div><dt>24-month cost illustration</dt><dd>{monthlyCurrencyFormatter.format(monthlyPayment)}<small>/mo.</small></dd></div>
+          <div className="product-economics__payback"><dt>Price ÷ scenario contribution</dt><dd>{paybackMonths.toFixed(1)}<small>months</small></dd></div>
+          <div><dt>Equipment price ÷ 24</dt><dd>{monthlyCurrencyFormatter.format(monthlyPayment)}<small>/mo. (not financing)</small></dd></div>
         </dl>
         <p className="product-economics__assumptions">
-          {monthlySales} products/mo. × {economics.sellingPrice} selling price × {economics.margin} net margin. Payback uses the current {currencyFormatter.format(equipmentInvestment)} configuration.
+          {monthlySales} {economics.orderValue.includes("batch") ? "batches" : "items"}/mo. × {currencyFormatter.format(economics.unitPrice)} per {economics.orderValue.includes("batch") ? "batch" : "item"} × {economics.margin} assumed contribution margin. Equipment-price comparison uses {currencyFormatter.format(equipmentInvestment)}; this is not net profit or a financing quote.
         </p>
         <p className="product-economics__disclaimer">{economicsDisclaimer}</p>
       </div>
@@ -212,9 +212,9 @@ function ProductOpportunities({ asset, equipmentInvestment }) {
                     <small>{String(index + 1).padStart(2, "0")}</small>
                     <strong>{product.name}</strong>
                     <span className="product-card__economics">
-                      <span>Selling Price: <b>{economics.sellingPrice}</b></span>
-                      <span>Net Margin: <b>{economics.margin}</b></span>
-                      <span>Hourly Revenue Output: <b>{economics.hourlyOutput}</b></span>
+                      <span>ILLUSTRATIVE EXAMPLE</span>
+                      <span>Example Price: <b>{economics.sellingPrice}</b></span>
+                      <span>Assumed Margin: <b>{economics.margin}</b></span>
                     </span>
                   </span>
                 </button>

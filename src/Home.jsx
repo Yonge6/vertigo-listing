@@ -28,9 +28,9 @@ import {
 } from "./data/commercialCapabilities.js";
 
 const asset = (name) => `${import.meta.env.BASE_URL}assets/${name}`;
-const XRF_PAGE_URL = `${import.meta.env.BASE_URL}?page=xrf`;
-const MACHINES_PAGE_URL = `${import.meta.env.BASE_URL}collections/`;
-const ACCESSORIES_PAGE_URL = `${import.meta.env.BASE_URL}accessories/`;
+const XRF_PAGE_URL = "https://www.1laser.com/products/onelaser-xrf-desktop-laser-machine";
+const MACHINES_PAGE_URL = "https://www.1laser.com/collections/laser-engraving-cutting-marking-machines";
+const ACCESSORIES_PAGE_URL = "https://www.1laser.com/collections/laser-accessories";
 const MATERIALS_PAGE_URL = "https://www.1laser.com/collections/materials-for-laser-engraving-cutting";
 const wholeCurrencyFormatter = new Intl.NumberFormat("en-US", {
   style: "currency",
@@ -521,7 +521,7 @@ export function HomeNavigation({ megaMenuActivation = "hover" }) {
           if (!event.currentTarget.contains(event.relatedTarget)) setActiveMegaMenu(null);
         }}
       >
-        <a className="home-brand" href={import.meta.env.BASE_URL} aria-label="OneLaser home">
+        <a className="home-brand" href="https://www.1laser.com/" aria-label="OneLaser home">
           <img src={asset("onelaser-logo.png")} alt="OneLaser" />
         </a>
         <button
