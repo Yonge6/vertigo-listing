@@ -614,7 +614,7 @@ function CapabilityBrowser({ onPlay, onVideoPlay, children }) {
       frame = 0;
       const readingLine = chapterOffset();
       const current = chapters.reduce((active, target) => (
-        target.getBoundingClientRect().top <= readingLine + 2 ? target : active
+        target.getBoundingClientRect().top <= readingLine + 24 ? target : active
       ), chapters[0]);
       if (current) setActiveChapter(Number(current.dataset.chapterIndex));
     };
@@ -622,12 +622,17 @@ function CapabilityBrowser({ onPlay, onVideoPlay, children }) {
       if (!frame) frame = requestAnimationFrame(updateChapter);
     };
     updateChapter();
+    const resizeObserver = new ResizeObserver(scheduleUpdate);
+    chapters.forEach((chapter) => resizeObserver.observe(chapter));
     window.addEventListener("scroll", scheduleUpdate, { passive: true });
     window.addEventListener("resize", scheduleUpdate);
+    window.addEventListener("load", scheduleUpdate);
     return () => {
+      resizeObserver.disconnect();
       cancelAnimationFrame(frame);
       window.removeEventListener("scroll", scheduleUpdate);
       window.removeEventListener("resize", scheduleUpdate);
+      window.removeEventListener("load", scheduleUpdate);
     };
   }, []);
 
@@ -664,7 +669,7 @@ function CapabilityBrowser({ onPlay, onVideoPlay, children }) {
     <section className="capability-scroll" id="features">
       <span className="commercial-capabilities__anchor" id="capability-system" aria-hidden="true" />
       <div className="journey-opening-artwork">
-        <img src={asset("hydra-gen2-feature-overview-v1.webp")} style={{height:"auto",aspectRatio:"auto",objectFit:"contain"}} alt="Supplied VertiGo machine photograph with cylindrical product examples" />
+        <img src={asset("hydra-gen2-feature-overview-v1.webp")} width="1320" height="936" style={{height:"auto",aspectRatio:"1320 / 936",objectFit:"contain"}} alt="Supplied VertiGo machine photograph with cylindrical product examples" />
       </div>
       <nav
           className="capability-scroll__nav"

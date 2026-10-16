@@ -9,6 +9,7 @@ Date: 2026-10-16, Asia/Shanghai. Scope: the published VertiGo page, with the liv
 - The two supporting cards measure 612.75 px wide with identical 408.5 px media heights at desktop. The proof rail now separates autofocus and touchscreen control; an autofocus icon no longer suggests that VertiGo has an XRF vision camera.
 - Fixed chapter jumps hiding the eyebrow under sticky navigation. A desktop jump positions the chapter at 148 px, below the 128 px navigation; mobile positions it at 180 px, below the 159 px rails.
 - Replaced threshold-only chapter observation with requestAnimationFrame-batched scroll/resize tracking. Reading within the workflow cards keeps Smart Workflow active instead of jumping to another chapter.
+- The first public readback exposed a small load-time shift leaving the section just beyond the reading-line threshold. Reserved the supplied opening artwork's intrinsic 1320 × 936 ratio, added chapter resize/load observation and a 24 px reading-line allowance so font/image reflow does not leave the preceding chapter highlighted.
 - Evidence: `01-xrf-workflow.png`, `03-xrf-workflow-cards.png`, `09-xrf-workflow-mobile.png`, `14-workflow-mobile-final.png`, `21-workflow-desktop-final.png`.
 
 ## 2. Reliability & Safety — corrected and checked
