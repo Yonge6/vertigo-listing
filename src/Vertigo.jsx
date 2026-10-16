@@ -882,6 +882,7 @@ export function VertigoPage() {
   const [videoModal, setVideoModal] = useState(null);
   const [youtubeVideo, setYoutubeVideo] = useState(null);
   const thumbnailRailRef = useRef(null);
+  const heroLightboxRef = useRef(null);
   const heroMediaTouchStartX = useRef(null);
   const authorityVideoRailRef = useRef(null);
   const horizontalRailDragRef = useRef({ rail: null, pointerId: null, startX: 0, startScrollLeft: 0, dragged: false });
@@ -1038,8 +1039,10 @@ export function VertigoPage() {
         setVideoModal(null);
         setHeroLightboxOpen(false);
       }
-      if (heroLightboxOpen && event.key === "ArrowLeft") stepMedia(-1);
-      if (heroLightboxOpen && event.key === "ArrowRight") stepMedia(1);
+      if (heroLightboxOpen && ["ArrowLeft", "ArrowRight"].includes(event.key)) {
+        event.preventDefault();
+        stepMedia(event.key === "ArrowLeft" ? -1 : 1);
+      }
     };
     document.body.style.overflow = "hidden";
     window.addEventListener("keydown", closeOnEscape);
@@ -1048,6 +1051,31 @@ export function VertigoPage() {
       window.removeEventListener("keydown", closeOnEscape);
     };
   }, [youtubeVideo, videoModal, heroLightboxOpen, media.length]);
+
+  useEffect(() => {
+    if (!heroLightboxOpen) return undefined;
+    const trigger = document.activeElement;
+    const dialog = heroLightboxRef.current;
+    const controls = [...dialog.querySelectorAll("button")];
+    controls[0]?.focus();
+    const containFocus = (event) => {
+      if (event.key !== "Tab") return;
+      const first = controls[0];
+      const last = controls[controls.length - 1];
+      if (event.shiftKey && (document.activeElement === first || !dialog.contains(document.activeElement))) {
+        event.preventDefault();
+        last?.focus();
+      } else if (!event.shiftKey && (document.activeElement === last || !dialog.contains(document.activeElement))) {
+        event.preventDefault();
+        first?.focus();
+      }
+    };
+    document.addEventListener("keydown", containFocus);
+    return () => {
+      document.removeEventListener("keydown", containFocus);
+      if (trigger instanceof HTMLElement && trigger.isConnected) trigger.focus({ preventScroll: true });
+    };
+  }, [heroLightboxOpen]);
 
   const selectedPurchasePackage = useMemo(() => {
     const selected = purchasePackages.find((item) => item.id === selectedPackageId) ?? purchasePackages[0];
@@ -1298,6 +1326,7 @@ export function VertigoPage() {
                 type="button"
                 className="media-stage__open"
                 aria-label={`View larger: ${media[activeMedia].alt}`}
+                aria-haspopup="dialog"
                 onClick={() => setHeroLightboxOpen(true)}
               >
                 <span aria-hidden="true"><MagnifyingGlassPlus size={20} /></span>
@@ -1854,6 +1883,7 @@ export function VertigoPage() {
       {heroLightboxOpen && (
         <div
           className="hero-lightbox"
+          ref={heroLightboxRef}
           role="dialog"
           aria-modal="true"
           aria-label="VertiGo enlarged product gallery"
