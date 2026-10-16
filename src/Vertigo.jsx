@@ -201,7 +201,12 @@ const capabilityChapters = [
   {
     id: "motion", nav: "Speed & Motion", title: "Production motion in a compact footprint.",
     summary: "Published performance reaches up to 800 mm/s with maximum 3G acceleration while maintaining repeatable positioning.",
-    speedProof: true, spotlights: [], support: [], proofs: [], details: [],
+    speedProof: true, spotlights: [],
+    support: [
+      { title: "Smooth, controlled vertical motion", copy: "An engineered vertical motion system manages gravity for smooth acceleration and precise positioning during engraving.", icon: ArrowClockwise },
+      { title: "Built-in rotary. Less setup.", copy: "The integrated clamping rotary keeps positioning and rotation in one system, reducing the separate alignment steps of an add-on rotary.", icon: CubeTransparent },
+    ],
+    proofs: [], details: [],
   },
   {
     id: "workflow", nav: "Smart Workflow", title: "Load. Focus. Start.",

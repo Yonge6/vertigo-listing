@@ -32,6 +32,7 @@ Updated 2026-10-16 (Asia/Shanghai).
 - Economics are hypothetical contribution scenarios, not earnings/net profit. Cards label examples; item/batch units are correct. The user-approved price/24 payment example is illustrative, not a verified financing offer. No Hourly Revenue Output without throughput evidence.
 - Desktop header mega menus open on hover or keyboard focus; mobile groups remain click/tap. Lead-select chevrons are inset 16 px in VertiGo and the parent XRF page.
 - Hero images open a Hydra-style full-screen gallery through a full-stage zoom button. Keep images uncropped; support previous/next, arrow keys, touch swipe, close button/backdrop/Escape, body scroll lock, trapped keyboard focus and focus restoration. The stage/lightbox CSS must ship with the existing JSX logic.
+- Speed & Motion adds the XRF-style two compact icon cards below the application stage, using VertiGo's precision vertical motion and integrated clamping rotary facts (`Selling Points` rows 3–4). Do not copy XRF's Leadshine/closed-loop/all-steel axes or 20% head-weight reduction without VertiGo-specific evidence.
 - Logo/catalog/XRF/accessories links now use official working destinations. Journey scrolling accounts for sticky chrome.
 
 ## Verification and release
