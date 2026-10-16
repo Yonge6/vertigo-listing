@@ -260,9 +260,6 @@ export function CommercialCapabilities({ asset, equipmentInvestment }) {
     <section className="commercial-capabilities" id="roi-materials" aria-label="VertiGo product and material opportunities">
       <span className="commercial-capabilities__anchor" id="capabilities" aria-hidden="true" />
       <span className="commercial-capabilities__anchor" id="results" aria-hidden="true" />
-      <div className="journey-opening-artwork">
-        <img src={asset("vertigo-machine-products.jpg")} alt="VertiGo with a range of compatible cylindrical products" />
-      </div>
       <ProductOpportunities asset={asset} equipmentInvestment={equipmentInvestment} />
     </section>
   );

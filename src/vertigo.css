@@ -72,6 +72,17 @@
 #materials .material-tabs { grid-template-columns:repeat(4,minmax(0,1fr)); }
 .capability-scroll__editorial > img.is-image-ready { background:#fff; }
 .capability-scroll__support .youtube-cover > i:empty { display:none; }
+.financing-disclaimer,
+.purchase-handoff-note { margin:0 0 20px; color:var(--muted); font-size:12px; line-height:1.5; white-space:normal; }
+.purchase-handoff-note { margin:12px 0 0; }
+.purchase-panel .secondary-cta--shop { display:flex; align-items:center; justify-content:center; gap:8px; width:100%; min-height:54px; margin-top:10px; border-radius:12px; font-size:16px; font-weight:800; }
+.official-package__monthly { max-width:190px; white-space:normal; line-height:1.35; text-align:right; }
+.rating-row--unrated .rating-stars { color:var(--muted); }
+#capability-workflow .capability-scroll__stories .capability-scroll__media,
+#capability-protection .capability-scroll__stories .capability-scroll__media { background:#fff; }
+#capability-workflow .capability-scroll__stories .capability-scroll__media > img,
+#capability-protection .capability-scroll__stories .capability-scroll__media > img { padding:0; background:#fff; }
+#capability-protection .capability-scroll__support img[src*="ventilation"] { object-fit:cover; }
 #software .software-compatibility__body,
 .specs .section-heading--stack > p { white-space:normal; overflow-wrap:anywhere; }
 .capability-scroll__editorial { border-radius:32px; background:#fff; }

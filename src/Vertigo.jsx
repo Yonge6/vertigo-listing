@@ -3,6 +3,7 @@ import {
   ArrowUpRight,
   ArrowClockwise,
   Camera,
+  CaretDown,
   CaretLeft,
   CaretRight,
   CaretUp,
@@ -30,7 +31,6 @@ import {
   Trash,
   Tree,
   WifiHigh,
-  Wind,
   Wine,
   X,
 } from "@phosphor-icons/react";
@@ -105,20 +105,6 @@ const materialCategories = [
   },
 ];
 
-const powerProofs = [
-  {
-    id: "38W", tab: "38W RF Precision", eyebrow: "AIR-COOLED RF",
-    title: "Fine detail for cylindrical products.",
-    copy: "The 38W CO₂ RF metal tube supports stable, detailed engraving with air-cooled operation and no external water chiller.",
-    proof: "38W RF · Air cooled · 1,000 DPI", image: "vertigo-rf-source-brochure.webp", alt: "RF source illustration from the supplied OneLaser VertiGo brochure",
-  },
-  {
-    id: "rotary", tab: "Integrated Rotary", eyebrow: "VERTICAL ARCHITECTURE",
-    title: "Built around the cylinder.",
-    copy: "The integrated Grip2 rotary keeps compatible products upright and removes the separate rotary setup used by traditional flat-bed workflows.",
-    proof: "Factory aligned · Upright positioning", image: "vertigo-architecture-brochure.webp", alt: "Vertical motion and integrated rotary architecture illustration from the supplied VertiGo brochure",
-  }
-];
 
 const generationComparisons = [
   {
@@ -150,18 +136,18 @@ const rfAdvantages = [
   },
   {
     "id": "speed",
-    "tab": "Production Motion",
-    "eyebrow": "PRODUCTION MOTION",
-    title: "Production motion in a compact footprint.",
-    copy: "Published motion performance reaches up to 800 mm/s with maximum 3G acceleration. Actual throughput depends on the artwork, coating and object geometry.",
+    "tab": "Faster Response",
+    "eyebrow": "FASTER RESPONSE",
+    title: "Keep fine detail moving.",
+    copy: "Responsive RF output supports detailed artwork as VertiGo’s integrated motion system runs at up to 800 mm/s with 3G acceleration. Match the speed and power to your coating, artwork and product geometry.",
     proof: "Up to 800 mm/s · 3G", image: "vertigo-machine-products.jpg", alt: "Supplied VertiGo product photograph with cylindrical products",
     "icon": ArrowClockwise
   },
   {
-    id: "workflow", tab: "Simpler Workflow", eyebrow: "INTEGRATED SYSTEM",
-    title: "Load. Focus. Start.",
-    copy: "Automatic focus, red-light positioning, touchscreen controls and an integrated rotary shorten the path from product setup to engraving.",
-    proof: "Autofocus · Integrated rotary · Touch control", image: "vertigo-rotary-official.webp", alt: "Real VertiGo rotary and cylindrical positioning hardware",
+    id: "lifespan", tab: "Longer Lifespan", eyebrow: "LONGER LIFESPAN",
+    title: "Built for repeat production.",
+    copy: "The air-cooled RF metal source is designed for repeated engraving without an external water chiller. Keep cooling airflow clear and maintain the optics as directed to support consistent performance over time.",
+    proof: "RF metal source · Air cooled", image: "vertigo-rf-source-brochure.webp", alt: "Supplied VertiGo air-cooled RF metal laser source illustration",
     "icon": ShieldCheck
   }
 ];
@@ -220,10 +206,10 @@ const capabilityChapters = [
   {
     id: "workflow", nav: "Smart Workflow", title: "Load. Focus. Start.",
     summary: "Automatic focus, red-light positioning, touchscreen controls and the integrated Grip2 rotary shorten the path from product setup to engraving.",
-    spotlights: [{ title: "Built around cylindrical production.", copy: "An upright work area and factory-aligned Grip2 rotary keep the setup focused on your product. Load a compatible blank, confirm the focus and positioning, then start your job.", image: "vertigo-architecture-brochure.webp", mediaTitle: "One integrated workflow.", steps: ["Load upright", "Focus automatically", "Start engraving"], metrics: ["Integrated rotary", "Upright position", "Factory aligned"], hideCopy: false }],
+    spotlights: [{ title: "Built around cylindrical production.", copy: "An upright work area and factory-aligned Grip2 rotary keep the setup focused on your product. Load a compatible blank, confirm the focus and positioning, then start your job.", image: "vertigo-architecture-brochure.webp", metrics: ["Integrated rotary", "Upright position", "Factory aligned"], hideCopy: false }],
     support: [
       { title: "A clear view of every setup.", copy: "The LED-lit chamber keeps your upright product visible while you check clamping, clearance and red-light positioning before engraving.", image: "vertigo-rotary-official.webp" },
-      { title: "Direct control, at your fingertips.", copy: "Get to know the touchscreen with OneLaser’s step-by-step panel tutorial. USB, Ethernet and Wi-Fi connect your software workflow to the machine.", youtube: { id: "bEAKhA2Wjj4", title: "VertiGo Step-by-Step Panel Tutorial", channel: "OneLaser" } },
+      { title: "Direct control, at your fingertips.", copy: "Use the integrated touchscreen for direct machine control. USB, Ethernet and Wi-Fi connect LightBurn, RDWorks or MakerBoost to your engraving workflow.", image: "vertigo-touch-control-brochure.webp" },
     ],
     proofs: [
       { value: "Auto", label: "Focus · 89–230 mm diameter", icon: CubeFocus },
@@ -252,11 +238,11 @@ const capabilityChapters = [
   {
     id: "protection", nav: "Reliability & Safety", title: "Enclosed for daily production.",
     summary: "An enclosed Class 1 design, lid protection, isolated electronics, built-in smoke extraction and air-cooled RF operation support a cleaner workflow.",
-    spotlights: [{ title: "Protection starts with the enclosure.", copy: "The Class 1 enclosure design, lid protection and emergency stop support everyday operation. Follow the operating manual, keep interlocks active and never leave an engraving job unattended.", image: "vertigo-enclosure-detail.webp", mediaTitle: "Enclosed by design.", steps: ["Class 1 enclosure design", "Lid protection", "Emergency stop"], metrics: ["Enclosed operation", "Lid protection", "Emergency stop"], hideCopy: false }],
+    spotlights: [{ title: "Protection starts with the enclosure.", copy: "The Class 1 enclosure design, lid protection and emergency stop support everyday operation. Follow the operating manual, keep interlocks active and never leave an engraving job unattended.", image: "vertigo-enclosure-detail.webp", metrics: ["Enclosed operation", "Lid protection", "Emergency stop"], hideCopy: false }],
     feature: { title: "Air-cooled RF operation", copy: "No external water chiller is required for the 38W RF source. Keep cooling airflow and ventilation unobstructed.", image: "vertigo-rf-source-brochure.webp" },
     support: [
       { title: "Built for routine care", copy: "Isolated electronics, a level indicator and a quick-release lens support setup and maintenance. Follow the manual for inspection and cleaning.", image: "vertigo-architecture-brochure.webp" },
-      { title: "Plan the exhaust path", copy: "Built-in extraction is not air filtration. Plan suitable exhaust or a compatible filtration solution for the material and workspace.", diagram: true, icon: Wind },
+      { title: "Plan the exhaust path", copy: "Built-in extraction is not air filtration. Plan suitable exhaust or filtration for your material and workspace. Shown: an illustrative ventilation layout, not included equipment.", image: "vertigo-ventilation-layout-ai.webp" },
     ],
     proofs: [
       { value: "Class 1", label: "Enclosure", icon: ShieldCheck },
@@ -514,7 +500,7 @@ function RfAdvantages({ activeIndex, onChange, carouselProps }) {
         <header className="rf-advantages__header">
           <span className="eyebrow">WHY RF TUBE</span>
           <h2>Why makers choose RF tube.</h2>
-          <p>Fine RF detail, production motion and a simpler integrated workflow—built around cylindrical products.</p>
+          <p>Cleaner detail, responsive output and an air-cooled RF metal source—built for cylindrical production.</p>
         </header>
         <div className="rf-advantages__tabs" role="tablist" aria-label="Explore the advantages of RF laser technology">
           {rfAdvantages.map((item, index) => {
@@ -605,7 +591,6 @@ function CapabilityBrowser({ onPlay, onVideoPlay, children }) {
   useEffect(() => {
     const chapters = [
       document.getElementById("rf-advantages"),
-      document.getElementById("power-guide"),
       ...chapterRefs.current,
       document.getElementById("makerboost"),
     ].filter(Boolean);
@@ -734,19 +719,13 @@ function CapabilityBrowser({ onPlay, onVideoPlay, children }) {
                 {chapter.speedProof && <SpeedMotionProof />}
                 {chapter.spotlights.map((spotlight) => (
                   <article className="capability-scroll__story" key={spotlight.title}>
-                    <div className={`capability-scroll__media capability-scroll__media--static${spotlight.steps ? " capability-scroll__editorial" : ""}`}>
+                    <div className="capability-scroll__media capability-scroll__media--static">
                       {spotlight.video ? (
                         <video controls muted playsInline preload="metadata" poster={spotlight.poster} aria-label={`${spotlight.title} VertiGo video`} style={{ display: "block", width: "100%", height: "100%", objectFit: "contain", background: "#000" }}>
                           <source src={spotlight.video} type="video/mp4" />
                         </video>
                       ) : (
                         <img src={asset(spotlight.image)} alt={`${spotlight.title} ${spotlight.image.includes("-ai") ? "illustrative application" : spotlight.image.includes("-brochure") ? "supplied technical illustration" : "VertiGo product photograph"}`} />
-                      )}
-                      {spotlight.steps && (
-                        <div className="capability-scroll__editorial-copy">
-                          <strong>{spotlight.mediaTitle}</strong>
-                          <ol>{spotlight.steps.map((step) => <li key={step}>{step}</li>)}</ol>
-                        </div>
                       )}
                     </div>
                     {!spotlight.hideCopy && (
@@ -886,11 +865,6 @@ export function VertigoPage() {
     selectIndex: setActiveRfAdvantage,
     interactionProps: rfCarouselProps,
   } = useAutoplayCarousel(rfAdvantages.length);
-  const {
-    activeIndex: activePowerProof,
-    selectIndex: setActivePowerProof,
-    interactionProps: powerCarouselProps,
-  } = useAutoplayCarousel(powerProofs.length);
   const [openFaq, setOpenFaq] = useState(0);
   const [quantity, setQuantity] = useState(1);
   const [selectedPackageId, setSelectedPackageId] = useState("vertigo");
@@ -1098,7 +1072,8 @@ export function VertigoPage() {
   const purchaseMsrpTotal = (selectedPurchasePackage.msrp + purchaseAccessoryMsrpTotal) * quantity;
   const selectedVariant = selectedPurchasePackage.hybrid;
   const MORE_PAYMENT_OPTIONS_URL = PRODUCT_URL;
-  const financingCopy = "Financing available";
+  const monthlyPayment = selectedPurchasePackage.price / 24;
+  const financingCopy = `${formatMoney(monthlyPayment)}/mo.`;
 
   function handleJourneyNavigation(section) {
     trackEvent("navigate_section", { section_id: section.id, section_name: section.label });
@@ -1282,7 +1257,7 @@ export function VertigoPage() {
     <div className="site-shell home-global-chrome">
       <div className="page-progress" aria-hidden="true"><span style={{ width: `${scrollProgress}%` }} /></div>
       <a className="skip-link" href="#main">Skip to content</a>
-      <HomeNavigation megaMenuActivation="click" />
+      <HomeNavigation />
 
       <nav className={journeyVisible ? "journey-nav is-visible" : "journey-nav"} aria-label="Explore VertiGo page sections">
         <div className="journey-nav__inner">
@@ -1379,9 +1354,11 @@ export function VertigoPage() {
           <div className="purchase-panel">
             <h1>OneLaser VertiGo™ Performance Rotary Laser for Drinkware (38W RF)</h1>
 
-            <div className="rating-row" aria-label="Explore VertiGo creator videos">
-              <Play size={18} weight="fill" aria-hidden="true" />
-              <a href="#reviews">See creator reviews &amp; application demos</a>
+            <div className="rating-row rating-row--unrated" aria-label="VertiGo has no published customer ratings yet">
+              <span className="rating-stars" aria-hidden="true">
+                {[0, 1, 2, 3, 4].map((item) => <Star size={18} weight="regular" key={item} />)}
+              </span>
+              <a href="https://www.1laser.com/products/vertigo-vertical-laser-engraver#judgeme_product_reviews" target="_blank" rel="noreferrer">No reviews yet</a>
             </div>
 
             <ul className="hero-highlights">
@@ -1403,13 +1380,14 @@ export function VertigoPage() {
               </div>
             </div>
             <div className="financing-line">
-              <strong><span>{financingCopy}</span> with Affirm</strong>
+              <strong><span>{financingCopy}</span> for 24 months</strong>
               <a href="https://www.1laser.com/pages/financing" target="_blank" rel="noreferrer">See if you qualify <CaretRight size={15} /></a>
             </div>
             <div className="financing-more">
-              <span>Subject to eligibility and terms</span>
+              <span>More Financing Options</span>
               <a href="https://www.1laser.com/pages/financing" target="_blank" rel="noreferrer">Click here <ArrowUpRight size={14} /></a>
             </div>
+            <p className="financing-disclaimer">Illustrative payment: price ÷ 24, assuming 0% APR; excludes tax and fees. Actual APR, term and eligibility depend on lender approval. Not a financing offer.</p>
 
             <div className="purchase-options" id="purchase-options">
               <div className="purchase-section-heading">
@@ -1459,7 +1437,7 @@ export function VertigoPage() {
                         <span><small>{item.badge}</small><strong>{item.name}</strong></span>
                         <span>
                           <strong>{formatMoney(packagePrice)}</strong>
-                          <span className="official-package__monthly">Financing subject to approval</span>
+                          <span className="official-package__monthly">{formatMoney(packagePrice / 24)}/mo. for 24 months*</span>
                           <em>Save {formatMoney(packageMsrp - packagePrice)}</em>
                         </span>
                       </div>
@@ -1500,10 +1478,11 @@ export function VertigoPage() {
                   <strong>{quantity}</strong>
                   <button type="button" aria-label="Increase quantity" onClick={() => setQuantity((value) => value + 1)}><Plus size={15} /></button>
                 </div>
-                <button type="button" className="primary-cta" onClick={handleAddToCart}>Order on OneLaser</button>
-                <p className="application-caption">Confirm availability, quantity and delivery timing on OneLaser’s official product page before payment.</p>
+                <button type="button" className="primary-cta" onClick={handleAddToCart}>Add to Cart</button>
               </div>
-              <a className="more-payment-options" href={MORE_PAYMENT_OPTIONS_URL} target="_blank" rel="noreferrer" onClick={() => trackEvent("begin_checkout", { ...getPurchaseEventParameters(), checkout_type: "more_payment_options" })}>More payment options <ArrowUpRight size={14} /></a>
+              <a className="secondary-cta secondary-cta--link secondary-cta--shop" href={PRODUCT_URL} target="_blank" rel="noreferrer" onClick={() => trackEvent("purchase_intent", { ...getPurchaseEventParameters(), checkout_type: "shop_pay_handoff" })}>Buy with SHOP <ArrowUpRight size={16} /></a>
+              <a className="more-payment-options" href={MORE_PAYMENT_OPTIONS_URL} target="_blank" rel="noreferrer" onClick={() => trackEvent("purchase_intent", { ...getPurchaseEventParameters(), checkout_type: "more_payment_options" })}>More payment options <ArrowUpRight size={14} /></a>
+              <p className="purchase-handoff-note">Payment buttons open OneLaser’s official preorder page. Confirm quantity and available payment methods there. *Monthly amount is illustrative; actual terms require approval.</p>
             </div>
 
           </div>
@@ -1562,65 +1541,6 @@ export function VertigoPage() {
 
         <CapabilityBrowser onPlay={openStory} onVideoPlay={setYoutubeVideo}>
           <RfAdvantages activeIndex={activeRfAdvantage} onChange={setActiveRfAdvantage} carouselProps={rfCarouselProps} />
-          <section className="power-guide" id="power-guide" data-chapter-index="0" data-reveal {...powerCarouselProps}>
-            <div className="power-guide__inner">
-              <div className="section-heading section-heading--left">
-                <span className="eyebrow">ONE PURPOSE-BUILT VERTICAL PLATFORM</span>
-                <h2>The laser, rotary and focus system work as one.</h2>
-                <p>Explore the 38W RF source and integrated rotary as two parts of the same cylindrical production workflow.</p>
-              </div>
-              <div className="power-switch" role="tablist" aria-label="Explore VertiGo platform proof">
-                {powerProofs.map((item, index) => (
-                  <button
-                    type="button"
-                    role="tab"
-                    id={`power-tab-${item.id}`}
-                    aria-controls="power-proof-panel"
-                    aria-selected={activePowerProof === index}
-                    tabIndex={activePowerProof === index ? 0 : -1}
-                    className={activePowerProof === index ? "is-active" : ""}
-                    key={item.id}
-                    onClick={() => setActivePowerProof(index)}
-                    onKeyDown={(event) => {
-                      const navigationKeys = ["ArrowLeft", "ArrowRight", "Home", "End"];
-                      if (!navigationKeys.includes(event.key)) return;
-                      event.preventDefault();
-                      const nextIndex = event.key === "Home"
-                        ? 0
-                        : event.key === "End"
-                          ? powerProofs.length - 1
-                          : event.key === "ArrowLeft"
-                            ? (index - 1 + powerProofs.length) % powerProofs.length
-                            : (index + 1) % powerProofs.length;
-                      setActivePowerProof(nextIndex);
-                      event.currentTarget.parentElement
-                        ?.querySelectorAll('[role="tab"]')
-                        [nextIndex]?.focus();
-                    }}
-                  >
-                    {item.tab}
-                  </button>
-                ))}
-              </div>
-              <div
-                className="power-proof-stage"
-                id="power-proof-panel"
-                role="tabpanel"
-                aria-labelledby={`power-tab-${powerProofs[activePowerProof].id}`}
-                aria-live="polite"
-              >
-                <div className="power-proof-stage__media">
-                  <img key={powerProofs[activePowerProof].id} src={asset(powerProofs[activePowerProof].image)} alt={powerProofs[activePowerProof].alt} />
-                </div>
-                <div className="power-proof-stage__copy">
-                  <span className="eyebrow">{powerProofs[activePowerProof].eyebrow}</span>
-                  <h3>{powerProofs[activePowerProof].title}</h3>
-                  <p>{powerProofs[activePowerProof].copy}</p>
-                  <strong>{powerProofs[activePowerProof].proof}</strong>
-                </div>
-              </div>
-            </div>
-          </section>
         </CapabilityBrowser>
 
         <section className="makerboost-proof" id="makerboost" data-chapter-index={capabilityChapters.length} data-reveal>
@@ -1822,11 +1742,14 @@ export function VertigoPage() {
               <p>Choose the complete specifications, an itemized quote or help evaluating your materials.</p>
               <label>
                 <span className="sr-only">Choose what you want to receive</span>
+                <span className="decision-path__select">
                 <select name="contact[body]" defaultValue="Send me the complete VertiGo specification sheet">
                   <option>Send me the complete VertiGo specification sheet</option>
                   <option>I want an itemized VertiGo quotation</option>
                   <option>I want to discuss my materials with an engineer</option>
                 </select>
+                <CaretDown size={15} weight="bold" aria-hidden="true" />
+                </span>
               </label>
               <label className="decision-path__email">
                 <span className="sr-only">Email address</span>
@@ -1922,9 +1845,9 @@ export function VertigoPage() {
         <div className="sticky-buy__price">
           <div className="sticky-buy__amounts">
             <span><strong>{formatMoney(purchaseTotal)}</strong><del>{formatMoney(purchaseMsrpTotal)}</del></span>
-            <small>Financing available with Affirm</small>
+            <small>{formatMoney(purchaseTotal / 24)}/mo. for 24 months*</small>
           </div>
-          <button type="button" onClick={handleAddToCart}>Order on OneLaser</button>
+          <button type="button" onClick={handleAddToCart}>Add to Cart</button>
         </div>
       </div>
 
