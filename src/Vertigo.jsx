@@ -18,6 +18,7 @@ import {
   MapPin,
   MagnifyingGlassPlus,
   Minus,
+  Monitor,
   Phone,
   Play,
   Plus,
@@ -225,8 +226,8 @@ const capabilityChapters = [
       { title: "Direct control, at your fingertips.", copy: "Get to know the touchscreen with OneLaser’s step-by-step panel tutorial. USB, Ethernet and Wi-Fi connect your software workflow to the machine.", youtube: { id: "bEAKhA2Wjj4", title: "VertiGo Step-by-Step Panel Tutorial", channel: "OneLaser" } },
     ],
     proofs: [
-      { value: "Auto", label: "Focus", icon: Camera },
-      { value: "89–230 mm", label: "Autofocus diameter", icon: Target },
+      { value: "Auto", label: "Focus · 89–230 mm diameter", icon: CubeFocus },
+      { value: "Touchscreen", label: "Direct machine control", icon: Monitor },
       { value: "3 ways", label: "USB / Ethernet / Wi-Fi", icon: WifiHigh },
       { value: "300 mm", label: "Vertical travel", icon: ArrowClockwise },
     ],
@@ -251,7 +252,7 @@ const capabilityChapters = [
   {
     id: "protection", nav: "Reliability & Safety", title: "Enclosed for daily production.",
     summary: "An enclosed Class 1 design, lid protection, isolated electronics, built-in smoke extraction and air-cooled RF operation support a cleaner workflow.",
-    spotlights: [{ title: "Protection starts with the enclosure.", copy: "The Class 1 enclosure design, lid protection and emergency stop support everyday operation. Follow the operating manual, keep interlocks active and never leave an engraving job unattended.", image: "vertigo-hero-01.png", mediaTitle: "Enclosed by design.", steps: ["Class 1 enclosure design", "Lid protection", "Emergency stop"], metrics: ["Enclosed operation", "Lid protection", "Emergency stop"], hideCopy: false }],
+    spotlights: [{ title: "Protection starts with the enclosure.", copy: "The Class 1 enclosure design, lid protection and emergency stop support everyday operation. Follow the operating manual, keep interlocks active and never leave an engraving job unattended.", image: "vertigo-enclosure-detail.webp", mediaTitle: "Enclosed by design.", steps: ["Class 1 enclosure design", "Lid protection", "Emergency stop"], metrics: ["Enclosed operation", "Lid protection", "Emergency stop"], hideCopy: false }],
     feature: { title: "Air-cooled RF operation", copy: "No external water chiller is required for the 38W RF source. Keep cooling airflow and ventilation unobstructed.", image: "vertigo-rf-source-brochure.webp" },
     support: [
       { title: "Built for routine care", copy: "Isolated electronics, a level indicator and a quick-release lens support setup and maintenance. Follow the manual for inspection and cleaning.", image: "vertigo-architecture-brochure.webp" },
@@ -583,6 +584,15 @@ function CapabilityBrowser({ onPlay, onVideoPlay, children }) {
   const chapterRefs = useRef([]);
   const navRef = useRef(null);
 
+  function chapterOffset() {
+    const chromeBottom = Math.max(
+      document.querySelector(".home-header")?.getBoundingClientRect().bottom || 0,
+      document.querySelector(".journey-nav")?.getBoundingClientRect().bottom || 0,
+    );
+    const railHeight = window.innerWidth <= 760 ? navRef.current?.offsetHeight || 48 : 0;
+    return Math.max(window.innerWidth <= 760 ? 180 : 148, chromeBottom + railHeight + 16);
+  }
+
   function jumpToNode(node, offset) {
     if (!node) return;
     const root = document.documentElement;
@@ -599,16 +609,26 @@ function CapabilityBrowser({ onPlay, onVideoPlay, children }) {
       ...chapterRefs.current,
       document.getElementById("makerboost"),
     ].filter(Boolean);
-    const observer = new IntersectionObserver(() => {
-      const visible = chapters
-        .map((target) => ({ target, rect: target.getBoundingClientRect() }))
-        .filter(({ rect }) => rect.bottom > 96 && rect.top < window.innerHeight * .32)
-        .sort((a, b) => Math.abs(a.rect.top - 150) - Math.abs(b.rect.top - 150));
-      if (visible[0]) setActiveChapter(Number(visible[0].target.dataset.chapterIndex));
-    }, { rootMargin: "-96px 0px -68% 0px", threshold: 0 });
-
-    chapters.forEach((chapter) => observer.observe(chapter));
-    return () => observer.disconnect();
+    let frame = 0;
+    const updateChapter = () => {
+      frame = 0;
+      const readingLine = chapterOffset();
+      const current = chapters.reduce((active, target) => (
+        target.getBoundingClientRect().top <= readingLine + 2 ? target : active
+      ), chapters[0]);
+      if (current) setActiveChapter(Number(current.dataset.chapterIndex));
+    };
+    const scheduleUpdate = () => {
+      if (!frame) frame = requestAnimationFrame(updateChapter);
+    };
+    updateChapter();
+    window.addEventListener("scroll", scheduleUpdate, { passive: true });
+    window.addEventListener("resize", scheduleUpdate);
+    return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener("scroll", scheduleUpdate);
+      window.removeEventListener("resize", scheduleUpdate);
+    };
   }, []);
 
   useEffect(() => {
@@ -636,7 +656,7 @@ function CapabilityBrowser({ onPlay, onVideoPlay, children }) {
     setActiveChapter(index);
     jumpToNode(
       index === 0 ? document.getElementById("rf-advantages") : chapterRefs.current[index],
-      window.innerWidth <= 760 ? 180 : 100,
+      chapterOffset(),
     );
   }
 
@@ -672,7 +692,7 @@ function CapabilityBrowser({ onPlay, onVideoPlay, children }) {
             className={activeChapter === capabilityChapters.length ? "is-active" : ""}
             onClick={() => {
               setActiveChapter(capabilityChapters.length);
-              jumpToNode(document.getElementById("makerboost"), window.innerWidth <= 760 ? 136 : 100);
+              jumpToNode(document.getElementById("makerboost"), chapterOffset());
             }}
             aria-current={activeChapter === capabilityChapters.length ? "step" : undefined}
             data-chapter-nav={capabilityChapters.length}

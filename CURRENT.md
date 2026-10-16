@@ -5,6 +5,7 @@ Updated 2026-10-16 (Asia/Shanghai).
 - Independent repository `Yonge6/vertigo-listing`, branch `main`; live `https://yonge6.github.io/vertigo-listing/`. Continue in this child checkout, not the parent homepage repo; preserve parent untracked QA evidence.
 - Keep the XRF-derived structure, Certia visual system, gallery/journey/chapter rails, software, opportunities, materials, specifications, comparison, video rails, decision paths, support, FAQ and sticky purchase bar. No second configurator.
 - Source/asset/prompt and audit record: `docs/plans/2026-10-13-trust-audit.md`. Screenshots and source media remain ignored under `references/incoming/audit-20261013/`.
+- Latest detail comparison and scoped page audit: `docs/plans/2026-10-16-detail-audit.md`; screenshot evidence under ignored `references/incoming/detail-audit-20261016/`.
 
 ## Facts and purchase
 
@@ -25,6 +26,7 @@ Updated 2026-10-16 (Asia/Shanghai).
 - Platform-proof segmented switch is up to 520 px wide with non-wrapping labels; mobile keeps a fluid single row and reduced horizontal button padding.
 - The four material category tabs use four equal desktop columns, without the inherited empty fifth column. Mobile retains horizontal scrolling.
 - Smart Workflow follows the XRF chapter anatomy: 16:9 editorial stage using the supplied VertiGo architecture, two equal 3:2 supporting media cards, then the compact autofocus/control proof rail. The panel tutorial remains a shared lazy YouTube modal; no XRF camera/registration claims.
+- Both workflow/safety primary stages stay 16:9 on mobile too. Chapter jumps account for the sticky chrome (148 px desktop / at least 180 px mobile); active chapters track the reading line on scroll/resize, not threshold-only callbacks. Software/specification intro copy wraps normally.
 - Reliability & Safety now follows the same main-stage/story plus three compact cards and proof rail. Real enclosure/architecture/RF artwork and a labelled ventilation illustration support VertiGo-specific claims; mobile cards remain image-left/copy-right. Never copy XRF Smart Air Assist, thermal suppression or camera features.
 - Economics are hypothetical contribution scenarios, not earnings/net profit. Cards label examples; item/batch units are correct; price/24 is not financing. No Hourly Revenue Output without throughput evidence.
 - Logo/catalog/XRF/accessories links now use official working destinations. Journey scrolling accounts for sticky chrome.
@@ -33,4 +35,4 @@ Updated 2026-10-16 (Asia/Shanghai).
 
 - Build verification passed; 1440 px desktop and 390 px mobile checks showed no document overflow, 12 px displayed-text floor and no page-origin console errors. Coated-mug image loaded at 1536 px, collection at 1672 px.
 - Panel tutorial opens the correct bEAKhA2Wjj4 lazy embed; Escape removes the iframe. Sticky CTA opened the official variant page without a transaction. Contact submission, material performance and full WCAG compliance were not tested.
-- Prior public version: `957ab96`, Pages run `38843573638`. Follow-ups require scoped commit/push, Pages success and fresh public readback; a build/push alone is not live proof.
+- Prior public version: `0f45d1c`, Pages run `38845901729`. Follow-ups require scoped commit/push, Pages success and fresh public readback; a build/push alone is not live proof.
