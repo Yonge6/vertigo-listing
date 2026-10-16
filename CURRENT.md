@@ -1,6 +1,6 @@
 # VertiGo listing - current handoff
 
-Updated 2026-10-13 (Asia/Shanghai).
+Updated 2026-10-16 (Asia/Shanghai).
 
 - Independent repository `Yonge6/vertigo-listing`, branch `main`; live `https://yonge6.github.io/vertigo-listing/`. Continue in this child checkout, not the parent homepage repo; preserve parent untracked QA evidence.
 - Keep the XRF-derived structure, Certia visual system, gallery/journey/chapter rails, software, opportunities, materials, specifications, comparison, video rails, decision paths, support, FAQ and sticky purchase bar. No second configurator.
@@ -21,7 +21,8 @@ Updated 2026-10-13 (Asia/Shanghai).
 - Clear brochure architecture/RF artwork replaces blurred enlarged hardware. Actual official rotary photography and clickable panel tutorial support workflow. Enclosure uses a real machine image, not headquarters aerial imagery. Absolute comparison artwork is retired; objective HTML comparison remains.
 - High-mode ChatGPT replacements show coated stainless mugs and a results-only drinkware collection. No generated machine anatomy or bare-metal engraving implication remains active. AI applications are labelled illustrative, not performance tests; old assets are preserved, unused.
 - Glass/coating/wood-finish, height, clamping and handle-clearance checks remain explicit. Ceramic is conditional in FAQ, not arbitrary bare-glaze engraving.
-- Shared software artwork and ten distinct YouTube sources remain, with creator/purpose labels. CREATOR REVIEW does not assert independently verified lack of sponsorship.
+- Shared software artwork and twelve distinct YouTube sources remain, with creator/purpose labels. The setup/application rail has five videos: three official OneLaser guides plus LensDigital artwork-preparation and bottle-engraving demonstrations. CREATOR REVIEW does not assert independently verified lack of sponsorship.
+- Platform-proof segmented switch is up to 520 px wide with non-wrapping labels; mobile keeps a fluid single row and reduced horizontal button padding.
 - Economics are hypothetical contribution scenarios, not earnings/net profit. Cards label examples; item/batch units are correct; price/24 is not financing. No Hourly Revenue Output without throughput evidence.
 - Logo/catalog/XRF/accessories links now use official working destinations. Journey scrolling accounts for sticky chrome.
 
@@ -29,4 +30,4 @@ Updated 2026-10-13 (Asia/Shanghai).
 
 - Build verification passed; 1440 px desktop and 390 px mobile checks showed no document overflow, 12 px displayed-text floor and no page-origin console errors. Coated-mug image loaded at 1536 px, collection at 1672 px.
 - Panel tutorial opens the correct bEAKhA2Wjj4 lazy embed; Escape removes the iframe. Sticky CTA opened the official variant page without a transaction. Contact submission, material performance and full WCAG compliance were not tested.
-- Prior public version: `2abe979`, Pages run `38233611620`. The audited follow-up requires scoped commit/push, Pages success and fresh public readback; a build/push alone is not live proof.
+- Prior public version: `3838119`, Pages run `38335095901`. Follow-ups require scoped commit/push, Pages success and fresh public readback; a build/push alone is not live proof.

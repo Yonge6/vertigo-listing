@@ -169,6 +169,8 @@ const authorityVideos = [
   { id: "qAn4HhGjRDs", title: "Getting Started with VertiGo: Complete Setup Guide", channel: "OneLaser", tag: "OFFICIAL SETUP GUIDE" },
   { id: "qomhIor8-Ww", title: "OneLaser | VertiGo First Setup", channel: "OneLaser", tag: "OFFICIAL FIRST SETUP" },
   { id: "bEAKhA2Wjj4", title: "VertiGo Step-by-Step Panel Tutorial", channel: "OneLaser", tag: "OFFICIAL PANEL GUIDE" },
+  { id: "4HJYrNMQaj4", title: "Inverting Artwork for Dark Drinkware", channel: "LensDigital", tag: "ARTWORK PREPARATION" },
+  { id: "nsh8RTnQBGA", title: "Halloween Bottle Engraving on VertiGo", channel: "LensDigital", tag: "BOTTLE APPLICATION DEMO" },
 ];
 const customerStoryVideos = [
   { id: "G9fXsZAbUXs", title: "If You Sell Tumblers, Buy This Laser", channel: "Make or Break Shop", tag: "CREATOR REVIEW" },
@@ -1497,9 +1499,9 @@ export function VertigoPage() {
         <section className="review-proof authority-proof" aria-labelledby="authority-proof-title" data-reveal>
           <div className="review-proof__header">
             <div className="section-heading section-heading--stack">
-              <span className="eyebrow">OFFICIAL VIDEO GUIDES</span>
-              <h2 id="authority-proof-title">Learn the VertiGo workflow from OneLaser.</h2>
-              <p>Get familiar with your machine, from the first setup to everyday touchscreen controls.</p>
+              <span className="eyebrow">SETUP &amp; APPLICATION VIDEOS</span>
+              <h2 id="authority-proof-title">Learn the VertiGo workflow.</h2>
+              <p>Start with OneLaser’s official setup and touchscreen guides, then explore artwork preparation and bottle engraving with LensDigital.</p>
             </div>
             <div className="review-proof__controls" aria-label="Browse VertiGo reviews and demonstrations">
               <button type="button" onClick={() => scrollAuthorityVideos(-1)} aria-label="Show previous VertiGo video"><CaretLeft size={22} /></button>
