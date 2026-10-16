@@ -7802,8 +7802,105 @@ p.application-caption {
 
 .capability-scroll__support .youtube-cover {
   width: 100%;
-  aspect-ratio: 16 / 9;
-  border-radius: 20px;
+  aspect-ratio: 3 / 2;
+  border: 1px solid var(--divider);
+  border-radius: 24px;
+}
+
+/* Match the XRF chapter anatomy with VertiGo-specific, source-backed media. */
+.capability-scroll__editorial {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  background: #fff;
+}
+
+.capability-scroll__editorial > img {
+  min-width: 0;
+  min-height: 0;
+  max-height: 100%;
+  padding: 28px;
+  object-fit: contain;
+}
+
+.capability-scroll__editorial-copy {
+  min-width: 0;
+  padding: 32px 40px 32px 12px;
+}
+
+.capability-scroll__editorial-copy > strong {
+  display: block;
+  font-size: clamp(24px, 3vw, 42px);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -.035em;
+}
+
+.capability-scroll__editorial-copy ol {
+  display: grid;
+  gap: 24px;
+  margin: 32px 0 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: workflow;
+}
+
+.capability-scroll__editorial-copy li {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.3;
+  counter-increment: workflow;
+}
+
+.capability-scroll__editorial-copy li::before {
+  content: counter(workflow, decimal-leading-zero);
+  display: grid;
+  flex: 0 0 32px;
+  height: 32px;
+  place-items: center;
+  border: 1px solid var(--divider);
+  border-radius: 50%;
+  color: var(--red);
+  font-size: 12px;
+}
+
+#capability-protection .capability-scroll__diagram {
+  display: flex;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  margin: 0;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #fff;
+  color: var(--muted);
+}
+
+.capability-scroll__diagram figcaption {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+#capability-protection .capability-scroll__support img,
+#capability-protection .capability-scroll__feature .capability-scroll__media > img {
+  object-fit: contain;
+  background: #fff;
+}
+
+@media (max-width: 760px) {
+  .capability-scroll__support .youtube-cover { border-radius: 20px; }
+  .capability-scroll__editorial { aspect-ratio: auto; grid-template-columns: 1fr; }
+  .capability-scroll__editorial > img { height: 220px; padding: 16px; }
+  .capability-scroll__editorial-copy { padding: 8px 20px 24px; }
+  .capability-scroll__editorial-copy > strong { font-size: 26px; }
+  .capability-scroll__editorial-copy ol { gap: 12px; margin-top: 20px; }
+  .capability-scroll__editorial-copy li { font-size: 14px; }
+  #capability-protection .capability-scroll__diagram { height: 100%; min-height: 132px; aspect-ratio: auto; padding: 12px; }
+  .capability-scroll__diagram figcaption { text-align: center; }
 }
 
 .capability-scroll__support article > .capability-scroll__support-icon {

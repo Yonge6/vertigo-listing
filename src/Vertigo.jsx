@@ -29,6 +29,7 @@ import {
   Trash,
   Tree,
   WifiHigh,
+  Wind,
   Wine,
   X,
 } from "@phosphor-icons/react";
@@ -218,10 +219,10 @@ const capabilityChapters = [
   {
     id: "workflow", nav: "Smart Workflow", title: "Load. Focus. Start.",
     summary: "Automatic focus, red-light positioning, touchscreen controls and the integrated Grip2 rotary shorten the path from product setup to engraving.",
-    spotlights: [{ title: "Built around cylindrical production.", copy: "VertiGo keeps compatible products upright and integrates the rotary into the machine architecture. This architecture view shows the vertical motion and rotary layout.", image: "vertigo-architecture-brochure.webp", metrics: ["Integrated rotary", "Upright position", "Factory aligned"], hideCopy: false }],
+    spotlights: [{ title: "Built around cylindrical production.", copy: "An upright work area and factory-aligned Grip2 rotary keep the setup focused on your product. Load a compatible blank, confirm the focus and positioning, then start your job.", image: "vertigo-architecture-brochure.webp", mediaTitle: "One integrated workflow.", steps: ["Load upright", "Focus automatically", "Start engraving"], metrics: ["Integrated rotary", "Upright position", "Factory aligned"], hideCopy: false }],
     support: [
-      { title: "Automatic focus", copy: "Repeatable focal setup across the 89–230 mm autofocus diameter range. Confirm the focal setup for each new product.", image: "vertigo-rotary-official.webp" },
-      { title: "Direct machine control", copy: "Watch OneLaser’s real panel tutorial, then use USB, Ethernet or Wi-Fi for your software workflow.", youtube: { id: "bEAKhA2Wjj4", title: "VertiGo Step-by-Step Panel Tutorial", channel: "OneLaser" } },
+      { title: "A clear view of every setup.", copy: "The LED-lit chamber keeps your upright product visible while you check clamping, clearance and red-light positioning before engraving.", image: "vertigo-rotary-official.webp" },
+      { title: "Direct control, at your fingertips.", copy: "Get to know the touchscreen with OneLaser’s step-by-step panel tutorial. USB, Ethernet and Wi-Fi connect your software workflow to the machine.", youtube: { id: "bEAKhA2Wjj4", title: "VertiGo Step-by-Step Panel Tutorial", channel: "OneLaser" } },
     ],
     proofs: [
       { value: "Auto", label: "Focus", icon: Camera },
@@ -250,11 +251,11 @@ const capabilityChapters = [
   {
     id: "protection", nav: "Reliability & Safety", title: "Enclosed for daily production.",
     summary: "An enclosed Class 1 design, lid protection, isolated electronics, built-in smoke extraction and air-cooled RF operation support a cleaner workflow.",
-    spotlights: [],
+    spotlights: [{ title: "Protection starts with the enclosure.", copy: "The Class 1 enclosure design, lid protection and emergency stop support everyday operation. Follow the operating manual, keep interlocks active and never leave an engraving job unattended.", image: "vertigo-hero-01.png", mediaTitle: "Enclosed by design.", steps: ["Class 1 enclosure design", "Lid protection", "Emergency stop"], metrics: ["Enclosed operation", "Lid protection", "Emergency stop"], hideCopy: false }],
     feature: { title: "Air-cooled RF operation", copy: "No external water chiller is required for the 38W RF source. Keep cooling airflow and ventilation unobstructed.", image: "vertigo-rf-source-brochure.webp" },
     support: [
-      { title: "Enclosed workflow", copy: "A Class 1 enclosure design and lid protection support the workflow. Follow the operating manual and never bypass interlocks.", image: "vertigo-hero-01.png" },
-      { title: "Plan the exhaust path", copy: "Built-in extraction is not air filtration. Plan suitable exhaust or a compatible filtration solution for the material and workspace.", icon: ArrowClockwise },
+      { title: "Built for routine care", copy: "Isolated electronics, a level indicator and a quick-release lens support setup and maintenance. Follow the manual for inspection and cleaning.", image: "vertigo-architecture-brochure.webp" },
+      { title: "Plan the exhaust path", copy: "Built-in extraction is not air filtration. Plan suitable exhaust or a compatible filtration solution for the material and workspace.", diagram: true, icon: Wind },
     ],
     proofs: [
       { value: "Class 1", label: "Enclosure", icon: ShieldCheck },
@@ -708,13 +709,19 @@ function CapabilityBrowser({ onPlay, onVideoPlay, children }) {
                 {chapter.speedProof && <SpeedMotionProof />}
                 {chapter.spotlights.map((spotlight) => (
                   <article className="capability-scroll__story" key={spotlight.title}>
-                    <div className="capability-scroll__media capability-scroll__media--static">
+                    <div className={`capability-scroll__media capability-scroll__media--static${spotlight.steps ? " capability-scroll__editorial" : ""}`}>
                       {spotlight.video ? (
                         <video controls muted playsInline preload="metadata" poster={spotlight.poster} aria-label={`${spotlight.title} VertiGo video`} style={{ display: "block", width: "100%", height: "100%", objectFit: "contain", background: "#000" }}>
                           <source src={spotlight.video} type="video/mp4" />
                         </video>
                       ) : (
                         <img src={asset(spotlight.image)} alt={`${spotlight.title} ${spotlight.image.includes("-ai") ? "illustrative application" : spotlight.image.includes("-brochure") ? "supplied technical illustration" : "VertiGo product photograph"}`} />
+                      )}
+                      {spotlight.steps && (
+                        <div className="capability-scroll__editorial-copy">
+                          <strong>{spotlight.mediaTitle}</strong>
+                          <ol>{spotlight.steps.map((step) => <li key={step}>{step}</li>)}</ol>
+                        </div>
                       )}
                     </div>
                     {!spotlight.hideCopy && (
@@ -761,7 +768,12 @@ function CapabilityBrowser({ onPlay, onVideoPlay, children }) {
                 <div className={chapter.support.every((item) => item.icon) ? "capability-scroll__support capability-scroll__support--icons" : "capability-scroll__support"}>
                   {chapter.support.map((item) => (
                     <article key={item.title ?? item.compareTitles?.join("-")}>
-                      {item.icon ? (
+                      {item.diagram ? (
+                        <figure className="capability-scroll__diagram" aria-label="Ventilation planning illustration, not a machine component photograph">
+                          <item.icon size={64} weight="light" aria-hidden="true" />
+                          <figcaption>Extract. Vent. Maintain.</figcaption>
+                        </figure>
+                      ) : item.icon ? (
                         <span className="capability-scroll__support-icon" aria-hidden="true"><item.icon size={28} weight="regular" /></span>
                       ) : item.youtube ? (
                         <YouTubeCover video={item.youtube} onPlay={onVideoPlay} />
