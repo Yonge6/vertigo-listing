@@ -1,6 +1,6 @@
 # VertiGo listing - current handoff
 
-Updated 2026-10-16 (Asia/Shanghai).
+Updated 2026-10-19 (Asia/Shanghai).
 
 - Independent repository `Yonge6/vertigo-listing`, branch `main`; live `https://yonge6.github.io/vertigo-listing/`. Continue in this child checkout, not the parent homepage repo; preserve parent untracked QA evidence.
 - Keep the XRF-derived structure, Certia visual system, gallery/journey/chapter rails, software, opportunities, materials, specifications, comparison, video rails, decision paths, support, FAQ and sticky purchase bar. No second configurator.
@@ -23,10 +23,10 @@ Updated 2026-10-16 (Asia/Shanghai).
 - Supplied architecture/RF artwork and actual official rotary photography support workflow. The touchscreen support card is a static crop from the supplied brochure, not a video. Enclosure uses a real machine image. Absolute comparison artwork is retired; objective HTML comparison remains.
 - High-mode ChatGPT replacements show coated stainless mugs and a results-only drinkware collection. No generated machine anatomy or bare-metal engraving implication remains active. AI applications are labelled illustrative, not performance tests; old assets are preserved, unused.
 - Glass/coating/wood-finish, height, clamping and handle-clearance checks remain explicit. Ceramic is conditional in FAQ, not arbitrary bare-glaze engraving.
-- Shared software artwork and twelve distinct YouTube sources remain, with creator/purpose labels. The setup/application rail has five videos: three official OneLaser guides plus LensDigital artwork-preparation and bottle-engraving demonstrations. CREATOR REVIEW does not assert independently verified lack of sponsorship.
+- Shared software artwork, the product film and lower creator/application video rail remain. The entire Setup & Application Videos module (five videos, heading, controls and rail) was removed on 2026-10-19 by explicit user request; do not restore it or leave an empty band. CREATOR REVIEW does not assert independently verified lack of sponsorship.
 - The duplicate `#power-guide` platform-proof module and the repeated machine artwork immediately before Product Opportunities were removed by explicit user request. Why RF uses Cleaner Detail / Faster Response / Longer Lifespan with VertiGo-specific 800 mm/s / 3G facts, no invented response-time or source-hour comparison.
 - The four material category tabs use four equal desktop columns, without the inherited empty fifth column. Mobile retains horizontal scrolling.
-- Smart Workflow follows the XRF chapter anatomy: one image-only 16:9 stage using the supplied architecture (no split HTML text/steps), two equal 3:2 static supporting images, then the autofocus/control proof rail. The panel tutorial remains in the upper official video rail only; no XRF camera/registration claims.
+- Smart Workflow follows the XRF chapter anatomy: one image-only 16:9 stage using the supplied architecture (no split HTML text/steps), two equal 3:2 static supporting images, then the autofocus/control proof rail. Keep the touchscreen card static; the upper setup/tutorial video rail has been removed. No XRF camera/registration claims.
 - Both workflow/safety primary stages stay 16:9 on mobile too. Chapter jumps account for the sticky chrome (148 px desktop / at least 180 px mobile); active chapters track the reading line on scroll/resize, not threshold-only callbacks. Software/specification intro copy wraps normally.
 - Reliability & Safety has one image-only enclosure stage, then three compact cards and proof rail. The exhaust card uses a ChatGPT High-generated raster ventilation illustration, explicitly not included equipment; extraction is not filtration. Mobile cards remain image-left/copy-right. Never copy XRF Smart Air Assist, thermal suppression or camera features.
 - Economics are hypothetical contribution scenarios, not earnings/net profit. Cards label examples; item/batch units are correct. The user-approved price/24 payment example is illustrative, not a verified financing offer. No Hourly Revenue Output without throughput evidence.
@@ -38,5 +38,5 @@ Updated 2026-10-16 (Asia/Shanghai).
 ## Verification and release
 
 - Build verification passed; 1440 px desktop and 390 px mobile checks showed no document overflow, 12 px displayed-text floor and no page-origin console errors. Coated-mug image loaded at 1536 px, collection at 1672 px.
-- Prior modal check: panel tutorial opens bEAKhA2Wjj4 and Escape removes the iframe. Purchase controls hand off to the official variant page without a transaction. Contact submission, material performance and full WCAG compliance were not tested.
-- Prior public version: `97104a9`, Pages run `38848627649`. Annotation corrections require scoped commit/push, Pages success and fresh public readback; a build/push alone is not live proof.
+- Remaining videos use the shared lazy player. Purchase controls hand off to the official variant page without a transaction. Contact submission, material performance and full WCAG compliance were not tested.
+- Baseline before the video-module removal: `42b2028`, Pages run `38877937277`. Follow-ups require scoped commit/push, Pages success and fresh public readback; a build/push alone is not live proof.

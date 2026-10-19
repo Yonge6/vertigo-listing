@@ -153,13 +153,6 @@ const rfAdvantages = [
 ];
 
 const decisionVideos = {};
-const authorityVideos = [
-  { id: "qAn4HhGjRDs", title: "Getting Started with VertiGo: Complete Setup Guide", channel: "OneLaser", tag: "OFFICIAL SETUP GUIDE" },
-  { id: "qomhIor8-Ww", title: "OneLaser | VertiGo First Setup", channel: "OneLaser", tag: "OFFICIAL FIRST SETUP" },
-  { id: "bEAKhA2Wjj4", title: "VertiGo Step-by-Step Panel Tutorial", channel: "OneLaser", tag: "OFFICIAL PANEL GUIDE" },
-  { id: "4HJYrNMQaj4", title: "Inverting Artwork for Dark Drinkware", channel: "LensDigital", tag: "ARTWORK PREPARATION" },
-  { id: "nsh8RTnQBGA", title: "Halloween Bottle Engraving on VertiGo", channel: "LensDigital", tag: "BOTTLE APPLICATION DEMO" },
-];
 const customerStoryVideos = [
   { id: "G9fXsZAbUXs", title: "If You Sell Tumblers, Buy This Laser", channel: "Make or Break Shop", tag: "CREATOR REVIEW" },
   { id: "1WOh36-VBWs", title: "Unboxing the VertiGo", channel: "Maker Studio", tag: "OWNER UNBOXING" },
@@ -889,7 +882,6 @@ export function VertigoPage() {
   const thumbnailRailRef = useRef(null);
   const heroLightboxRef = useRef(null);
   const heroMediaTouchStartX = useRef(null);
-  const authorityVideoRailRef = useRef(null);
   const horizontalRailDragRef = useRef({ rail: null, pointerId: null, startX: 0, startScrollLeft: 0, dragged: false });
   const reviewVideoRailRef = useRef(null);
   const consultationFeedbackRailRef = useRef(null);
@@ -1184,10 +1176,6 @@ export function VertigoPage() {
 
   function scrollReviewVideos(direction) {
     reviewVideoRailRef.current?.scrollBy({ left: direction * 420, behavior: "smooth" });
-  }
-
-  function scrollAuthorityVideos(direction) {
-    authorityVideoRailRef.current?.scrollBy({ left: direction * 420, behavior: "smooth" });
   }
 
   function startHorizontalRailDrag(event) {
@@ -1544,33 +1532,6 @@ export function VertigoPage() {
               <small>PLAY ON YOUTUBE</small>
             </div>
           </button>
-        </section>
-
-        <section className="review-proof authority-proof" aria-labelledby="authority-proof-title" data-reveal>
-          <div className="review-proof__header">
-            <div className="section-heading section-heading--stack">
-              <span className="eyebrow">SETUP &amp; APPLICATION VIDEOS</span>
-              <h2 id="authority-proof-title">Learn the VertiGo workflow.</h2>
-              <p>Start with OneLaser’s official setup and touchscreen guides, then explore artwork preparation and bottle engraving with LensDigital.</p>
-            </div>
-            <div className="review-proof__controls" aria-label="Browse VertiGo reviews and demonstrations">
-              <button type="button" onClick={() => scrollAuthorityVideos(-1)} aria-label="Show previous VertiGo video"><CaretLeft size={22} /></button>
-              <button type="button" onClick={() => scrollAuthorityVideos(1)} aria-label="Show more VertiGo videos"><CaretRight size={22} /></button>
-            </div>
-          </div>
-          <div
-            className="review-proof__rail is-mouse-draggable"
-            ref={authorityVideoRailRef}
-            aria-label="VertiGo machine reviews and demonstrations"
-            onPointerDown={startHorizontalRailDrag}
-            onPointerMove={moveHorizontalRailDrag}
-            onPointerUp={endHorizontalRailDrag}
-            onPointerCancel={endHorizontalRailDrag}
-            onClickCapture={suppressHorizontalRailClickAfterDrag}
-            onDragStart={(event) => event.preventDefault()}
-          >
-            {authorityVideos.map((video, index) => <ReviewVideoCard video={video} onPlay={setYoutubeVideo} index={index} total={authorityVideos.length} key={video.id} />)}
-          </div>
         </section>
 
         <CapabilityBrowser onPlay={openStory} onVideoPlay={setYoutubeVideo}>
