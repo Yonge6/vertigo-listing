@@ -1516,9 +1516,8 @@ export function VertigoPage() {
           </div>
         </section>
 
-        <section className="feature-overview reference-media" id="why-vertigo" data-reveal>
-          <img src={asset("xrf-reference-feature-overview-hero.webp")} width="3840" height="1800" style={{height:"auto",aspectRatio:"3840 / 1800",objectFit:"contain"}} alt="XRF Gen2 workshop and product overview reference artwork; the pictured machine is XRF, not VertiGo" />
-          <span className="xrf-reference-label">XRF Gen2 reference artwork</span>
+        <section className="feature-overview" id="why-vertigo" data-reveal>
+          <img src={asset("vertigo-overview-user-20261019.webp")} width="3840" height="1800" style={{height:"auto",aspectRatio:"3840 / 1800",objectFit:"contain"}} alt="OneLaser VertiGo in a retail gifting studio with personalized drinkware and gift displays" />
         </section>
 
         <section className="official-film" aria-labelledby="official-film-title" data-reveal>
