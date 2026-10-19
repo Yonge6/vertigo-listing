@@ -1,8 +1,8 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
-  economicsAssumptions,
   economicsDisclaimer,
   economicsExamples,
+  getEconomicsScenario,
   productCategories,
   products,
 } from "../data/commercialCapabilities.js";
@@ -24,11 +24,7 @@ const monthlyCurrencyFormatter = new Intl.NumberFormat("en-US", {
 
 function ProductEconomics({ product, equipmentInvestment }) {
   const economics = economicsExamples[product.economicsId];
-  const monthlySales = economics.monthlySales ?? economicsAssumptions.monthlySales;
-  const marginRate = Number.parseInt(economics.margin, 10) / 100;
-  const monthlyPayment = equipmentInvestment / 24;
-  const monthlyProfit = economics.unitPrice * marginRate * monthlySales;
-  const paybackMonths = equipmentInvestment / monthlyProfit;
+  const { monthlySales, monthlyPayment, monthlyProfit, paybackMonths } = getEconomicsScenario(economics, equipmentInvestment);
 
   return (
     <aside className="product-economics" aria-live="polite" aria-atomic="true">
@@ -45,7 +41,7 @@ function ProductEconomics({ product, equipmentInvestment }) {
           <div><dt>24-month payment</dt><dd>{monthlyCurrencyFormatter.format(monthlyPayment)}<small>/mo.*</small></dd></div>
         </dl>
         <p className="product-economics__assumptions">
-          {monthlySales} {economics.orderValue.includes("batch") ? "batches" : "items"}/mo. × {currencyFormatter.format(economics.unitPrice)} selling price per {economics.orderValue.includes("batch") ? "batch" : "item"} × {economics.margin} assumed contribution margin. Estimated payback uses the {currencyFormatter.format(equipmentInvestment)} equipment price. Profit shown is before fixed overhead, tax and financing costs.
+          Target: {monthlySales} {economics.orderValue.includes("batch") ? "batches" : "items"}/mo. × {currencyFormatter.format(economics.unitPrice)} selling price × {economics.margin} assumed margin. Payback uses the {currencyFormatter.format(equipmentInvestment)} equipment price.
         </p>
         <p className="product-economics__disclaimer">{economicsDisclaimer}</p>
       </div>

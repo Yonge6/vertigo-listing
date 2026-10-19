@@ -334,6 +334,16 @@
   transition: transform 360ms cubic-bezier(.2, .72, .2, 1);
 }
 
+/* Preserve the native 4:3 Drinkware originals, including cap/straw headroom. */
+.product-card:is([data-product-id="outdoor-tumbler"], [data-product-id="handled-tumbler"], [data-product-id="coated-bottle"]) .product-card__media {
+  aspect-ratio: 4 / 3;
+}
+
+.product-card:is([data-product-id="outdoor-tumbler"], [data-product-id="handled-tumbler"], [data-product-id="coated-bottle"]) .product-card__media img {
+  object-position: center top;
+  transform-origin: center top;
+}
+
 .product-card__body {
   min-height: 138px;
   display: grid;
