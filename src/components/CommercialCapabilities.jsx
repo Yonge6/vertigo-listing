@@ -36,16 +36,16 @@ function ProductEconomics({ product, equipmentInvestment }) {
         <header className="product-economics__header">
           <div>
             <span>ILLUSTRATIVE EXAMPLE</span>
-            <h4>Monthly contribution scenario</h4>
+            <h4>Estimated monthly profit</h4>
           </div>
           <strong>{currencyFormatter.format(monthlyProfit)}<small>/mo.</small></strong>
         </header>
         <dl className="product-economics__metrics">
-          <div className="product-economics__payback"><dt>Price ÷ scenario contribution</dt><dd>{paybackMonths.toFixed(1)}<small>months</small></dd></div>
-          <div><dt>Equipment price ÷ 24</dt><dd>{monthlyCurrencyFormatter.format(monthlyPayment)}<small>/mo. (not financing)</small></dd></div>
+          <div className="product-economics__payback"><dt>Estimated payback</dt><dd>{paybackMonths.toFixed(1)}<small>months</small></dd></div>
+          <div><dt>24-month payment</dt><dd>{monthlyCurrencyFormatter.format(monthlyPayment)}<small>/mo.*</small></dd></div>
         </dl>
         <p className="product-economics__assumptions">
-          {monthlySales} {economics.orderValue.includes("batch") ? "batches" : "items"}/mo. × {currencyFormatter.format(economics.unitPrice)} per {economics.orderValue.includes("batch") ? "batch" : "item"} × {economics.margin} assumed contribution margin. Equipment-price comparison uses {currencyFormatter.format(equipmentInvestment)}; this is not net profit or a financing quote.
+          {monthlySales} {economics.orderValue.includes("batch") ? "batches" : "items"}/mo. × {currencyFormatter.format(economics.unitPrice)} selling price per {economics.orderValue.includes("batch") ? "batch" : "item"} × {economics.margin} assumed contribution margin. Estimated payback uses the {currencyFormatter.format(equipmentInvestment)} equipment price. Profit shown is before fixed overhead, tax and financing costs.
         </p>
         <p className="product-economics__disclaimer">{economicsDisclaimer}</p>
       </div>

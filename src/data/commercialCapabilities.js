@@ -24,13 +24,13 @@ export const products = {
 
 const economics = (unitPrice, sellingPrice, margin, monthlySales, orderValue) => ({ unitPrice, sellingPrice, margin, monthlySales, orderValue });
 export const economicsExamples = {
-  "outdoor-tumbler": economics(35, "$35", "45%", 24, "$35/item"), "handled-tumbler": economics(55, "$55", "45%", 18, "$55/item"), "coated-bottle": economics(40, "$40", "45%", 24, "$40/item"),
-  "event-batch": economics(300, "$300/10", "40%", 4, "$300/batch"), "corporate-batch": economics(450, "$450/15", "40%", 4, "$450/batch"), "studio-service": economics(30, "$30", "45%", 30, "$30/item"),
-  "personalized-bottle": economics(38, "$38", "45%", 24, "$38/item"), glassware: economics(30, "$30", "40%", 24, "$30/item"), "bottle-gifting": economics(60, "$60", "40%", 12, "$60/item"),
-  "logo-program": economics(600, "$600/20", "40%", 3, "$600/batch"), "short-run": economics(360, "$360/12", "40%", 4, "$360/batch"), "mixed-range": economics(45, "$45", "40%", 18, "$45/item"),
+  "outdoor-tumbler": economics(35, "$35", "45%", 48, "$35/item"), "handled-tumbler": economics(55, "$55", "45%", 36, "$55/item"), "coated-bottle": economics(40, "$40", "45%", 48, "$40/item"),
+  "event-batch": economics(300, "$300/10", "40%", 8, "$300/batch"), "corporate-batch": economics(450, "$450/15", "40%", 8, "$450/batch"), "studio-service": economics(30, "$30", "45%", 60, "$30/item"),
+  "personalized-bottle": economics(38, "$38", "45%", 48, "$38/item"), glassware: economics(30, "$30", "40%", 48, "$30/item"), "bottle-gifting": economics(60, "$60", "40%", 24, "$60/item"),
+  "logo-program": economics(600, "$600/20", "40%", 6, "$600/batch"), "short-run": economics(360, "$360/12", "40%", 8, "$360/batch"), "mixed-range": economics(45, "$45", "40%", 36, "$45/item"),
 };
 
-export const economicsAssumptions = { monthlySales: 24 };
+export const economicsAssumptions = { monthlySales: 48 };
 export const productCategories = [
   { id: "drinkware", label: "Drinkware", description: "Build a focused catalog across compatible coated tumblers and bottles.", productIds: ["outdoor-tumbler", "handled-tumbler", "coated-bottle"] },
   { id: "events", label: "Events & Retail", description: "Personalize where the customer is with pre-tested products and a compact vertical workflow.", productIds: ["event-batch", "corporate-batch", "studio-service"] },
@@ -38,4 +38,4 @@ export const productCategories = [
   { id: "batch", label: "Batch Work", description: "Repeat the verified setup across logo programs, short runs and a focused product range.", productIds: ["logo-program", "short-run", "mixed-range"] },
 ];
 export const workflowCapabilities = [];
-export const economicsDisclaimer = "Hypothetical planning example, not measured customer results or guaranteed income. Assumed contribution excludes fixed overhead, tax, equipment financing and other business-specific costs. Actual selling prices, costs, sales volume and results vary. Equipment price divided by 24 is an arithmetic illustration, not a loan or payment offer.";
+export const economicsDisclaimer = "Illustrative estimates only, not measured customer results or guaranteed income. Actual pricing, costs, sales volume, profitability and payback vary by material, setup, labor, sales channel and market demand. Estimated payback covers equipment price only, not total startup costs. *24-month payment is price ÷ 24 assuming 0% APR, excluding tax and fees; actual terms require lender approval. Not a financing offer.";

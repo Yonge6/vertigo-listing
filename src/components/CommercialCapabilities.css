@@ -951,6 +951,17 @@
     padding: 16px;
   }
 
+  .product-economics__header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    align-items: start;
+    gap: 12px;
+  }
+
+  .product-economics__header > strong {
+    justify-self: start;
+  }
+
   .product-economics__metrics {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }

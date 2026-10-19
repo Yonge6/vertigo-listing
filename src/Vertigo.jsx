@@ -131,7 +131,7 @@ const rfAdvantages = [
     "eyebrow": "CLEANER DETAIL",
     "title": "Fine artwork, made personal.",
     copy: "A responsive 38W RF source supports fine artwork with up to 1,000 DPI scanning precision and ≤0.01 mm positioning accuracy.",
-    proof: "1,000 DPI · ≤0.01 mm positioning", image: "vertigo-rf-detail-ai.webp", illustrative: true, alt: "Illustrative botanical artwork on a powder-coated tumbler",
+    proof: "1,000 DPI · ≤0.01 mm positioning", image: "xrf-reference-xrf-detail-proof.webp", alt: "XRF Gen2 reference artwork showing fine engraving on a cotton swab",
     "icon": Target
   },
   {
@@ -140,14 +140,14 @@ const rfAdvantages = [
     "eyebrow": "FASTER RESPONSE",
     title: "Keep fine detail moving.",
     copy: "Responsive RF output supports detailed artwork as VertiGo’s integrated motion system runs at up to 800 mm/s with 3G acceleration. Match the speed and power to your coating, artwork and product geometry.",
-    proof: "Up to 800 mm/s · 3G", image: "vertigo-machine-products.jpg", alt: "Supplied VertiGo product photograph with cylindrical products",
+    proof: "Up to 800 mm/s · 3G", image: "xrf-reference-rf-faster-response-v2.webp", alt: "XRF Gen2 reference comparison; its 1,200 mm/s, 3.5G and response-time figures are not VertiGo specifications",
     "icon": ArrowClockwise
   },
   {
     id: "lifespan", tab: "Longer Lifespan", eyebrow: "LONGER LIFESPAN",
     title: "Built for repeat production.",
     copy: "The air-cooled RF metal source is designed for repeated engraving without an external water chiller. Keep cooling airflow clear and maintain the optics as directed to support consistent performance over time.",
-    proof: "RF metal source · Air cooled", image: "vertigo-rf-source-brochure.webp", alt: "Supplied VertiGo air-cooled RF metal laser source illustration",
+    proof: "RF metal source · Air cooled", image: "xrf-reference-rf-longer-lifespan.webp", alt: "XRF Gen2 RF source comparison reference; the pictured 30,000-hour rating is not a confirmed VertiGo specification",
     "icon": ShieldCheck
   }
 ];
@@ -164,16 +164,16 @@ const customerStoryVideos = [
 
 const speedMotionMaterials = [
   {
-    id: "tumblers", label: "Tumblers", title: "Repeat detail around the cylinder.", copy: "Keep compatible tumblers upright while the integrated rotary supports repeatable positioning.", image: "home-project-vertigo-mountain-rambler.webp", icon: Tag,
+    id: "wood", label: "Wood", title: "XRF Gen2 woodwork reference.", copy: "Shared XRF Gen2 comparison artwork. The pictured dimensions, timing and speed multiplier are XRF results, not VertiGo test data or cutting capabilities.", image: "xrf-reference-speed-motion-wood.webp", icon: Tree,
   },
   {
-    id: "bottles", label: "Bottles", title: "Move from one name to a coordinated batch.", copy: "Produce consistent artwork on compatible coated bottles with the same upright workflow.", image: "home-project-vertigo-coastal-wide-mouth-bottle.webp", icon: Wine,
+    id: "acrylic", label: "Acrylic", title: "XRF Gen2 acrylic reference.", copy: "Shared XRF Gen2 comparison artwork. The pictured dimensions, timing and speed multiplier are XRF results, not VertiGo test data or cutting capabilities.", image: "xrf-reference-speed-motion-acrylic.webp", icon: CubeTransparent,
   },
   {
-    id: "glass", label: "Glass", title: "Keep cylindrical glassware upright.", copy: "Test the exact glass and settings first, then repeat the vertical setup across compatible products.", image: "product-rocks-glass.webp", icon: Target,
+    id: "slate", label: "Slate", title: "XRF Gen2 slate reference.", copy: "Shared XRF Gen2 comparison artwork. The pictured batch, timing and speed multiplier are XRF results, not VertiGo test data or material-compatibility guarantees.", image: "xrf-reference-speed-motion-slate.webp", icon: Target,
   },
   {
-    id: "mugs", label: "Mugs", title: "A focused path to gift-ready mugs.", copy: "Personalize compatible coated mugs after checking the surface and handle clearance. Application shown is illustrative; test the exact blank and settings.", image: "vertigo-coated-mugs-ai-v2.webp", icon: CubeTransparent,
+    id: "leather", label: "Leather", title: "XRF Gen2 leatherwork reference.", copy: "Shared XRF Gen2 comparison artwork. The pictured batch, timing and speed multiplier are XRF results, not VertiGo test data or cutting capabilities.", image: "xrf-reference-speed-motion-leather.webp", icon: Handbag,
   }
 ];
 
@@ -181,7 +181,7 @@ const capabilityChapters = [
   {
     id: "precision", nav: "RF Precision", title: "Sharper detail. More valuable work.",
     summary: "A responsive 38W RF source supports fine artwork with up to 1,000 DPI scanning precision and ≤0.01 mm positioning accuracy.",
-    spotlights: [{ title: "Fine artwork for compatible coatings.", copy: "A responsive RF source supports detailed designs; test the artwork, surface and settings before a batch run.", image: "vertigo-rf-detail-ai.webp", metrics: ["38W CO₂ RF", "1,000 DPI", "≤0.01 mm"], hideCopy: false }],
+    spotlights: [{ title: "RF source architecture, illustrated.", copy: "Shared XRF Gen2 RF-source artwork is shown as a technology reference, not a VertiGo component photograph or performance test. VertiGo uses a 38W air-cooled RF source; test the exact product and settings before production.", image: "xrf-reference-capability-precision-main.webp", reference: true, alt: "XRF Gen2 RF-source exploded illustration with an engraved wood sample, shown as reference artwork", metrics: ["38W CO₂ RF", "1,000 DPI", "≤0.01 mm"], hideCopy: false }],
     support: [],
     proofs: [
       { value: "Air-cooled", label: "RF source cooling", icon: Thermometer },
@@ -278,11 +278,12 @@ const specs = [
   { title: "Laser & Performance", rows: [["Laser source", "38W CO₂ RF metal tube"], ["Cooling", "Air cooling"], ["Maximum speed", "800 mm/s"], ["Maximum acceleration", "3G"], ["Positioning accuracy", "≤0.01 mm"], ["Maximum scanning precision", "1,000 DPI"]] },
   { title: "Object Range", rows: [["Autofocus diameter", "89–230 mm", "3.5–9.05 in"], ["Manual-focus diameter", "16–230 mm", "0.62–9.05 in"]] },
   { title: "Control & Optics", rows: [["Software", "LightBurn / RDWorks / MakerBoost"], ["Connections", "USB / Ethernet / Wi-Fi"], ["Beam expander", "3×"], ["Focal lens", "2.5 in"], ["Lens / mirror diameter", "20 mm / 25 mm"]] },
-  { title: "Electrical & Support", rows: [["Electrical input", "Factory-configured 115V or 220V, 50/60Hz", "Single phase; confirm the supplied version and outlet requirements with OneLaser"], ["Power consumption", "706.2W at 115V / 660.5W at 220V"], ["Limited warranty", "1 year: mechanics and electronics", "6 months: optical power source; 1 month: lenses and mirrors. Official terms and exclusions apply."], ["Support", "OneLaser knowledge base and U.S. support"]] },
+  { title: "Electrical & Support", rows: [["Electrical input", "Factory-configured 115V or 220V, 50/60Hz", "Single phase; confirm the supplied version and outlet requirements with OneLaser"], ["Power consumption", "706.2W at 115V / 660.5W at 220V"], ["Limited warranty", "3-2-1 warranty", "3 years: frame and structure; 2 years: electronics; 1 year: laser source."], ["Returns", "30-Day Money-Back Guarantee", "Refunds less a 3% payment processing fee and round-trip shipping costs."], ["Support", "OneLaser knowledge base and U.S. support"]] },
   { title: "Included Items", rows: [["Cables", "Power cable / USB cable"], ["Exhaust", "4-inch exhaust hose"], ["Tools", "2.5 mm and 4 mm hex keys"], ["Rotary jaws", "Short and extended chuck jaws"], ["Other", "USB drive / labels / stickers", "Confirm final bundle contents at checkout"]] },
 ];
 
 const faqs = [
+  { q: "What warranty and return coverage does VertiGo include?", a: "VertiGo includes a 3-2-1 warranty: 3 years on the frame and structure, 2 years on electronics and 1 year on the laser source. The 30-Day Money-Back Guarantee provides refunds less a 3% payment processing fee and round-trip shipping costs." },
   { q: "Do I need a separate rotary attachment?", a: "No. VertiGo's Grip2 rotary is integrated and factory-aligned for compatible cylindrical products." },
   { q: "What object diameters can VertiGo focus on?", a: "Autofocus covers 89–230 mm; manual focus covers 16–230 mm. Confirm object height, unusual shapes, clamping and handle clearance with OneLaser before ordering." },
   { q: "Does VertiGo need a water chiller?", a: "No. The 38W RF metal tube uses air cooling." },
@@ -469,18 +470,20 @@ function SpeedMotionProof() {
         role="tabpanel"
         aria-live="polite"
       >
-        <div className="speed-motion-proof__media">
+        <div className="speed-motion-proof__media reference-media">
           <img
             key={selectedMaterial.id}
             src={asset(selectedMaterial.image)}
-            alt={`${selectedMaterial.label} cylindrical product example for OneLaser VertiGo`}
+            alt={`${selectedMaterial.label} comparison artwork for XRF Gen2, not VertiGo test results`}
           />
+          <span className="xrf-reference-label">XRF Gen2 reference artwork</span>
         </div>
 
         <div className="speed-motion-proof__copy">
-          <span className="speed-motion-proof__profile">VertiGo motion · Vertical production</span>
+          <span className="speed-motion-proof__profile">XRF Gen2 reference · Not a VertiGo test</span>
           <h4>{selectedMaterial.title}</h4>
           <p>{selectedMaterial.copy}</p>
+          <p className="application-caption">VertiGo platform specifications:</p>
           <div className="speed-motion-proof__metrics" aria-label="Confirmed VertiGo motion performance">
             <div><strong>800</strong><span>mm/s maximum speed</span></div>
             <div><strong>3G</strong><span>Maximum acceleration</span></div>
@@ -499,6 +502,7 @@ function RfAdvantages({ activeIndex, onChange, carouselProps }) {
           <span className="eyebrow">WHY RF TUBE</span>
           <h2>Why makers choose RF tube.</h2>
           <p>Cleaner detail, responsive output and an air-cooled RF metal source—built for cylindrical production.</p>
+          <p className="application-caption">Shared XRF Gen2 reference artwork. Image specifications and comparative results apply to XRF, not VertiGo.</p>
         </header>
         <div className="rf-advantages__tabs" role="tablist" aria-label="Explore the advantages of RF laser technology">
           {rfAdvantages.map((item, index) => {
@@ -543,13 +547,14 @@ function RfAdvantages({ activeIndex, onChange, carouselProps }) {
           aria-labelledby={`rf-tab-${rfAdvantages[activeIndex].id}`}
           aria-live="polite"
         >
-          <div className="rf-advantages__media">
+          <div className="rf-advantages__media reference-media">
             <img
               key={rfAdvantages[activeIndex].id}
               className={`rf-advantages__image rf-advantages__image--${rfAdvantages[activeIndex].id}`}
               src={asset(rfAdvantages[activeIndex].image)}
               alt={rfAdvantages[activeIndex].alt}
             />
+            <span className="xrf-reference-label">XRF Gen2 reference artwork</span>
           </div>
           <div className="rf-advantages__copy">
             <h3>{rfAdvantages[activeIndex].title}</h3>
@@ -651,8 +656,9 @@ function CapabilityBrowser({ onPlay, onVideoPlay, children }) {
   return (
     <section className="capability-scroll" id="features">
       <span className="commercial-capabilities__anchor" id="capability-system" aria-hidden="true" />
-      <div className="journey-opening-artwork">
-        <img src={asset("hydra-gen2-feature-overview-v1.webp")} width="1320" height="936" style={{height:"auto",aspectRatio:"1320 / 936",objectFit:"contain"}} alt="Supplied VertiGo machine photograph with cylindrical product examples" />
+      <div className="journey-opening-artwork reference-media">
+        <img src={asset("xrf-reference-feature-overview-capabilities-v4.webp")} width="3840" height="2004" style={{height:"auto",aspectRatio:"3840 / 2004",objectFit:"contain"}} alt="XRF Gen2 feature overview reference artwork; pictured machine and feature specifications are for XRF, not VertiGo" />
+        <span className="xrf-reference-label">XRF Gen2 reference artwork</span>
       </div>
       <nav
           className="capability-scroll__nav"
@@ -717,14 +723,15 @@ function CapabilityBrowser({ onPlay, onVideoPlay, children }) {
                 {chapter.speedProof && <SpeedMotionProof />}
                 {chapter.spotlights.map((spotlight) => (
                   <article className="capability-scroll__story" key={spotlight.title}>
-                    <div className="capability-scroll__media capability-scroll__media--static">
+                    <div className={`capability-scroll__media capability-scroll__media--static${spotlight.reference ? " reference-media" : ""}`}>
                       {spotlight.video ? (
                         <video controls muted playsInline preload="metadata" poster={spotlight.poster} aria-label={`${spotlight.title} VertiGo video`} style={{ display: "block", width: "100%", height: "100%", objectFit: "contain", background: "#000" }}>
                           <source src={spotlight.video} type="video/mp4" />
                         </video>
                       ) : (
-                        <img src={asset(spotlight.image)} alt={`${spotlight.title} ${spotlight.image.includes("-ai") ? "illustrative application" : spotlight.image.includes("-brochure") ? "supplied technical illustration" : "VertiGo product photograph"}`} />
+                        <img src={asset(spotlight.image)} alt={spotlight.alt ?? `${spotlight.title} ${spotlight.image.includes("-ai") ? "illustrative application" : spotlight.image.includes("-brochure") ? "supplied technical illustration" : "VertiGo product photograph"}`} />
                       )}
+                      {spotlight.reference && <span className="xrf-reference-label">XRF Gen2 reference artwork</span>}
                     </div>
                     {!spotlight.hideCopy && (
                       <div className="capability-scroll__story-copy">
@@ -1368,7 +1375,7 @@ export function VertigoPage() {
               </a>
               <div className="hero-assurance-card">
                 <ShieldCheck size={28} weight="light" aria-hidden="true" />
-                <strong>Component-Specific Limited Warranty</strong>
+                <strong>3-2-1 Warranty</strong>
               </div>
             </div>
           </div>
@@ -1402,14 +1409,13 @@ export function VertigoPage() {
               </div>
             </div>
             <div className="financing-line">
-              <strong><span>{financingCopy}</span> for 24 months</strong>
+              <strong><span>{financingCopy}</span> for 24 months*</strong>
               <a href="https://www.1laser.com/pages/financing" target="_blank" rel="noreferrer">See if you qualify <CaretRight size={15} /></a>
             </div>
             <div className="financing-more">
               <span>More Financing Options</span>
               <a href="https://www.1laser.com/pages/financing" target="_blank" rel="noreferrer">Click here <ArrowUpRight size={14} /></a>
             </div>
-            <p className="financing-disclaimer">Illustrative payment: price ÷ 24, assuming 0% APR; excludes tax and fees. Actual APR, term and eligibility depend on lender approval. Not a financing offer.</p>
 
             <div className="purchase-options" id="purchase-options">
               <div className="purchase-section-heading">
@@ -1510,9 +1516,9 @@ export function VertigoPage() {
           </div>
         </section>
 
-        <section className="feature-overview" id="why-vertigo" data-reveal>
-          <img src={asset("feature-overview-hydra-gen2-v2.webp")} style={{height:"auto",aspectRatio:"1672 / 941",objectFit:"contain"}} alt="Illustrative collection of personalized powder-coated tumblers, bottles and a handled mug" />
-          <p className="application-caption media-provenance">AI-generated application concept · Not a material or performance test.</p>
+        <section className="feature-overview reference-media" id="why-vertigo" data-reveal>
+          <img src={asset("xrf-reference-feature-overview-hero.webp")} width="3840" height="1800" style={{height:"auto",aspectRatio:"3840 / 1800",objectFit:"contain"}} alt="XRF Gen2 workshop and product overview reference artwork; the pictured machine is XRF, not VertiGo" />
+          <span className="xrf-reference-label">XRF Gen2 reference artwork</span>
         </section>
 
         <section className="official-film" aria-labelledby="official-film-title" data-reveal>
@@ -1777,23 +1783,23 @@ export function VertigoPage() {
             <div className="ownership-support__grid">
               <article className="ownership-support__card">
                 <div className="ownership-support__card-top"><Check size={26} weight="bold" aria-hidden="true" /><span>01</span></div>
-                <div className="ownership-support__lead"><h3>Clear terms. Confident decisions.</h3></div>
+                <div className="ownership-support__lead"><h3>30-Day Money-Back Guarantee.</h3></div>
                 <div className="ownership-support__details">
-                  <p>Non-defect returns carry a 25% restocking fee; original and return freight are non-refundable. Leased or financed equipment is excluded from returns and refunds. <a href={RETURNS_URL} target="_blank" rel="noreferrer">Read the official return terms.</a></p>
+                  <p>Take a full 30 days to get to know your VertiGo. If it's not the right fit for you, just reach out — we'll help you send it back, no hard feelings, no hassle. We'd rather you find the perfect machine than keep one that isn't. (Refunds are issued in full, less a 3% payment processing fee and round-trip shipping costs.)</p>
                 </div>
               </article>
               <article className="ownership-support__card">
                 <div className="ownership-support__card-top"><ShieldCheck size={26} weight="regular" aria-hidden="true" /><span>02</span></div>
-                <div className="ownership-support__lead"><h3>Know what is covered.</h3></div>
+                <div className="ownership-support__lead"><h3>We built it to last. We back it to prove it.</h3></div>
                 <div className="ownership-support__details">
-                  <p>VertiGo’s limited warranty covers mechanics and electronics for 1 year, optical power sources for 6 months, and lenses and mirrors for 1 month. <a href={WARRANTY_URL} target="_blank" rel="noreferrer">Coverage and exclusions.</a></p>
+                  <p>Every VertiGo is backed by our 3-2-1 warranty: three years on the frame and structure, two years on electronics, and one year on the laser source — among the strongest coverage in its class. It's not fine print; it's what confidence in our own build quality looks like.</p>
                 </div>
               </article>
               <article className="ownership-support__card ownership-support__card--wide">
                 <div className="ownership-support__card-top"><Star size={26} weight="regular" aria-hidden="true" /><span>03</span></div>
                 <div className="ownership-support__lead"><h3>One Support. Real engineers. Real experience.</h3></div>
                 <div className="ownership-support__details">
-                  <p>Work directly with OneLaser’s U.S.-based engineering team for lifetime support, 1-on-1 training and setup guidance. Plan delivery access, electrical requirements, ventilation and cooling before your machine arrives.</p>
+                  <p>When you call OneLaser, you talk to a U.S.-based engineer with more than five years of laser-industry experience on average—people who've built, tuned and repaired these machines, not script readers. That experience means faster answers, first-call solutions and real support. You're not just buying a machine; you're buying the team behind it.</p>
                 </div>
               </article>
             </div>
@@ -1835,7 +1841,7 @@ export function VertigoPage() {
         <div>
           <strong>{selectedPurchasePackage.name}</strong>
           <span>38W RF · Integrated rotary</span>
-          <small>U.S.-based support · Confirm current delivery timing</small>
+          <small>30-Day Money-Back · 3-2-1 Warranty · Confirm delivery timing</small>
         </div>
         <div className="sticky-buy__price">
           <div className="sticky-buy__amounts">
