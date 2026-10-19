@@ -86,22 +86,22 @@ const materialCategories = [
   {
     id: "coated-metal", label: "Coated Metal", title: "Crisp detail on compatible coatings.",
     copy: "Create personalized tumblers, bottles and handled drinkware on powder-coated, anodized or otherwise laser-compatible surfaces.",
-    proof: "Tumblers · bottles · handled drinkware", image: "material-coated-metal.webp", icon: Tag,
+    proof: "Tumblers · bottles · handled drinkware", image: "vertigo-material-metal-editorial-v3.webp", illustrative: true, icon: Tag,
   },
   {
     id: "glass", label: "Glass", title: "Personalized glassware, kept upright.",
     copy: "Test settings for the specific glass product, then use vertical positioning for compatible cylindrical forms.",
-    proof: "Mugs · steins · bottles", image: "material-glass-stone.webp", icon: Wine,
+    proof: "Mugs · steins · bottles", image: "vertigo-material-glass-editorial-v3.webp", illustrative: true, icon: Wine,
   },
   {
     id: "mugs", label: "Coated Mugs", title: "A direct path to gift-ready mugs.",
     copy: "Personalize laser-compatible coated mugs with names and artwork. Confirm the coating, handle clearance and marking method with a sample first.",
-    proof: "Compatible coatings · Tested blanks", image: "vertigo-coated-mugs-ai-v2.webp", illustrative: true, icon: CubeTransparent,
+    proof: "Compatible coatings · Tested blanks", image: "vertigo-material-mugs-editorial-v3.webp", illustrative: true, icon: CubeTransparent,
   },
   {
     id: "wood", label: "Wood Cylinders", title: "More than drinkware.",
     copy: "Explore compatible cylindrical wood gifts with tested settings. Confirm diameter, length, finish and secure clamping before production.",
-    proof: "Rolling pins · cylindrical gifts", image: "vertigo-wood-cylinder-ai.webp", illustrative: true, icon: Tree,
+    proof: "Rolling pins · cylindrical gifts", image: "vertigo-material-wood-editorial-v3.webp", illustrative: true, icon: Tree,
   },
 ];
 

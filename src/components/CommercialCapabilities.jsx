@@ -212,9 +212,9 @@ function ProductOpportunities({ asset, equipmentInvestment }) {
                     <small>{String(index + 1).padStart(2, "0")}</small>
                     <strong>{product.name}</strong>
                     <span className="product-card__economics">
-                      <span>ILLUSTRATIVE EXAMPLE</span>
-                      <span>Example Price: <b>{economics.sellingPrice}</b></span>
+                      <span>Selling Price: <b>{economics.sellingPrice}</b></span>
                       <span>Assumed Margin: <b>{economics.margin}</b></span>
+                      <span>Hourly Revenue Output: <b>Based on orders &amp; labor time</b></span>
                     </span>
                   </span>
                 </button>
