@@ -13,9 +13,11 @@ import {
   DownloadSimple,
   EnvelopeSimple,
   Fire,
+  Gauge,
   Handbag,
   Headset,
   LockKey,
+  Lightning,
   MapPin,
   MagnifyingGlassPlus,
   Minus,
@@ -207,12 +209,19 @@ const capabilityChapters = [
   {
     id: "vertical-design", nav: "Vertical Design", title: "Vertical by design. Built for cylinders.",
     summary: "An upright work area, controlled vertical motion and a factory-aligned rotary bring cylindrical engraving into one integrated system.",
-    verticalDesign: [
-      { title: "A new angle on cylindrical work.", copy: "Keep compatible tumblers and bottles upright in a work area designed around cylindrical products, rather than laying them across a flat bed.", icon: CubeTransparent },
-      { title: "Precision through vertical motion.", copy: "The engineered vertical motion system manages gravity for smooth acceleration and precise positioning as the laser head travels along your product.", icon: ArrowClockwise },
-      { title: "Integrated rotary. Less setup.", copy: "The factory-aligned Grip2 rotary combines clamping and rotation inside the machine, reducing separate add-on alignment steps. Load a compatible blank, then confirm focus and clearance.", icon: CubeFocus },
+    spotlights: [
+      { title: "A new angle on cylindrical work.", copy: "Keep compatible tumblers and bottles upright in a work area designed around cylindrical products, rather than laying them across a flat bed.", image: "vertigo-architecture-brochure.webp", alt: "Supplied VertiGo technical illustration showing the upright laser-head rail and integrated rotary on a shared machine base", metrics: [], hideCopy: false },
     ],
-    spotlights: [], support: [], proofs: [], details: [],
+    support: [
+      { title: "Precision through vertical motion.", copy: "The engineered vertical motion system manages gravity for smooth acceleration and precise positioning as the laser head travels along your product.", image: "vertigo-laser-head-user-20261020.jpg", alt: "Supplied close-up of the VertiGo laser head mounted on its vertical motion rail" },
+      { title: "Integrated rotary. Less setup.", copy: "The factory-aligned Grip2 rotary combines clamping and rotation inside the machine, reducing separate add-on alignment steps. Load a compatible blank, then confirm focus and clearance.", image: "vertigo-rotary-official.webp", alt: "Upright orange tumbler secured in the integrated VertiGo rotary" },
+    ],
+    proofs: [
+      { value: "800 mm/s", label: "Maximum engraving speed", icon: Gauge },
+      { value: "3G", label: "Maximum acceleration", icon: Lightning },
+      { value: "300 mm", label: "Vertical travel", icon: ArrowClockwise },
+      { value: "Grip2", label: "Integrated rotary", icon: CubeTransparent },
+    ], details: [],
   },
   {
     id: "workflow", nav: "Smart Workflow", title: "Load. Focus. Start.",
@@ -220,19 +229,19 @@ const capabilityChapters = [
     spotlights: [{ title: "Built around cylindrical production.", copy: "An upright work area and factory-aligned Grip2 rotary keep the setup focused on your product. Load a compatible blank, confirm the focus and positioning, then start your job.", image: "vertigo-workflow-original-photos-v2-20261020.webp", alt: "Comparison layout based on supplied original photos: white tumbler in VertiGo upright engraving at left, black tumbler in a horizontal add-on rotary at right, with supplied setup icons", metrics: ["Integrated rotary", "Upright position", "Factory aligned"], hideCopy: false }],
     support: [
       { title: "A clear view of every setup.", copy: "The LED-lit chamber keeps your upright product visible while you check clamping, clearance and red-light positioning before engraving.", image: "vertigo-workflow-live-engraving-20261020.webp", animationPoster: "vertigo-workflow-live-engraving-poster-20261020.webp", alt: "Actual VertiGo setup animation showing an upright orange tumbler and the moving side-mounted laser head inside the illuminated chamber" },
-      { title: "Direct control, at your fingertips.", copy: "Use the integrated touchscreen for direct machine control. USB, Ethernet and Wi-Fi connect LightBurn, RDWorks or MakerBoost to your engraving workflow.", image: "vertigo-touch-control-brochure.webp" },
+      { title: "Direct control, at your fingertips.", copy: "Control machine movement, adjust test parameters and check machine status, alarms and fault messages on the integrated touchscreen. USB, Ethernet and Wi-Fi connect your computer to the machine.", image: "vertigo-touch-control-brochure.webp" },
     ],
     proofs: [
       { value: "Auto", label: "Focus · 89–230 mm diameter", icon: CubeFocus },
       { value: "Touchscreen", label: "Direct machine control", icon: Monitor },
       { value: "3 ways", label: "USB / Ethernet / Wi-Fi", icon: WifiHigh },
-      { value: "300 mm", label: "Vertical travel", icon: ArrowClockwise },
+      { value: "Red light", label: "Design positioning", icon: Target },
     ],
-    details: ["Red-light positioning", "MakerBoost", "LightBurn", "RDWorks"],
+    details: ["Status and alarm display", "LED-lit chamber", "Test parameter controls"],
   },
   {
     id: "expansion", nav: "Product Range", title: "One vertical workflow. More cylindrical products.",
-    summary: "Build focused collections across compatible tumblers, bottles, mugs, glassware and cylindrical gifts.",
+    summary: "Shape-Shifting Versatility VertiGo adapts to irregular shapes like cups and baseball bats, expanding business opportunities and giving you a competitive edge.",
     spotlights: [{ title: "From one-off personalization to coordinated batches.", copy: "Reuse a familiar upright setup across products that fit the diameter range. Confirm height, handles and clamping before production.", image: "vertigo-product-range-editorial-20261020.webp", alt: "Illustrative premium collection of compatible coated drinkware, glassware, bottles, a pet bowl, vase, ice bucket, rolling pins and promotional pen", metrics: ["16–230 mm manual", "89–230 mm auto", "Integrated Grip2"], hideCopy: false }],
     support: [
       { title: "A clear view of the work", copy: "A large viewing door and LED-lit chamber make the engraving workflow visible in studios, shops and live personalization setups.", image: "vertigo-window-visibility-20261020.webp", alt: "Illustrative studio scene based on the supplied VertiGo render, with a closed observation window and an illuminated upright tumbler inside" },
@@ -241,15 +250,15 @@ const capabilityChapters = [
     proofs: [
       { value: "630 × 550", label: "Machine footprint (mm)", icon: CubeTransparent },
       { value: "64 kg", label: "Machine weight", icon: Target },
-      { value: "Class 1", label: "Enclosed design", icon: ShieldCheck },
-      { value: "Built-in", label: "Smoke extraction", icon: ArrowClockwise },
+      { value: "16–230 mm", label: "Manual-focus diameter", icon: Target },
+      { value: "89–230 mm", label: "Autofocus diameter", icon: CubeFocus },
     ],
     details: ["Tumblers", "Bottles", "Mugs", "Rotary gifts"],
   },
   {
     id: "protection", nav: "Reliability & Safety", title: "Enclosed for daily production.",
     summary: "An enclosed Class 1 design, lid protection, isolated electronics, built-in smoke extraction and air-cooled RF operation support a cleaner workflow.",
-    spotlights: [{ title: "Protection starts with the enclosure.", copy: "The Class 1 enclosure design, lid protection and emergency stop support everyday operation. Follow the operating manual, keep interlocks active and never leave an engraving job unattended.", image: "vertigo-enclosure-detail.webp", metrics: ["Enclosed operation", "Lid protection", "Emergency stop"], hideCopy: false }],
+    spotlights: [],
     feature: { title: "Air-cooled RF operation", copy: "No external water chiller is required for the 38W RF source. Keep cooling airflow and ventilation unobstructed.", image: "vertigo-rf-source-brochure.webp" },
     support: [
       { title: "Built for routine care", copy: "Isolated electronics, a level indicator and a quick-release lens support setup and maintenance. Follow the manual for inspection and cleaning.", image: "vertigo-architecture-brochure.webp" },
@@ -258,7 +267,7 @@ const capabilityChapters = [
     proofs: [
       { value: "Class 1", label: "Enclosure", icon: ShieldCheck },
       { value: "Lid", label: "Protection", icon: LockKey },
-      { value: "Air", label: "RF cooling", icon: Thermometer },
+      { value: "Isolated", label: "Electronics compartment", icon: CubeTransparent },
       { value: "Built-in", label: "Smoke extraction", icon: Target },
     ],
     details: ["Isolated electronics", "Emergency stop", "Level indicator", "Quick-release lens for cleaning"],
@@ -763,23 +772,7 @@ function CapabilityBrowser({ onPlay, onVideoPlay, children }) {
                 <p>{chapter.summary}</p>
               </header>
 
-              {chapter.verticalDesign && (
-                <div className="vertical-design">
-                  <figure className="vertical-design__media">
-                    <img src={asset("vertigo-architecture-brochure.webp")} width="670" height="825" alt="Supplied VertiGo technical illustration showing the upright laser-head rail and integrated rotary on a shared machine base" />
-                  </figure>
-                  <div className="vertical-design__benefits">
-                    {chapter.verticalDesign.map(({ title, copy, icon: Icon }) => (
-                      <article key={title}>
-                        <Icon size={28} weight="regular" aria-hidden="true" />
-                        <div><h4>{title}</h4><p>{copy}</p></div>
-                      </article>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              <div className="capability-scroll__stories">
+              {(chapter.speedProof || chapter.spotlights.length > 0) && <div className="capability-scroll__stories">
                 {chapter.speedProof && <SpeedMotionProof />}
                 {chapter.spotlights.map((spotlight) => (
                   <article className="capability-scroll__story" key={spotlight.title}>
@@ -801,7 +794,7 @@ function CapabilityBrowser({ onPlay, onVideoPlay, children }) {
                     )}
                   </article>
                 ))}
-              </div>
+              </div>}
 
               {(chapter.feature || chapter.support.length > 0) && (
                 <div className={chapter.id === "protection" ? "capability-scroll__media-showcase capability-scroll__media-showcase--compact" : "capability-scroll__media-showcase"}>

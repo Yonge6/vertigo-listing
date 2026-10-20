@@ -223,17 +223,10 @@
 @media(min-width:1181px) {
   #features.capability-scroll > .capability-scroll__nav { --chapter-row:40px; --chapter-gap:4px; }
 }
-.vertical-design { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.1fr); gap:32px; padding:32px; border-radius:28px; background:#f5f5f7; }
-.vertical-design__media { display:grid; place-items:center; min-width:0; margin:0; padding:24px; border-radius:24px; background:#fff; }
-.vertical-design__media img { display:block; width:auto; max-width:100%; height:auto; max-height:520px; object-fit:contain; }
-.vertical-design__benefits { display:grid; align-content:center; gap:0; min-width:0; }
-.vertical-design__benefits article { display:grid; grid-template-columns:28px minmax(0,1fr); gap:16px; padding:24px 0; }
-.vertical-design__benefits article + article { border-top:1px solid #d2d2d7; }
-.vertical-design__benefits svg { color:#e7310e; }
-.vertical-design__benefits h4 { margin:0; font-size:24px; font-weight:800; line-height:1.12; }
-.vertical-design__benefits p { margin:12px 0 0; color:#6b6b70; font-size:15px; line-height:1.6; }
-@media(max-width:1000px) { .vertical-design { grid-template-columns:minmax(0,1fr); gap:8px; padding:24px; } .vertical-design__media img { max-height:420px; } }
-@media(max-width:760px) { .vertical-design { padding:20px; border-radius:24px; } .vertical-design__media { padding:16px; border-radius:20px; } .vertical-design__benefits article { gap:12px; padding:24px 0; } .vertical-design__benefits h4 { font-size:22px; } }
+#capability-vertical-design .capability-scroll__stories .capability-scroll__media { aspect-ratio:16/9; background:#f5f5f7; }
+#capability-vertical-design .capability-scroll__stories .capability-scroll__media > img { object-fit:contain; }
+#capability-vertical-design .capability-scroll__support { grid-template-columns:repeat(2,minmax(0,1fr)); }
+@media(max-width:760px) { #capability-vertical-design .capability-scroll__support { grid-template-columns:1fr; } }
 @media(max-width:760px) { .hydra-capability { padding-top:32px; } }
 @media(max-width:760px) { .hydra-capability .capability-scroll__layout { padding:0; } }
 /* Keep chapter headings below both mobile navigation rails. */
