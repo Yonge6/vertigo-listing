@@ -1630,6 +1630,18 @@ export function VertigoPage() {
           </div>
         </section>
 
+        <figure className="vertigo-opportunities-artwork" id="product-opportunities-artwork">
+          <img
+            src={asset("vertigo-opportunities-fullwidth-user-20261020.webp")}
+            alt="Your Work Is Only As Good As Your Laser. OneLaser engraved drinkware, gifts and cylindrical products with illustrative pricing and revenue examples."
+            width="3840"
+            height="1800"
+            loading="lazy"
+            decoding="async"
+          />
+          <figcaption>Illustrative examples only. Selling prices, margins and hourly revenue shown are not guaranteed results. Actual outcomes depend on product compatibility, costs, demand and production time.</figcaption>
+        </figure>
+
         <CommercialCapabilities asset={asset} equipmentInvestment={purchaseTotal} />
 
         <section className="section materials" id="materials" data-reveal>
