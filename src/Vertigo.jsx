@@ -143,8 +143,8 @@ const rfAdvantages = [
     "eyebrow": "FASTER RESPONSE",
     title: "Keep fine detail moving.",
     copy: "Responsive RF output supports detailed artwork as VertiGo’s integrated motion system runs at up to 800 mm/s with 3G acceleration. Match the speed and power to your coating, artwork and product geometry.",
-    proof: "Up to 800 mm/s · 3G", image: "vertigo-rf-speed-rightward-v2-20261020.webp", alt: "VertiGo speed concept with the supplied laser head in its original orientation emitting rightward toward an upright coated tumbler; up to 800 mm/s, 3G acceleration and 38W CO₂ RF",
-    referenceNote: "Illustrated horizontal beam path and upright rotary workflow, based on the supplied VertiGo laser-head reference. Not a performance test.",
+    proof: "Up to 800 mm/s · 3G", image: "vertigo-rf-speed-xrf-layout-photo-20261020.webp", alt: "XRF-style black and red VertiGo speed artwork based on the supplied actual upright white-tumbler engraving photo, with a vertically moving laser head and 800 mm/s, 3G and 38W CO₂ RF specifications",
+    referenceNote: "Speed artwork based on supplied VertiGo engraving photography. Motion effects are illustrative, not a performance test.",
     "icon": ArrowClockwise
   },
   {
@@ -207,14 +207,14 @@ const capabilityChapters = [
     proofs: [], details: [],
   },
   {
-    id: "vertical-design", nav: "Vertical Design", title: "Vertical by design. Built for cylinders.",
-    summary: "An upright work area, controlled vertical motion and a factory-aligned rotary bring cylindrical engraving into one integrated system.",
+    id: "vertical-design", nav: "Vertical Design", title: "Revolutionizing Cylinder Engraving",
+    summary: "VertiGo’s vertical design transforms cylinder processing, giving your studio a competitive edge with cutting-edge production methods.",
     spotlights: [
-      { title: "A new angle on cylindrical work.", copy: "Keep compatible tumblers and bottles upright in a work area designed around cylindrical products, rather than laying them across a flat bed.", image: "vertigo-architecture-brochure.webp", alt: "Supplied VertiGo technical illustration showing the upright laser-head rail and integrated rotary on a shared machine base", metrics: [], hideCopy: false },
+      { title: "A new angle on cylindrical work.", copy: "Keep compatible tumblers and bottles upright in a work area designed around cylindrical products, rather than laying them across a flat bed.", image: "vertigo-vertical-comparison-user-20261020.webp", alt: "User-supplied vertical engraving and traditional horizontal setup comparison, with engraving-time labels and six setup illustrations", metrics: [], hideCopy: false },
     ],
     support: [
-      { title: "Precision through vertical motion.", copy: "The engineered vertical motion system manages gravity for smooth acceleration and precise positioning as the laser head travels along your product.", image: "vertigo-laser-head-user-20261020.jpg", alt: "Supplied close-up of the VertiGo laser head mounted on its vertical motion rail" },
-      { title: "Integrated rotary. Less setup.", copy: "The factory-aligned Grip2 rotary combines clamping and rotation inside the machine, reducing separate add-on alignment steps. Load a compatible blank, then confirm focus and clearance.", image: "vertigo-rotary-official.webp", alt: "Upright orange tumbler secured in the integrated VertiGo rotary" },
+      { title: "Precision Beyond Gravity", copy: "The vertical motion system ensures flawless acceleration and accuracy, maintaining smooth, consistent engraving during high-volume production.", image: "vertigo-vertical-motion-animated-20261020.webp", animationPoster: "vertigo-vertical-motion-poster-20261020.webp", alt: "User-supplied animation of VertiGo engraving with a collection of cylindrical products in the foreground" },
+      { title: "Zero Hassle, Instant Setup", copy: "The integrated rotary axis offers a “plug and play” setup—no adjustments required, allowing operators to start creating immediately.", image: "vertigo-vertical-rotary-animated-20261020.webp", animationPoster: "vertigo-vertical-rotary-poster-20261020.webp", alt: "User-supplied animation of an upright bottle secured in the integrated VertiGo rotary" },
     ],
     proofs: [
       { value: "800 mm/s", label: "Maximum engraving speed", icon: Gauge },
