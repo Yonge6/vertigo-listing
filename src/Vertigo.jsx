@@ -132,7 +132,6 @@ const rfAdvantages = [
     "title": "Fine artwork, made personal.",
     copy: "A responsive 38W RF source supports fine artwork with up to 1,000 DPI scanning precision and ≤0.01 mm positioning accuracy.",
     proof: "1,000 DPI · ≤0.01 mm positioning", image: "vertigo-rf-detail-logo-20261020.webp", alt: "Illustrative coated tumbler with fine botanical engraving and a magnified OneLaser logo detail",
-    referenceLabel: "Illustrative engraving concept",
     referenceNote: "AI-generated engraving concept, not a measured precision test. Test your coating, artwork and settings first.",
     "icon": Target
   },
@@ -142,9 +141,8 @@ const rfAdvantages = [
     "eyebrow": "FASTER RESPONSE",
     title: "Keep fine detail moving.",
     copy: "Responsive RF output supports detailed artwork as VertiGo’s integrated motion system runs at up to 800 mm/s with 3G acceleration. Match the speed and power to your coating, artwork and product geometry.",
-    proof: "Up to 800 mm/s · 3G", image: "xrf-reference-rf-faster-response-v2.webp", alt: "XRF Gen2 reference comparison; its 1,200 mm/s, 3.5G and response-time figures are not VertiGo specifications",
-    referenceLabel: "XRF Gen2 reference artwork",
-    referenceNote: "Shared XRF Gen2 reference artwork. Image specifications and comparative results apply to XRF, not VertiGo.",
+    proof: "Up to 800 mm/s · 3G", image: "vertigo-rf-horizontal-motion-20261020.webp", alt: "Illustrative VertiGo side-firing laser head engraving the sidewall of an upright coated tumbler; 38W CO₂ RF, up to 800 mm/s and 3G acceleration",
+    referenceNote: "Illustrated horizontal beam path and upright rotary workflow, based on the supplied VertiGo laser-head reference. Not a performance test.",
     "icon": ArrowClockwise
   },
   {
@@ -152,7 +150,6 @@ const rfAdvantages = [
     title: "Built for repeat production.",
     copy: "The air-cooled RF metal source is designed for repeated engraving without an external water chiller. Keep cooling airflow clear and maintain the optics as directed to support consistent performance over time.",
     proof: "RF metal source · Air cooled", image: "vertigo-rf-lifespan-user-20261020.webp", alt: "Supplied RF-versus-glass source illustration, RF on the left; the pictured 30,000-hour rating is not a confirmed VertiGo specification",
-    referenceLabel: "RF technology illustration",
     referenceNote: "RF-source comparison artwork. The illustrated service-life rating is not a confirmed VertiGo specification.",
     "icon": ShieldCheck
   }
@@ -187,7 +184,7 @@ const capabilityChapters = [
   {
     id: "precision", nav: "RF Precision", title: "Sharper detail. More valuable work.",
     summary: "A responsive 38W RF source supports fine artwork with up to 1,000 DPI scanning precision and ≤0.01 mm positioning accuracy.",
-    spotlights: [{ title: "RF source architecture, illustrated.", copy: "Shared XRF Gen2 RF-source artwork is shown as a technology reference, not a VertiGo component photograph or performance test. VertiGo uses a 38W air-cooled RF source; test the exact product and settings before production.", image: "xrf-reference-capability-precision-main.webp", reference: true, alt: "XRF Gen2 RF-source exploded illustration with an engraved wood sample, shown as reference artwork", metrics: ["38W CO₂ RF", "1,000 DPI", "≤0.01 mm"], hideCopy: false }],
+    spotlights: [{ title: "RF precision, illustrated.", copy: "Illustrative RF-source concept with fine portrait engraving on a coated insulated bottle and a magnified eye detail, not a VertiGo component photograph or precision test. Test your exact coating, artwork and settings before production.", image: "vertigo-rf-precision-tumbler-20261020.webp", alt: "RF-source concept beside a navy coated insulated bottle with fine silver dog-portrait engraving and a matching magnified eye detail", metrics: ["38W CO₂ RF", "1,000 DPI", "≤0.01 mm"], hideCopy: false }],
     support: [],
     proofs: [
       { value: "Air-cooled", label: "RF source cooling", icon: Thermometer },
@@ -198,7 +195,7 @@ const capabilityChapters = [
     details: ["3× beam expander", "20 mm lens", "25 mm mirrors"],
   },
   {
-    id: "motion", nav: "Speed & Motion", title: "Production motion in a compact footprint.",
+    id: "motion", hidden: true, nav: "Speed & Motion", title: "Production motion in a compact footprint.",
     summary: "Published performance reaches up to 800 mm/s with maximum 3G acceleration while maintaining repeatable positioning.",
     speedProof: true, spotlights: [],
     support: [
@@ -210,7 +207,7 @@ const capabilityChapters = [
   {
     id: "workflow", nav: "Smart Workflow", title: "Load. Focus. Start.",
     summary: "Automatic focus, red-light positioning, touchscreen controls and the integrated Grip2 rotary shorten the path from product setup to engraving.",
-    spotlights: [{ title: "Built around cylindrical production.", copy: "An upright work area and factory-aligned Grip2 rotary keep the setup focused on your product. Load a compatible blank, confirm the focus and positioning, then start your job.", image: "vertigo-architecture-brochure.webp", metrics: ["Integrated rotary", "Upright position", "Factory aligned"], hideCopy: false }],
+    spotlights: [{ title: "Built around cylindrical production.", copy: "An upright work area and factory-aligned Grip2 rotary keep the setup focused on your product. Load a compatible blank, confirm the focus and positioning, then start your job.", image: "vertigo-workflow-upright-comparison-20261020.webp", alt: "Illustrated upright integrated rotary with a side-firing head versus a horizontal add-on rotary with a downward-firing head", metrics: ["Integrated rotary", "Upright position", "Factory aligned"], hideCopy: false }],
     support: [
       { title: "A clear view of every setup.", copy: "The LED-lit chamber keeps your upright product visible while you check clamping, clearance and red-light positioning before engraving.", image: "vertigo-rotary-official.webp" },
       { title: "Direct control, at your fingertips.", copy: "Use the integrated touchscreen for direct machine control. USB, Ethernet and Wi-Fi connect LightBurn, RDWorks or MakerBoost to your engraving workflow.", image: "vertigo-touch-control-brochure.webp" },
@@ -226,10 +223,10 @@ const capabilityChapters = [
   {
     id: "expansion", nav: "Product Range", title: "One vertical workflow. More cylindrical products.",
     summary: "Build focused collections across compatible tumblers, bottles, mugs, glassware and cylindrical gifts.",
-    spotlights: [{ title: "From one-off personalization to coordinated batches.", copy: "Reuse a familiar upright setup across products that fit the diameter range. Confirm height, handles and clamping before production.", image: "vertigo-drinkware-collection-ai-v2.webp", metrics: ["16–230 mm manual", "89–230 mm auto", "Integrated Grip2"], hideCopy: false }],
+    spotlights: [{ title: "From one-off personalization to coordinated batches.", copy: "Reuse a familiar upright setup across products that fit the diameter range. Confirm height, handles and clamping before production.", image: "vertigo-product-range-editorial-20261020.webp", alt: "Illustrative premium collection of compatible coated drinkware, glassware, bottles, a pet bowl, vase, ice bucket, rolling pins and promotional pen", metrics: ["16–230 mm manual", "89–230 mm auto", "Integrated Grip2"], hideCopy: false }],
     support: [
-      { title: "A clear view of the work", copy: "A large viewing door and LED-lit chamber make the engraving workflow visible in studios, shops and live personalization setups.", image: "vertigo-lifestyle.jpg" },
-      { title: "Focused footprint", copy: "The machine base measures 630 × 550 mm, with a published overall height of 710 mm.", image: "vertigo-hero-04.png" },
+      { title: "A clear view of the work", copy: "A large viewing door and LED-lit chamber make the engraving workflow visible in studios, shops and live personalization setups.", image: "vertigo-window-visibility-20261020.webp", alt: "Illustrative studio scene based on the supplied VertiGo render, with a closed observation window and an illuminated upright tumbler inside" },
+      { title: "Focused footprint", copy: "The machine base measures 630 × 550 mm, with an overall height of 710 mm.", image: "vertigo-footprint-editorial-20261020.webp", alt: "Illustrative VertiGo product scene with width 630 mm, depth 550 mm and overall height 710 mm dimension guides" },
     ],
     proofs: [
       { value: "630 × 550", label: "Machine footprint (mm)", icon: CubeTransparent },
@@ -256,7 +253,7 @@ const capabilityChapters = [
     ],
     details: ["Isolated electronics", "Emergency stop", "Level indicator", "Quick-release lens for cleaning"],
   },
-];
+].filter((chapter) => !chapter.hidden);
 
 const purchasePackages = [{
   id: "vertigo",
@@ -482,7 +479,6 @@ function SpeedMotionProof() {
             src={asset(selectedMaterial.image)}
             alt={`${selectedMaterial.label} comparison artwork for XRF Gen2, not VertiGo test results`}
           />
-          <span className="xrf-reference-label">XRF Gen2 reference artwork</span>
         </div>
 
         <div className="speed-motion-proof__copy">
@@ -560,7 +556,6 @@ function RfAdvantages({ activeIndex, onChange, carouselProps }) {
               src={asset(rfAdvantages[activeIndex].image)}
               alt={rfAdvantages[activeIndex].alt}
             />
-            <span className="xrf-reference-label">{rfAdvantages[activeIndex].referenceLabel}</span>
           </div>
           <div className="rf-advantages__copy">
             <h3>{rfAdvantages[activeIndex].title}</h3>
@@ -664,7 +659,6 @@ function CapabilityBrowser({ onPlay, onVideoPlay, children }) {
       <span className="commercial-capabilities__anchor" id="capability-system" aria-hidden="true" />
       <div className="journey-opening-artwork reference-media">
         <img src={asset("xrf-reference-feature-overview-capabilities-v4.webp")} width="3840" height="2004" style={{height:"auto",aspectRatio:"3840 / 2004",objectFit:"contain"}} alt="XRF Gen2 feature overview reference artwork; pictured machine and feature specifications are for XRF, not VertiGo" />
-        <span className="xrf-reference-label">XRF Gen2 reference artwork</span>
       </div>
       <nav
           className="capability-scroll__nav"
@@ -737,13 +731,11 @@ function CapabilityBrowser({ onPlay, onVideoPlay, children }) {
                       ) : (
                         <img src={asset(spotlight.image)} alt={spotlight.alt ?? `${spotlight.title} ${spotlight.image.includes("-ai") ? "illustrative application" : spotlight.image.includes("-brochure") ? "supplied technical illustration" : "VertiGo product photograph"}`} />
                       )}
-                      {spotlight.reference && <span className="xrf-reference-label">XRF Gen2 reference artwork</span>}
                     </div>
                     {!spotlight.hideCopy && (
                       <div className="capability-scroll__story-copy">
                         <h4>{spotlight.title}</h4>
                         <p>{spotlight.copy}</p>
-                        {spotlight.image.includes("-ai") && <p className="application-caption">Illustrative application · Results depend on material and settings.</p>}
                         <div>{spotlight.metrics.map((metric) => <span key={metric}>{metric}</span>)}</div>
                       </div>
                     )}
@@ -809,7 +801,7 @@ function CapabilityBrowser({ onPlay, onVideoPlay, children }) {
                           ))}
                         </div>
                       ) : (
-                        <img src={asset(item.image)} alt="" />
+                        <img src={asset(item.image)} alt={item.alt ?? ""} />
                       )}
                       {!item.compareImages && (
                         <div>
