@@ -205,6 +205,16 @@ const capabilityChapters = [
     proofs: [], details: [],
   },
   {
+    id: "vertical-design", nav: "Vertical Design", title: "Vertical by design. Built for cylinders.",
+    summary: "An upright work area, controlled vertical motion and a factory-aligned rotary bring cylindrical engraving into one integrated system.",
+    verticalDesign: [
+      { title: "A new angle on cylindrical work.", copy: "Keep compatible tumblers and bottles upright in a work area designed around cylindrical products, rather than laying them across a flat bed.", icon: CubeTransparent },
+      { title: "Precision through vertical motion.", copy: "The engineered vertical motion system manages gravity for smooth acceleration and precise positioning as the laser head travels along your product.", icon: ArrowClockwise },
+      { title: "Integrated rotary. Less setup.", copy: "The factory-aligned Grip2 rotary combines clamping and rotation inside the machine, reducing separate add-on alignment steps. Load a compatible blank, then confirm focus and clearance.", icon: CubeFocus },
+    ],
+    spotlights: [], support: [], proofs: [], details: [],
+  },
+  {
     id: "workflow", nav: "Smart Workflow", title: "Load. Focus. Start.",
     summary: "Automatic focus, red-light positioning, touchscreen controls and the integrated Grip2 rotary shorten the path from product setup to engraving.",
     spotlights: [{ title: "Built around cylindrical production.", copy: "An upright work area and factory-aligned Grip2 rotary keep the setup focused on your product. Load a compatible blank, confirm the focus and positioning, then start your job.", image: "vertigo-workflow-original-photos-v2-20261020.webp", alt: "Comparison layout based on supplied original photos: white tumbler in VertiGo upright engraving at left, black tumbler in a horizontal add-on rotary at right, with supplied setup icons", metrics: ["Integrated rotary", "Upright position", "Factory aligned"], hideCopy: false }],
@@ -752,6 +762,22 @@ function CapabilityBrowser({ onPlay, onVideoPlay, children }) {
                 <h3 id={`capability-${chapter.id}-title`}>{chapter.title}</h3>
                 <p>{chapter.summary}</p>
               </header>
+
+              {chapter.verticalDesign && (
+                <div className="vertical-design">
+                  <figure className="vertical-design__media">
+                    <img src={asset("vertigo-architecture-brochure.webp")} width="670" height="825" alt="Supplied VertiGo technical illustration showing the upright laser-head rail and integrated rotary on a shared machine base" />
+                  </figure>
+                  <div className="vertical-design__benefits">
+                    {chapter.verticalDesign.map(({ title, copy, icon: Icon }) => (
+                      <article key={title}>
+                        <Icon size={28} weight="regular" aria-hidden="true" />
+                        <div><h4>{title}</h4><p>{copy}</p></div>
+                      </article>
+                    ))}
+                  </div>
+                </div>
+              )}
 
               <div className="capability-scroll__stories">
                 {chapter.speedProof && <SpeedMotionProof />}
