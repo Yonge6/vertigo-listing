@@ -131,7 +131,9 @@ const rfAdvantages = [
     "eyebrow": "CLEANER DETAIL",
     "title": "Fine artwork, made personal.",
     copy: "A responsive 38W RF source supports fine artwork with up to 1,000 DPI scanning precision and ≤0.01 mm positioning accuracy.",
-    proof: "1,000 DPI · ≤0.01 mm positioning", image: "xrf-reference-xrf-detail-proof.webp", alt: "XRF Gen2 reference artwork showing fine engraving on a cotton swab",
+    proof: "1,000 DPI · ≤0.01 mm positioning", image: "vertigo-rf-detail-logo-20261020.webp", alt: "Illustrative coated tumbler with fine botanical engraving and a magnified OneLaser logo detail",
+    referenceLabel: "Illustrative engraving concept",
+    referenceNote: "AI-generated engraving concept, not a measured precision test. Test your coating, artwork and settings first.",
     "icon": Target
   },
   {
@@ -141,13 +143,17 @@ const rfAdvantages = [
     title: "Keep fine detail moving.",
     copy: "Responsive RF output supports detailed artwork as VertiGo’s integrated motion system runs at up to 800 mm/s with 3G acceleration. Match the speed and power to your coating, artwork and product geometry.",
     proof: "Up to 800 mm/s · 3G", image: "xrf-reference-rf-faster-response-v2.webp", alt: "XRF Gen2 reference comparison; its 1,200 mm/s, 3.5G and response-time figures are not VertiGo specifications",
+    referenceLabel: "XRF Gen2 reference artwork",
+    referenceNote: "Shared XRF Gen2 reference artwork. Image specifications and comparative results apply to XRF, not VertiGo.",
     "icon": ArrowClockwise
   },
   {
     id: "lifespan", tab: "Longer Lifespan", eyebrow: "LONGER LIFESPAN",
     title: "Built for repeat production.",
     copy: "The air-cooled RF metal source is designed for repeated engraving without an external water chiller. Keep cooling airflow clear and maintain the optics as directed to support consistent performance over time.",
-    proof: "RF metal source · Air cooled", image: "xrf-reference-rf-longer-lifespan.webp", alt: "XRF Gen2 RF source comparison reference; the pictured 30,000-hour rating is not a confirmed VertiGo specification",
+    proof: "RF metal source · Air cooled", image: "vertigo-rf-lifespan-user-20261020.webp", alt: "Supplied RF-versus-glass source illustration, RF on the left; the pictured 30,000-hour rating is not a confirmed VertiGo specification",
+    referenceLabel: "RF technology illustration",
+    referenceNote: "RF-source comparison artwork. The illustrated service-life rating is not a confirmed VertiGo specification.",
     "icon": ShieldCheck
   }
 ];
@@ -502,7 +508,7 @@ function RfAdvantages({ activeIndex, onChange, carouselProps }) {
           <span className="eyebrow">WHY RF TUBE</span>
           <h2>Why makers choose RF tube.</h2>
           <p>Cleaner detail, responsive output and an air-cooled RF metal source—built for cylindrical production.</p>
-          <p className="application-caption">Shared XRF Gen2 reference artwork. Image specifications and comparative results apply to XRF, not VertiGo.</p>
+          <p className="application-caption">{rfAdvantages[activeIndex].referenceNote}</p>
         </header>
         <div className="rf-advantages__tabs" role="tablist" aria-label="Explore the advantages of RF laser technology">
           {rfAdvantages.map((item, index) => {
@@ -554,7 +560,7 @@ function RfAdvantages({ activeIndex, onChange, carouselProps }) {
               src={asset(rfAdvantages[activeIndex].image)}
               alt={rfAdvantages[activeIndex].alt}
             />
-            <span className="xrf-reference-label">XRF Gen2 reference artwork</span>
+            <span className="xrf-reference-label">{rfAdvantages[activeIndex].referenceLabel}</span>
           </div>
           <div className="rf-advantages__copy">
             <h3>{rfAdvantages[activeIndex].title}</h3>

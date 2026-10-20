@@ -213,6 +213,8 @@
 @media(max-width:760px) { .hydra-page .capability-scroll__chapter[id] { scroll-margin-top:180px; } }
 
 /* Reuse the XRF video, review, comparison and decision modules. */
+/* Keep every row and icon of the supplied comparison inside the existing RF frame. */
+#rf-advantage-panel .rf-advantages__image--lifespan { object-fit:contain; background:#000; }
 .h-hero-video { display:flex; align-items:center; gap:14px; width:100%; margin-top:14px; padding:0; border:0; background:none; color:var(--ink); text-align:left; cursor:pointer; }
 .h-hero-video > span { position:relative; width:124px; aspect-ratio:16/9; overflow:hidden; border-radius:12px; flex:none; }
 .h-hero-video img { display:block; width:100%; height:100%; object-fit:cover; }
