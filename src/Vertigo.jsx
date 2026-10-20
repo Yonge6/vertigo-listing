@@ -141,7 +141,7 @@ const rfAdvantages = [
     "eyebrow": "FASTER RESPONSE",
     title: "Keep fine detail moving.",
     copy: "Responsive RF output supports detailed artwork as VertiGo’s integrated motion system runs at up to 800 mm/s with 3G acceleration. Match the speed and power to your coating, artwork and product geometry.",
-    proof: "Up to 800 mm/s · 3G", image: "vertigo-rf-horizontal-motion-20261020.webp", alt: "Illustrative VertiGo side-firing laser head engraving the sidewall of an upright coated tumbler; 38W CO₂ RF, up to 800 mm/s and 3G acceleration",
+    proof: "Up to 800 mm/s · 3G", image: "vertigo-rf-speed-rightward-v2-20261020.webp", alt: "VertiGo speed concept with the supplied laser head in its original orientation emitting rightward toward an upright coated tumbler; up to 800 mm/s, 3G acceleration and 38W CO₂ RF",
     referenceNote: "Illustrated horizontal beam path and upright rotary workflow, based on the supplied VertiGo laser-head reference. Not a performance test.",
     "icon": ArrowClockwise
   },
@@ -184,7 +184,7 @@ const capabilityChapters = [
   {
     id: "precision", nav: "RF Precision", title: "Sharper detail. More valuable work.",
     summary: "A responsive 38W RF source supports fine artwork with up to 1,000 DPI scanning precision and ≤0.01 mm positioning accuracy.",
-    spotlights: [{ title: "RF precision, illustrated.", copy: "Illustrative RF-source concept with fine portrait engraving on a coated insulated bottle and a magnified eye detail, not a VertiGo component photograph or precision test. Test your exact coating, artwork and settings before production.", image: "vertigo-rf-precision-tumbler-20261020.webp", alt: "RF-source concept beside a navy coated insulated bottle with fine silver dog-portrait engraving and a matching magnified eye detail", metrics: ["38W CO₂ RF", "1,000 DPI", "≤0.01 mm"], hideCopy: false }],
+    spotlights: [{ title: "RF precision, illustrated.", copy: "Illustrative RF-source concept with fine portrait engraving on a coated insulated bottle and a magnified eye detail, not a VertiGo component photograph or precision test. Test your exact coating, artwork and settings before production.", image: "vertigo-rf-precision-original-axis-v2-20261020.webp", alt: "RF-source concept retaining the original right-and-down output axis toward a navy coated insulated bottle, with fine silver dog-portrait engraving and a matching magnified eye detail", metrics: ["38W CO₂ RF", "1,000 DPI", "≤0.01 mm"], hideCopy: false }],
     support: [],
     proofs: [
       { value: "Air-cooled", label: "RF source cooling", icon: Thermometer },
@@ -207,9 +207,9 @@ const capabilityChapters = [
   {
     id: "workflow", nav: "Smart Workflow", title: "Load. Focus. Start.",
     summary: "Automatic focus, red-light positioning, touchscreen controls and the integrated Grip2 rotary shorten the path from product setup to engraving.",
-    spotlights: [{ title: "Built around cylindrical production.", copy: "An upright work area and factory-aligned Grip2 rotary keep the setup focused on your product. Load a compatible blank, confirm the focus and positioning, then start your job.", image: "vertigo-workflow-upright-comparison-20261020.webp", alt: "Illustrated upright integrated rotary with a side-firing head versus a horizontal add-on rotary with a downward-firing head", metrics: ["Integrated rotary", "Upright position", "Factory aligned"], hideCopy: false }],
+    spotlights: [{ title: "Built around cylindrical production.", copy: "An upright work area and factory-aligned Grip2 rotary keep the setup focused on your product. Load a compatible blank, confirm the focus and positioning, then start your job.", image: "vertigo-workflow-original-photos-v2-20261020.webp", alt: "Comparison layout based on supplied original photos: white tumbler in VertiGo upright engraving at left, black tumbler in a horizontal add-on rotary at right, with supplied setup icons", metrics: ["Integrated rotary", "Upright position", "Factory aligned"], hideCopy: false }],
     support: [
-      { title: "A clear view of every setup.", copy: "The LED-lit chamber keeps your upright product visible while you check clamping, clearance and red-light positioning before engraving.", image: "vertigo-rotary-official.webp" },
+      { title: "A clear view of every setup.", copy: "The LED-lit chamber keeps your upright product visible while you check clamping, clearance and red-light positioning before engraving.", image: "vertigo-workflow-live-engraving-20261020.webp", animationPoster: "vertigo-workflow-live-engraving-poster-20261020.webp", alt: "Actual VertiGo setup animation showing an upright orange tumbler and the moving side-mounted laser head inside the illuminated chamber" },
       { title: "Direct control, at your fingertips.", copy: "Use the integrated touchscreen for direct machine control. USB, Ethernet and Wi-Fi connect LightBurn, RDWorks or MakerBoost to your engraving workflow.", image: "vertigo-touch-control-brochure.webp" },
     ],
     proofs: [
@@ -569,6 +569,40 @@ function RfAdvantages({ activeIndex, onChange, carouselProps }) {
   );
 }
 
+function AnimatedSupportImage({ image, poster, alt }) {
+  const [playing, setPlaying] = useState(() => (
+    typeof window !== "undefined" && !window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  ));
+  const [inView, setInView] = useState(false);
+  const frameRef = useRef(null);
+
+  useEffect(() => {
+    const preference = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const stopForPreference = () => { if (preference.matches) setPlaying(false); };
+    preference.addEventListener("change", stopForPreference);
+    return () => preference.removeEventListener("change", stopForPreference);
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(([entry]) => setInView(entry.isIntersecting));
+    observer.observe(frameRef.current);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div className="capability-scroll__animated-media" ref={frameRef}>
+      <img src={asset(playing && inView ? image : poster)} alt={alt} width="600" height="338" />
+      <button
+        type="button"
+        aria-label={playing ? "Pause setup animation" : "Play setup animation"}
+        onClick={() => setPlaying((current) => !current)}
+      >
+        {playing ? "Pause" : "Play"}
+      </button>
+    </div>
+  );
+}
+
 function CapabilityBrowser({ onPlay, onVideoPlay, children }) {
   const [activeChapter, setActiveChapter] = useState(0);
   const chapterRefs = useRef([]);
@@ -800,6 +834,8 @@ function CapabilityBrowser({ onPlay, onVideoPlay, children }) {
                             </figure>
                           ))}
                         </div>
+                      ) : item.animationPoster ? (
+                        <AnimatedSupportImage image={item.image} poster={item.animationPoster} alt={item.alt} />
                       ) : (
                         <img src={asset(item.image)} alt={item.alt ?? ""} />
                       )}
