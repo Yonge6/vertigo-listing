@@ -26,4 +26,6 @@ User source: `/Users/yongyuan/Downloads/未命名文件夹/d4a65749ef936443c28c6
 
 ## Checks
 
+Follow-up while release was in progress: merge red-light positioning and autofocus into the first card, titled “Automatic Focus, Precise Positioning”. Merge 99% preinstalled / 15-minute setup and one-touch operation into the second card, titled “Ready in 15 Minutes. One-Touch Simplicity.” Use the supplied rotating-machine animation `/Users/yongyuan/Downloads/未命名文件夹/6fb8e805446f1ef2fd7c6f049521f44d_original.webp` unchanged as `vertigo-workflow-ready-animated-20261021.webp` (600 × 338, 188 frames, 30 ms/frame, infinite loop) with first-frame poster and the same cover/control treatment. Previous autofocus image remains preserved on disk.
+
 `npm run verify` passed. Desktop 1454 px and mobile 390 px: new hero loaded at natural 1672 × 941, woman/complete machine visible, no horizontal overflow. Supplied animation fills its 3:2 frame with cover; Pause displays poster, Play restores animation, reduced-motion switches to poster. Local evidence stays ignored beside original download. Publication requires successful Pages deployment and a fresh live check of these two asset routes.
