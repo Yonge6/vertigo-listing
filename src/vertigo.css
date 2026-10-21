@@ -121,6 +121,7 @@
 #capability-protection .capability-scroll__support img[src*="ventilation"] { object-fit:cover; }
 #software .software-compatibility__body,
 .specs .section-heading--stack > p { white-space:normal; overflow-wrap:anywhere; }
+#capability-expansion .capability-scroll__stories .capability-scroll__story-copy > p { white-space:normal; overflow-wrap:anywhere; }
 .capability-scroll__editorial { border-radius:32px; background:#fff; }
 .capability-scroll__chapter { scroll-margin-top:148px; }
 .capability-scroll__editorial-copy { padding-right:48px; }
