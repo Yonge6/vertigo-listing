@@ -143,7 +143,7 @@ const rfAdvantages = [
     "eyebrow": "FASTER RESPONSE",
     title: "Keep fine detail moving.",
     copy: "Responsive RF output supports detailed artwork as VertiGo’s integrated motion system runs at up to 800 mm/s with 3G acceleration. Match the speed and power to your coating, artwork and product geometry.",
-    proof: "Up to 800 mm/s · 3G", image: "vertigo-rf-speed-xrf-layout-photo-20261020.webp", alt: "XRF-style black and red VertiGo speed artwork based on the supplied actual upright white-tumbler engraving photo, with a vertically moving laser head and 800 mm/s, 3G and 38W CO₂ RF specifications",
+    proof: "Up to 800 mm/s · 3G", image: "vertigo-rf-speed-comparison-20261021.webp", alt: "VertiGo speed comparison with other CO₂ and diode example machines: 800 versus 600 and 400 mm/s bitmap, RF versus glass CO₂ and diode sources, built-in versus add-on rotary; specifications vary by machine and are not equal-job completion times",
     referenceNote: "Speed artwork based on supplied VertiGo engraving photography. Motion effects are illustrative, not a performance test.",
     "icon": ArrowClockwise
   },
@@ -224,45 +224,45 @@ const capabilityChapters = [
     ], details: [],
   },
   {
-    id: "workflow", nav: "Smart Workflow", title: "Load. Focus. Start.",
-    summary: "Automatic focus, red-light positioning, touchscreen controls and the integrated Grip2 rotary shorten the path from product setup to engraving.",
-    spotlights: [{ title: "Built around cylindrical production.", copy: "An upright work area and factory-aligned Grip2 rotary keep the setup focused on your product. Load a compatible blank, confirm the focus and positioning, then start your job.", image: "vertigo-workflow-original-photos-v2-20261020.webp", alt: "Comparison layout based on supplied original photos: white tumbler in VertiGo upright engraving at left, black tumbler in a horizontal add-on rotary at right, with supplied setup icons", metrics: ["Integrated rotary", "Upright position", "Factory aligned"], hideCopy: false }],
+    id: "workflow", nav: "Smart Workflow", title: "Effortless Control at Your Fingertips",
+    summary: "The full-touch control system simplifies operation with real-time updates and minimal training required.",
+    spotlights: [{ title: "Instant Visualization, Seamless Execution", copy: "The WYSIWYG touchscreen interface matches the vertical system, reducing learning time and enhancing workflow efficiency. Control machine movement, adjust test parameters and read working status, alarms and fault messages directly on screen.", image: "vertigo-workflow-touch-editorial-20261020.webp", alt: "Illustrative commercial photograph based on supplied VertiGo references, showing a hand using the narrow integrated touchscreen beside the closed illuminated chamber", metrics: ["Vertical-coordinate controls", "Real-time status", "Alarm and fault display"], hideCopy: false }],
     support: [
-      { title: "A clear view of every setup.", copy: "The LED-lit chamber keeps your upright product visible while you check clamping, clearance and red-light positioning before engraving.", image: "vertigo-workflow-live-engraving-20261020.webp", animationPoster: "vertigo-workflow-live-engraving-poster-20261020.webp", alt: "Actual VertiGo setup animation showing an upright orange tumbler and the moving side-mounted laser head inside the illuminated chamber" },
-      { title: "Direct control, at your fingertips.", copy: "Control machine movement, adjust test parameters and check machine status, alarms and fault messages on the integrated touchscreen. USB, Ethernet and Wi-Fi connect your computer to the machine.", image: "vertigo-touch-control-brochure.webp" },
+      { title: "Flawless Precision", copy: "Red-light positioning helps align your design before engraving, reducing misalignment and waste in production.", image: "vertigo-workflow-positioning-20261021.webp", alt: "Reference-based illustration of red-light positioning on an upright coated tumbler inside the closed VertiGo chamber" },
+      { title: "Automatic Focus, Less Manual Adjustment", copy: "The automatic focusing system finds the engraving distance for compatible products, reducing manual adjustment and helping improve precision with each batch.", image: "vertigo-workflow-autofocus-20261021.webp", alt: "Reference-based illustration of the sideways laser head and upright tumbler in the integrated rotary, showing focus setup" },
     ],
     proofs: [
-      { value: "Auto", label: "Focus · 89–230 mm diameter", icon: CubeFocus },
-      { value: "Touchscreen", label: "Direct machine control", icon: Monitor },
-      { value: "3 ways", label: "USB / Ethernet / Wi-Fi", icon: WifiHigh },
-      { value: "Red light", label: "Design positioning", icon: Target },
+      { value: "Full touch", label: "Movement, settings and status", icon: Monitor },
+      { value: "Auto focus", label: "89–230 mm diameter", icon: CubeFocus },
+      { value: "Smart resume", label: "Continue after power restoration", icon: ArrowClockwise },
+      { value: "One-touch", label: "Load, press and start engraving", icon: Play },
     ],
-    details: ["Status and alarm display", "LED-lit chamber", "Test parameter controls"],
+    details: ["Red-light positioning", "Vertical-coordinate interface", "LED-lit chamber"],
   },
   {
-    id: "expansion", nav: "Product Range", title: "One vertical workflow. More cylindrical products.",
-    summary: "Shape-Shifting Versatility VertiGo adapts to irregular shapes like cups and baseball bats, expanding business opportunities and giving you a competitive edge.",
-    spotlights: [{ title: "From one-off personalization to coordinated batches.", copy: "Reuse a familiar upright setup across products that fit the diameter range. Confirm height, handles and clamping before production.", image: "vertigo-product-range-editorial-20261020.webp", alt: "Illustrative premium collection of compatible coated drinkware, glassware, bottles, a pet bowl, vase, ice bucket, rolling pins and promotional pen", metrics: ["16–230 mm manual", "89–230 mm auto", "Integrated Grip2"], hideCopy: false }],
+    id: "expansion", nav: "Mobile & Compact", title: "Portability Meets Power",
+    summary: "Built-in air cooling removes the need for external chillers, making VertiGo easier to transport and ready for mobile engraving.",
+    spotlights: [{ title: "From your studio to the market.", copy: "Bring personalized products to markets, exhibitions and live events. Plan a load-rated work surface, suitable power and an exhaust or filtration path for your location. At 64 kg, the machine requires appropriate lifting and transport equipment.", image: "vertigo-market-editorial-20261020.webp", alt: "Illustrative outdoor market scene with VertiGo on a sturdy workstation under a canopy, a maker presenting a personalized tumbler and neatly routed utilities", metrics: ["No external water chiller", "Markets and events", "Compact workstation"], hideCopy: false }],
     support: [
-      { title: "A clear view of the work", copy: "A large viewing door and LED-lit chamber make the engraving workflow visible in studios, shops and live personalization setups.", image: "vertigo-window-visibility-20261020.webp", alt: "Illustrative studio scene based on the supplied VertiGo render, with a closed observation window and an illuminated upright tumbler inside" },
-      { title: "Focused footprint", copy: "The machine base measures 630 × 550 mm, with an overall height of 710 mm.", image: "vertigo-footprint-editorial-20261020.webp", alt: "Illustrative VertiGo product scene with width 630 mm, depth 550 mm and overall height 710 mm dimension guides" },
+      { title: "Maximize Every Inch of Your Space", copy: "VertiGo’s compact size fits into small spaces, optimizing productivity even in limited work areas. The machine base measures 630 × 550 mm, with an overall height of 710 mm.", image: "vertigo-footprint-editorial-20261020.webp", alt: "Illustrative VertiGo product scene with width 630 mm, depth 550 mm and overall height 710 mm dimension guides" },
+      { title: "Plug & Play Productivity", copy: "99% pre-installed, VertiGo is designed to get you up and running in just 15 minutes. Fast setup minimizes downtime; confirm power, ventilation, clamping and focus before your first job.", image: "vertigo-setup-workstation-20261021.webp", alt: "Illustrative compact studio with an operator checking a closed VertiGo, upright tumbler and routed ventilation on a sturdy workbench" },
     ],
     proofs: [
       { value: "630 × 550", label: "Machine footprint (mm)", icon: CubeTransparent },
-      { value: "64 kg", label: "Machine weight", icon: Target },
-      { value: "16–230 mm", label: "Manual-focus diameter", icon: Target },
-      { value: "89–230 mm", label: "Autofocus diameter", icon: CubeFocus },
+      { value: "710 mm", label: "Overall height", icon: Gauge },
+      { value: "64 kg", label: "Plan supported transport", icon: Target },
+      { value: "Air-cooled", label: "No external water chiller", icon: Thermometer },
     ],
-    details: ["Tumblers", "Bottles", "Mugs", "Rotary gifts"],
+    details: ["Markets", "Exhibitions", "Retail counters", "Compact studios"],
   },
   {
-    id: "protection", nav: "Reliability & Safety", title: "Enclosed for daily production.",
-    summary: "An enclosed Class 1 design, lid protection, isolated electronics, built-in smoke extraction and air-cooled RF operation support a cleaner workflow.",
+    id: "protection", nav: "Reliability & Safety", title: "Built to Last",
+    summary: "VertiGo’s electrical and mechanical design supports durability and reliability under high-volume, long-term use.",
     spotlights: [],
-    feature: { title: "Air-cooled RF operation", copy: "No external water chiller is required for the 38W RF source. Keep cooling airflow and ventilation unobstructed.", image: "vertigo-rf-source-brochure.webp" },
+    feature: { title: "Dust-Isolated Electronics", copy: "The electronics compartment is separated from the working area to reduce dust exposure, support long-term reliability and simplify routine maintenance.", image: "vertigo-safety-enclosure-20261021.webp", alt: "Reference-based exterior illustration of VertiGo enclosure panels; internal electronics are not shown" },
     support: [
-      { title: "Built for routine care", copy: "Isolated electronics, a level indicator and a quick-release lens support setup and maintenance. Follow the manual for inspection and cleaning.", image: "vertigo-architecture-brochure.webp" },
-      { title: "Plan the exhaust path", copy: "Built-in extraction is not air filtration. Plan suitable exhaust or filtration for your material and workspace. Shown: an illustrative ventilation layout, not included equipment.", image: "vertigo-ventilation-layout-ai.webp" },
+      { title: "Effortless Lens Swap", copy: "Quick-release, slot-style lens access simplifies lens changes and cleaning. Use the tools and procedure specified in the operating manual, with the machine powered off.", image: "vertigo-lens-maintenance-20261021.webp", alt: "Illustrative close-up based on the actual laser-head reference, with a hex key and optical cloth for maintenance context" },
+      { title: "Built-in Safety for Peace of Mind", copy: "The safety lid detection system prevents operation when the lid is open. Keep interlocks active and never leave a job unattended. Built-in smoke extraction requires suitable exhaust or filtration; extraction is not filtration.", image: "vertigo-safety-operation-20261021.webp", alt: "Illustrative attended VertiGo workstation with the enclosure closed and a ventilation duct routed behind the machine" },
     ],
     proofs: [
       { value: "Class 1", label: "Enclosure", icon: ShieldCheck },
@@ -802,7 +802,7 @@ function CapabilityBrowser({ onPlay, onVideoPlay, children }) {
                   <article className="capability-scroll__feature capability-scroll__story">
                     {chapter.id === "protection" ? (
                       <div className="capability-scroll__media capability-scroll__media--static">
-                        <img src={asset(chapter.feature.image)} alt={`${chapter.feature.title} VertiGo proof`} />
+                        <img src={asset(chapter.feature.image)} alt={chapter.feature.alt ?? `${chapter.feature.title} VertiGo detail`} />
                       </div>
                     ) : (
                       <button
@@ -811,7 +811,7 @@ function CapabilityBrowser({ onPlay, onVideoPlay, children }) {
                         onClick={() => onPlay(chapter.feature.title, asset(chapter.feature.image))}
                         aria-label={`Open ${chapter.feature.title} full-size media preview`}
                       >
-                        <img src={asset(chapter.feature.image)} alt={`${chapter.feature.title} VertiGo proof`} />
+                        <img src={asset(chapter.feature.image)} alt={chapter.feature.alt ?? `${chapter.feature.title} VertiGo detail`} />
                         <span className="capability-scroll__play" aria-hidden="true"><Play size={25} weight="fill" /></span>
                       </button>
                     )}
@@ -1639,7 +1639,6 @@ export function VertigoPage() {
             loading="lazy"
             decoding="async"
           />
-          <figcaption>Illustrative examples only. Selling prices, margins and hourly revenue shown are not guaranteed results. Actual outcomes depend on product compatibility, costs, demand and production time.</figcaption>
         </figure>
 
         <CommercialCapabilities asset={asset} equipmentInvestment={purchaseTotal} />

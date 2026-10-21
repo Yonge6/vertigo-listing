@@ -226,6 +226,7 @@
 #capability-vertical-design .capability-scroll__stories .capability-scroll__media { aspect-ratio:16/9; background:#f5f5f7; }
 #capability-vertical-design .capability-scroll__stories .capability-scroll__media > img { object-fit:contain; }
 #capability-vertical-design .capability-scroll__support { grid-template-columns:repeat(2,minmax(0,1fr)); }
+#capability-vertical-design .capability-scroll__animated-media img { object-fit:cover; object-position:center; }
 @media(max-width:760px) { #capability-vertical-design .capability-scroll__support { grid-template-columns:1fr; } }
 @media(max-width:760px) { .hydra-capability { padding-top:32px; } }
 @media(max-width:760px) { .hydra-capability .capability-scroll__layout { padding:0; } }
@@ -235,7 +236,6 @@
 /* Reuse the XRF video, review, comparison and decision modules. */
 .vertigo-opportunities-artwork { width:100%; max-width:none; margin:0; padding:0; }
 .vertigo-opportunities-artwork > img { display:block; width:100%; height:auto; aspect-ratio:3840/1800; object-fit:contain; border-radius:0; }
-.vertigo-opportunities-artwork > figcaption { margin:0; padding:12px 24px; background:#F5F5F7; color:#6B6B70; font-size:12px; line-height:1.5; text-align:center; }
 /* Keep embedded specifications and comparison rows complete in the existing RF frame. */
 #rf-advantage-panel .rf-advantages__image--speed,
 #rf-advantage-panel .rf-advantages__image--lifespan { object-fit:contain; background:#000; }
