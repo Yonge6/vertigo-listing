@@ -61,7 +61,7 @@ const RETURNS_URL = "https://www.1laser.com/pages/refund-policy";
 
 const baseHeroMedia = [
   ["vertigo-hero-user-20261022-01.webp", "Supplied VertiGo drinkware personalization shop artwork"],
-  ["vertigo-hero-user-20261022-02.webp", "Supplied VertiGo feature overview collage"],
+  ["vertigo-hero-user-20261022-02-v2.webp", "Supplied VertiGo feature overview collage"],
   ["vertigo-hero-user-20261022-03.webp", "Supplied vertical cylinder engraving illustration"],
   ["vertigo-hero-user-20261022-04.webp", "Supplied RF source concept and engraved portrait bottle artwork"],
   ["vertigo-hero-user-20261022-05.webp", "Supplied engraved tumbler and magnified detail artwork"],
