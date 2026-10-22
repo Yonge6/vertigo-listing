@@ -184,9 +184,9 @@ const speedMotionMaterials = [
 
 const capabilityChapters = [
   {
-    id: "precision", nav: "RF Precision", title: "Sharper detail. More valuable work.",
-    summary: "A responsive 38W RF source supports fine artwork with up to 1,000 DPI scanning precision and ≤0.01 mm positioning accuracy.",
-    spotlights: [{ title: "RF precision, illustrated.", copy: "Illustrative RF-source concept with fine portrait engraving on a coated insulated bottle and a magnified eye detail, not a VertiGo component photograph or precision test. Test your exact coating, artwork and settings before production.", image: "vertigo-rf-precision-original-axis-v2-20261020.webp", alt: "RF-source concept retaining the original right-and-down output axis toward a navy coated insulated bottle, with fine silver dog-portrait engraving and a matching magnified eye detail", metrics: ["38W CO₂ RF", "1,000 DPI", "≤0.01 mm"], hideCopy: false }],
+    id: "precision", nav: "RF Precision", title: "Next-Level Power",
+    summary: "Powered by a 38W RF metal laser tube, VertiGo ensures consistent, high-quality engraving with a longer lifespan and lower operating costs.",
+    spotlights: [{ title: "3D Photo Realistic RF", copy: "RF Metal Tube — Next-Gen CO2 Source, 4–5× Lifetime Value vs Glass", image: "vertigo-rf-precision-original-axis-v2-20261020.webp", alt: "RF-source concept retaining the original right-and-down output axis toward a navy coated insulated bottle, with fine silver dog-portrait engraving and a matching magnified eye detail", metrics: ["38W CO₂ RF", "1,000 DPI", "≤0.01 mm"], hideCopy: false }],
     support: [],
     proofs: [
       { value: "Air-cooled", label: "RF source cooling", icon: Thermometer },
