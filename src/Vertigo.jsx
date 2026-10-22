@@ -42,9 +42,7 @@ import { initializeAnalytics, trackEvent } from "./analytics.js";
 import { useAutoplayCarousel } from "./hooks/useAutoplayCarousel.js";
 
 const assetMap = {
-  "feature-overview-hero.webp": "vertigo-lifestyle.jpg",
   "feature-overview-hydra-gen2-v2.webp": "vertigo-drinkware-collection-ai-v2.webp",
-  "hydra-gen2-feature-overview-v1.webp": "vertigo-machine-products.jpg",
   "software-makerboost.webp": "xrf-shared-makerboost.webp",
   "software-compatibility.webp": "xrf-shared-software-compatibility.webp",
   "material-acrylic.webp": "xrf-shared-custom-tumbler.webp",
@@ -62,19 +60,26 @@ const WARRANTY_URL = "https://www.1laser.com/pages/warranty-policy";
 const RETURNS_URL = "https://www.1laser.com/pages/refund-policy";
 
 const baseHeroMedia = [
-  ["vertigo-hero-01.png", "OneLaser VertiGo front product view"],
-  ["vertigo-lifestyle.jpg", "VertiGo in a drinkware personalization studio"],
-  ["vertigo-hero-02.png", "VertiGo vertical laser engraver on white"],
-  ["vertigo-hero-03.jpg", "VertiGo product view with integrated vertical rotary"],
-  ["vertigo-hero-04.png", "VertiGo side profile in gray"],
-  ["vertigo-hero-05.jpg", "VertiGo front product view"],
+  ["vertigo-hero-user-20261022-01.webp", "Supplied VertiGo drinkware personalization shop artwork"],
+  ["vertigo-hero-user-20261022-02.webp", "Supplied VertiGo feature overview collage"],
+  ["vertigo-hero-user-20261022-03.webp", "Supplied vertical cylinder engraving illustration"],
+  ["vertigo-hero-user-20261022-04.webp", "Supplied RF source concept and engraved portrait bottle artwork"],
+  ["vertigo-hero-user-20261022-05.webp", "Supplied engraved tumbler and magnified detail artwork"],
+  ["vertigo-hero-user-20261022-06.webp", "Supplied VertiGo engraving speed and laser comparison artwork"],
+  ["vertigo-hero-user-20261022-07.webp", "Supplied RF metal tube and glass tube comparison artwork"],
+  ["vertigo-hero-user-20261022-08.webp", "Supplied VertiGo touchscreen operation artwork"],
+  ["vertigo-hero-user-20261022-09.webp", "Supplied outdoor market and personalized drinkware artwork"],
+  ["vertigo-hero-user-20261022-10.webp", "Supplied compact checkout-side installation and dimension artwork"],
+  ["vertigo-hero-user-20261022-11.webp", "Supplied VertiGo studio setup artwork"],
+  ["vertigo-hero-user-20261022-12.webp", "Supplied integrated rotary product view"],
+  ["vertigo-hero-user-20261022-13.webp", "Supplied MakerBoost promotional artwork"],
+  ["vertigo-hero-user-20261022-14.webp", "Supplied VertiGo front and right-side product view"],
+  ["vertigo-hero-user-20261022-15.webp", "Supplied VertiGo front and left-side product view"],
+  ["vertigo-hero-user-20261022-16.webp", "Supplied VertiGo open-door product view"],
 ].map(([name, alt], index) => ({ src: asset(name), alt, label: `Product ${index + 1}` }));
 
 const packageHeroMedia = {
-  vertigo: [
-    ["vertigo-machine-products.jpg", "VertiGo with compatible cylindrical products"],
-    ["vertigo-support.jpg", "OneLaser support for VertiGo owners"],
-  ],
+  vertigo: [],
 };
 
 const officialFilm = {
@@ -711,7 +716,7 @@ function CapabilityBrowser({ onPlay, onVideoPlay, children }) {
     <section className="capability-scroll" id="features">
       <span className="commercial-capabilities__anchor" id="capability-system" aria-hidden="true" />
       <div className="journey-opening-artwork reference-media">
-        <img src={asset("xrf-reference-feature-overview-capabilities-v4.webp")} width="3840" height="2004" style={{height:"auto",aspectRatio:"3840 / 2004",objectFit:"contain"}} alt="XRF Gen2 feature overview reference artwork; pictured machine and feature specifications are for XRF, not VertiGo" />
+        <img src={asset("vertigo-features-overview-user-20261022.webp")} width="3840" height="2004" style={{height:"auto",aspectRatio:"3840 / 2004",objectFit:"contain"}} alt="User-supplied VertiGo feature overview collage showing RF engraving, vertical rotary design, touchscreen operation, compact retail workspaces and safety concepts" />
       </div>
       <nav
           className="capability-scroll__nav"
