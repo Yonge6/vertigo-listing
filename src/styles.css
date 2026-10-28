@@ -9738,14 +9738,6 @@ p.application-caption {
   opacity: 1;
 }
 
-.official-film__placeholder::before {
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  background: linear-gradient(90deg, rgba(0, 0, 0, .62), rgba(0, 0, 0, .18) 58%, rgba(0, 0, 0, .34));
-  content: "";
-}
-
 .official-film__cover {
   position: absolute;
   z-index: -2;

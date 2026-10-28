@@ -84,6 +84,7 @@ const packageHeroMedia = {
 
 const officialFilm = {
   youtubeId: "Yhfbj7ujNXQ",
+  cover: "vertigo-product-film-cover-hd-20261028.jpg",
   title: "Meet VertiGo in motion.",
   channel: "LensDigital",
   tag: "VERTIGO PRODUCT FILM",
@@ -231,7 +232,7 @@ const capabilityChapters = [
   {
     id: "workflow", nav: "Smart Workflow", title: "Effortless Control at Your Fingertips",
     summary: "The full-touch control system simplifies operation with real-time updates and minimal training required.",
-    spotlights: [{ title: "Instant Visualization, Seamless Execution", copy: "The WYSIWYG touchscreen interface matches the vertical system, reducing learning time and enhancing workflow efficiency. Control machine movement, adjust test parameters and read working status, alarms and fault messages directly on screen.", image: "vertigo-workflow-clamped-supplied-20261022.webp", alt: "User-supplied illustrative cup shop with a smiling owner touching the VertiGo touchscreen, a green tumbler held between red rotary posts in the illuminated chamber, and varied engraved drinkware on the counter and shelves", metrics: ["Vertical-coordinate controls", "Real-time status", "Alarm and fault display"], hideCopy: false }],
+    spotlights: [{ title: "Instant Visualization, Seamless Execution", copy: "The WYSIWYG touchscreen interface matches the vertical system, reducing learning time and enhancing workflow efficiency. Control machine movement, adjust test parameters and read working status, alarms and fault messages directly on screen.", image: "vertigo-workflow-over-shoulder-20261028.webp", alt: "Illustrative over-the-shoulder view of a cup-shop owner facing the VertiGo front touchscreen and operating it with a naturally bent arm, with a green tumbler held between red rotary posts in the illuminated closed chamber", metrics: ["Vertical-coordinate controls", "Real-time status", "Alarm and fault display"], hideCopy: false }],
     support: [
       { title: "Autofocus + Red Dot. Zero Guesswork", copy: "Automatic focus finds the engraving distance, while red-light positioning helps align your design on the product. Together, they reduce manual adjustment, misalignment and waste with each batch.", image: "vertigo-workflow-positioning-animated-20261021.webp", animationPoster: "vertigo-workflow-positioning-poster-20261021.webp", alt: "User-supplied VertiGo setup animation with an upright orange tumbler secured in the integrated rotary beside the side-facing laser head" },
       { title: "Ready in 15 Minutes. One-Touch Simplicity.", copy: "99% pre-installed, VertiGo is designed to get you up and running in just 15 minutes. Load, press and start engraving—the simple, intuitive workflow minimizes setup and training time.", image: "vertigo-workflow-ready-animated-20261021.webp", animationPoster: "vertigo-workflow-ready-poster-20261021.webp", alt: "User-supplied rotating view of the complete enclosed VertiGo machine, showing its integrated compact design" },
@@ -1411,7 +1412,7 @@ export function VertigoPage() {
               <button type="button" className="thumb-arrow" aria-label="Scroll product views right" onClick={() => scrollThumbnails(1)}><CaretRight size={20} /></button>
               <span className="thumbnail-divider" aria-hidden="true" />
               <button type="button" className="video-thumbnail" onClick={playOfficialFilm} aria-label="Watch the VertiGo product film">
-                <img src={`https://i.ytimg.com/vi/${officialFilm.youtubeId}/hqdefault.jpg`} alt="" />
+                <img src={asset(officialFilm.cover)} alt="" />
                 <span><Play size={16} weight="fill" /><small>WATCH</small></span>
               </button>
             </div>
@@ -1585,15 +1586,10 @@ export function VertigoPage() {
             <p>See the vertical rotary concept, upright product handling and cylindrical production workflow in one focused introduction.</p>
           </header>
           <button type="button" className="official-film__placeholder" onClick={playOfficialFilm} aria-label="Watch the VertiGo product film">
-            <img className="official-film__cover" src={`https://i.ytimg.com/vi/${officialFilm.youtubeId}/hqdefault.jpg`} alt="" />
-            <div className="official-film__placeholder-copy">
-              <span>{officialFilm.channel} · PRODUCT FILM</span>
-              <strong>VertiGo</strong>
-              <span className="official-film__play" aria-hidden="true">
-                <Play size={28} weight="fill" />
-              </span>
-              <small>PLAY ON YOUTUBE</small>
-            </div>
+            <img className="official-film__cover" src={asset(officialFilm.cover)} width="1280" height="720" alt="" />
+            <span className="official-film__play" aria-hidden="true">
+              <Play size={28} weight="fill" />
+            </span>
           </button>
         </section>
 
