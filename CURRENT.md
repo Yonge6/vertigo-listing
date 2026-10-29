@@ -1,8 +1,8 @@
 # VertiGo listing - current handoff
 
-Updated 2026-10-28 (Asia/Shanghai).
+Updated 2026-10-29 (Asia/Shanghai).
 
-- Product film uses the native YouTube 1280 × 720 cover as local `vertigo-product-film-cover-hd-20261028.jpg`, including its Hero video thumbnail. The large cover has only the centered play button: no title/channel/YouTube lettering or dark text gradient. Section introduction and shared player remain.
+- Product film uses `vertigo-product-film-designed-20261028.webp` (1672 × 941, quality 95, no resize/crop), generated via Ego/ChatGPT using the original VertiGo5 reference: complete machine with sculptural stone plinths, refined engraved drinkware and warm directional studio light. It replaces the letterboxed YouTube cover in both the large stage and Hero film thumbnail. Keep edge-to-edge centered cover rendering and only the centered play button, without title/channel/YouTube lettering or dark text gradient. Section introduction and shared player remain. Source/prompt: ignored `references/incoming/workflow-nine-options-20261028/film-cover-v1.png` and `cover-prompt.txt`; conversation https://chatgpt.com/c/6ae1c5f4-4b9c-83e8-9456-e178c9528978. User requested nine workflow alternatives for selection only; 01–03 are saved in the same incoming folder, and six remain to recover/generate. Do not replace the current workflow hero before selection. See incoming `status.json` for recovery URLs.
 
 - Three-chapter redesign completed 2026-10-21: Smart Workflow, Mobile & Compact (stable `capability-expansion` anchor), and Reliability & Safety now use the two approved Ego/ChatGPT hero images plus six newly generated and visually inspected support images. No placeholder support assets remain. See `docs/plans/2026-10-21-final-feature-release.md` for provenance, comparison sources and QA. Earlier browser verification issue is resolved; do not resume retired space 19.
 

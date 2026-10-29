@@ -84,7 +84,7 @@ const packageHeroMedia = {
 
 const officialFilm = {
   youtubeId: "Yhfbj7ujNXQ",
-  cover: "vertigo-product-film-cover-hd-20261028.jpg",
+  cover: "vertigo-product-film-designed-20261028.webp",
   title: "Meet VertiGo in motion.",
   channel: "LensDigital",
   tag: "VERTIGO PRODUCT FILM",
@@ -1586,7 +1586,7 @@ export function VertigoPage() {
             <p>See the vertical rotary concept, upright product handling and cylindrical production workflow in one focused introduction.</p>
           </header>
           <button type="button" className="official-film__placeholder" onClick={playOfficialFilm} aria-label="Watch the VertiGo product film">
-            <img className="official-film__cover" src={asset(officialFilm.cover)} width="1280" height="720" alt="" />
+            <img className="official-film__cover" src={asset(officialFilm.cover)} width="1672" height="941" alt="" />
             <span className="official-film__play" aria-hidden="true">
               <Play size={28} weight="fill" />
             </span>
